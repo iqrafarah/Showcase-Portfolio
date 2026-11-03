@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Iqra Farah – portfolio
 
 One-page portfolio built with Nuxt 3, Tailwind CSS and GSAP.
@@ -32,3 +33,6 @@ To add a project, add an object to `data/work.json` and drop its image in `publi
 ## Company logos
 
 `public/images/logos/bewise.svg` and `sovot.svg` are simple letter tiles. Replace them with the real logos (same file names, square) and they show up next to the jobs in About.
+=======
+# Showcase-Portfolio
+>>>>>>> ad7d0e327dea84dba3593cb7ee279940b576f4b3
