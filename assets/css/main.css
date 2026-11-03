@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-padding-top: 96px;
+    /* keep room for the scrollbar, so the page does not jump sideways when the start screen unlocks scrolling */
+    scrollbar-gutter: stable;
+    background: #efeee9;
+  }
+  body {
+    @apply bg-beige font-sans text-ink antialiased;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: #ed4407;
+    color: #121211;
+  }
+  :focus-visible {
+    outline: 2px solid #ed4407;
+    outline-offset: 3px;
+  }
+  body.lock {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[13px] uppercase tracking-[0.02em];
+  }
+  .label {
+    @apply font-mono text-[13px] uppercase text-mute;
+  }
+
+  /* Dithered "checkerboard" border used on nav, cards and the drawer */
+  .dither {
+    background-image: conic-gradient(#121211 25%, #454543 0 50%, #121211 0 75%, #454543 0);
+    background-size: 3px 3px;
+  }
+
+  /* Buttons ------------------------------------------------------------ */
+  .btn {
+    @apply relative inline-flex items-center justify-center rounded-[10px] bg-ink px-6 py-[17px] font-mono text-[15px] uppercase text-beige transition-colors duration-300;
+  }
+  .btn:hover {
+    @apply bg-ink-3;
+  }
+  .btn-light {
+    @apply bg-beige-2 text-ink;
+  }
+  .btn-light:hover {
+    @apply bg-beige-3;
+  }
+  .btn .dot {
+    @apply absolute right-2.5 top-2.5 h-1.5 w-1.5 rounded-full bg-orange;
+  }
+  /* the navigation pieces: a bit lighter than ink, so they also show on the dark work section */
+  .btn.nav {
+    @apply px-5 py-3 text-[13px] text-beige ring-1 ring-white/10;
+  }
+  .btn.nav:hover {
+    @apply bg-ink-3;
+  }
+  .btn.small {
+    @apply px-5 py-3 text-[13px];
+  }
+  /* two buttons that are bridged together, like GET | ACCESS */
+  .pair {
+    @apply inline-flex gap-1.5;
+  }
+  .pair > .btn:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    width: 6px;
+    height: 44%;
+    transform: translateY(-50%);
+    background: inherit;
+  }
+
+  /* text roll on hover */
+  .roll {
+    display: inline-block;
+    overflow: hidden;
+    height: 1.25em;
+    line-height: 1.25em;
+    vertical-align: bottom;
+  }
+  .roll > span {
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1);
+  }
+  .group:hover .roll > span,
+  .btn:hover .roll > span {
+    transform: translateY(-100%);
+  }
+
+  /* dotted-leader rows */
+  .leader {
+    @apply flex items-baseline gap-2.5 font-mono text-[14px] uppercase;
+  }
+  .leader > i {
+    @apply flex-1 border-b border-dotted border-current opacity-40;
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee, .animate-marquee-fast, .animate-spin360 { animation: none; }
+}
+
+/* motion: hidden until GSAP reveals them (class set in head, skipped for reduced motion) */
+.js [data-reveal]:not(.is-in),
+.js [data-stagger] > *:not(.is-in) {
+  opacity: 0;
+}
+@keyframes cellIn {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: none; }
+}
+
+/* outlined text for the second marquee row */
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #121211;
+}
+
+/* Lenis smooth scroll */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+/* while the About drawer is open, the page's own scrollbar goes away so only the drawer's scrollbar shows */
+html.drawer-open { scrollbar-gutter: auto; overflow: hidden; }
+
+/* loading screen: only with JavaScript, and never stuck for more than a few seconds */
+.loader { display: none; }
+.js .loader { display: block; background: #121211; }
+.no-loader .loader { display: none !important; }
+

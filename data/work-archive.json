@@ -1,0 +1,169 @@
+[
+  {
+    "slug": "note-it",
+    "title": "Note IT",
+    "group": "Vanilla JavaScript",
+    "year": "2024",
+    "role": "Design & Development",
+    "techs": [
+      "HTML & CSS",
+      "JavaScript"
+    ],
+    "summary": "A notes app built with a classmate. It saves to local storage and lets you dictate notes by voice.",
+    "description": "We built a notes app with JavaScript, HTML and CSS and used local storage to save data. Users can speak a note, have it converted to text and stored, and play it back.",
+    "learned": "I learned how to add voice input and playback features.",
+    "image": "/images/notes.png",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://iqrafarah.github.io/notes/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/iqrafarah/notes"
+      }
+    ],
+    "id": 5
+  },
+  {
+    "slug": "movie-box",
+    "title": "Movie Box",
+    "group": "Vanilla JavaScript",
+    "year": "2024",
+    "role": "Design & Development",
+    "techs": [
+      "HTML & CSS",
+      "JavaScript"
+    ],
+    "summary": "A cinema app where you register, order movies and vote for the Friday Movie Night selection.",
+    "description": "Using the databases and APIs from our teacher, users can register, log in, order movies, search and vote. Admins can create and delete movies.",
+    "learned": "The value of simplicity and accessibility: arrange features by what users find most useful.",
+    "image": "/images/bios1.png",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/iqrafarah/Bioscoop-app"
+      }
+    ],
+    "id": 6
+  },
+  {
+    "slug": "worthit",
+    "title": "WorthIt",
+    "group": "ASP.NET",
+    "year": "2025",
+    "role": "Design & Development",
+    "techs": [
+      "ASP.NET Core",
+      "C#",
+      "SQLite",
+      "Entity Framework"
+    ],
+    "summary": "Money = time. An expense tracker that shows what you spend in hours of work, with categories and analytics.",
+    "description": "ASP.NET Core MVC app with SQLite and Entity Framework Core. Add expenses, manage categories and see analytics.",
+    "learned": "Backend structure with MVC, migrations and unit tests.",
+    "image": "/images/worthit.png",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/iqrafarah/WorthIt"
+      }
+    ],
+    "id": 9
+  },
+  {
+    "slug": "tasbeeh-challenge",
+    "title": "Tasbeeh Challenge",
+    "group": "Next.js",
+    "year": "2025",
+    "role": "Design & Development",
+    "techs": [
+      "Next.js",
+      "React",
+      "Tailwind",
+      "PWA"
+    ],
+    "summary": "A tasbeeh counter app with challenges and a leaderboard, installable as a PWA.",
+    "description": "A counter app with friends, challenges, levels and a leaderboard. Installable on your phone.",
+    "learned": "PWA, service workers and designing a satisfying counter interaction.",
+    "image": "/images/tasbeeh.png",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/iqrafarah/Tasbeeh-Challenge"
+      }
+    ],
+    "id": 11
+  },
+  {
+    "slug": "bov-trofee",
+    "title": "BOV Trofee",
+    "group": "Client",
+    "role": "Design",
+    "techs": [
+      "Figma",
+      "Website design"
+    ],
+    "summary": "Website design for the BOV Trofee, an annual award for entrepreneurs with vision in the Hart van Brabant region.",
+    "description": "Design for bov-trofee.nl.",
+    "learned": "Designing a campaign site around one clear theme.",
+    "image": "/images/bov-trofee.png",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://bov-trofee.nl/"
+      }
+    ],
+    "id": 3
+  },
+  {
+    "slug": "finance-tracker",
+    "title": "Finance Tracker",
+    "group": "MERN stack",
+    "year": "2024",
+    "role": "Design & Development",
+    "techs": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "summary": "A dynamic finance dashboard with transaction tracking, goal setting and personalised finance tips.",
+    "description": "FinSmart is a finance tracker built with the MERN stack: a place where people can easily watch their spending and save up for the things they want.",
+    "learned": "I improved my Node.js skills and learned to focus on what users need. Making the dashboard user-friendly was the big lesson.",
+    "image": "/images/dash.png",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/iqrafarah/finsmart"
+      }
+    ],
+    "id": 5
+  },
+  {
+    "slug": "kras-hosting",
+    "title": "Kras Hosting",
+    "group": "Vanilla JavaScript",
+    "year": "2024",
+    "role": "Design & Development",
+    "techs": [
+      "HTML & CSS",
+      "JavaScript"
+    ],
+    "summary": "A platform for ordering hosting packages, with an admin dashboard for orders and blogs. Built with three classmates.",
+    "description": "Our first project using Scrum. We reached about 90% completion. Users can order hosting packages, and admins manage orders, packages and a blog.",
+    "learned": "Scrum taught me to break work into smaller parts, set short-term goals and hold regular team meetings.",
+    "image": "/images/krashosting.png",
+    "links": [
+      {
+        "label": "Live",
+        "url": "https://krashosting-lite.tobiasvandeven.nl/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Toby142/krashosting-frontend"
+      }
+    ],
+    "id": 6
+  }
+]

@@ -1,0 +1,168 @@
+{
+  "name": "Iqra Farah",
+  "role": "Web designer & developer",
+  "location": "Noord-Brabant, Netherlands",
+  "timezone": "Europe/Amsterdam",
+  "email": "iqrafarah02@gmail.com",
+  "site": "https://iqrafarah.nl",
+  "github": "https://github.com/iqrafarah",
+  "githubUser": "iqrafarah",
+  "eyebrow": "Web designer & developer / Noord-Brabant, NL",
+  "headline": [
+    "Hello, I'm Iqra,",
+    "a web designer & developer."
+  ],
+  "intro": "I design everything myself in Figma and build it in Next.js, React and WordPress. A creative who codes.",
+  "ticker": [
+    "Web designer & developer",
+    "Noord-Brabant, NL",
+    "Figma to production",
+    "Built with Nuxt + Tailwind"
+  ],
+  "spiral": "IQRA FARAH · WEB DESIGNER & DEVELOPER · FIGMA TO PRODUCTION · ",
+  "index": {
+    "title": [
+      "Learning by shipping.",
+      "Every single time."
+    ],
+    "text": "I'm creative, so I design. I'm technical, so I build. Everything starts as my own design in Figma and ends as a fast, working site, with automations on top when a business needs them. I'm full stack, strongest on the frontend, and I've shipped real sites for a scheduling tool, a restaurant and a law firm.",
+    "label": "Projects shipped",
+    "chip": "9 stacks"
+  },
+  "experience": [
+    {
+      "company": "Unique Design",
+      "role": "",
+      "period": "2024 – 2025",
+      "text": "",
+      "bullets": [],
+      "logo": "/images/logos/unique-design.svg",
+      "color": "#172D4B",
+      "tone": "light"
+    },
+    {
+      "company": "Bewise Solutions",
+      "role": "Web developer",
+      "period": "2022 – 2023",
+      "text": "Managed and updated text, images and video on client websites, built WordPress websites, supported customers and built the Restaurant Gem website.",
+      "bullets": [],
+      "logo": "/images/logos/bewise.png",
+      "color": "#2a2145",
+      "tone": "light"
+    },
+    {
+      "company": "SOVOT",
+      "role": "Front desk employee",
+      "period": "2020 – 2021",
+      "text": "Solved IT-related issues, supported end users, brainstormed solutions and offered advice.",
+      "bullets": [],
+      "logo": "/images/logos/sovot.png",
+      "color": "#f8ec4a",
+      "tone": "dark"
+    }
+  ],
+  "stack": [
+    {
+      "group": "Design",
+      "items": [
+        "Figma"
+      ]
+    },
+    {
+      "group": "Build",
+      "items": [
+        "HTML & CSS",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "PHP"
+      ]
+    },
+    {
+      "group": "CMS",
+      "items": [
+        "WordPress",
+        "Elementor",
+        "Webflow",
+        "Kirby CMS"
+      ]
+    },
+    {
+      "group": "Backend",
+      "items": [
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ]
+    },
+    {
+      "group": "Automation",
+      "items": [
+        "GoHighLevel",
+        "n8n"
+      ]
+    }
+  ],
+  "about": {
+    "lead": "Creative eye. Full-stack hands.",
+    "text": "I design everything myself in Figma, then build it in code, from the first sketch to the live site. I'm full stack with frontend as my strongest side, and I set up automations with n8n and GoHighLevel.",
+    "facts": [
+      {
+        "label": "Based in",
+        "value": "Noord-Brabant, Netherlands"
+      },
+      {
+        "label": "Focus",
+        "value": "Web design & development, Figma to production"
+      },
+      {
+        "label": "Email",
+        "value": "iqrafarah02@gmail.com"
+      }
+    ],
+    "what": [
+      {
+        "title": "Design",
+        "text": "I draw every screen in Figma first, so it feels right before any code.",
+        "tags": [
+          "Figma",
+          "Website design"
+        ]
+      },
+      {
+        "title": "Build",
+        "text": "WordPress, or React and Next.js when a site needs more.",
+        "tags": [
+          "WordPress",
+          "React",
+          "Next.js",
+          "Node.js"
+        ]
+      },
+      {
+        "title": "Look after",
+        "text": "I test everything and keep sites running well after launch.",
+        "tags": [
+          "Testing",
+          "Scrum",
+          "Maintenance"
+        ]
+      }
+    ]
+  },
+  "since": 2022,
+  "now": [
+    {
+      "label": "Looking for",
+      "value": "A web designer / developer role"
+    },
+    {
+      "label": "Based in",
+      "value": "Noord-Brabant, NL"
+    },
+    {
+      "label": "Works in",
+      "value": "Figma, Nuxt, React, WordPress"
+    }
+  ]
+}

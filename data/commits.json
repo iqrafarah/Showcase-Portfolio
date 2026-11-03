@@ -1,0 +1,1472 @@
+[
+ {
+  "sha": "ad7d0e3",
+  "date": "2026-11-02T19:55:22+01:00",
+  "message": "Initial commit",
+  "repo": "Showcase-Portfolio"
+ },
+ {
+  "sha": "c4da812",
+  "date": "2025-11-26T19:45:14+01:00",
+  "message": "ss",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "2ca2b9b",
+  "date": "2025-11-26T19:44:11+01:00",
+  "message": "commit readme",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "ae885a9",
+  "date": "2025-11-26T14:02:04+01:00",
+  "message": "final commit",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "cd564b8",
+  "date": "2025-11-24T14:12:06+01:00",
+  "message": "commit",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "a1d592a",
+  "date": "2025-11-24T13:27:00+01:00",
+  "message": "caculations works",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "08dee55",
+  "date": "2025-11-24T13:09:21+01:00",
+  "message": "changes",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "ec5fa2c",
+  "date": "2025-11-22T22:28:29+01:00",
+  "message": "analytics page added entries",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "1370367",
+  "date": "2025-11-22T19:35:44+01:00",
+  "message": "commit",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "2047f65",
+  "date": "2025-11-18T22:28:34+01:00",
+  "message": "category kinda works",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "ff18b25",
+  "date": "2025-11-18T21:35:44+01:00",
+  "message": "you can create expense",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "50c3ae0",
+  "date": "2025-11-18T00:55:11+01:00",
+  "message": "changes",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "a2bcf63",
+  "date": "2025-11-18T00:54:54+01:00",
+  "message": "first commit",
+  "repo": "WorthIt"
+ },
+ {
+  "sha": "cd9a21a",
+  "date": "2025-09-26T02:53:07+02:00",
+  "message": "commit",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "c5724f9",
+  "date": "2025-09-26T02:51:12+02:00",
+  "message": "final commit",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "d3d901e",
+  "date": "2025-09-26T02:51:01+02:00",
+  "message": "final commit (i think)",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "31b18d5",
+  "date": "2025-09-25T22:16:43+02:00",
+  "message": "everyhting works",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "8372b78",
+  "date": "2025-09-25T13:10:02+02:00",
+  "message": "commit",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "93a6d61",
+  "date": "2025-09-24T23:20:06+02:00",
+  "message": "commit",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "1e82563",
+  "date": "2025-09-24T10:24:34+02:00",
+  "message": "commit",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "81e6f91",
+  "date": "2025-09-23T13:54:29+02:00",
+  "message": "footer saved",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "28ae0c1",
+  "date": "2025-09-23T09:58:26+02:00",
+  "message": "skills works",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "af77445",
+  "date": "2025-09-22T14:57:39+02:00",
+  "message": "experience",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "070c0e8",
+  "date": "2025-09-22T09:45:42+02:00",
+  "message": "summart saved",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "a703bde",
+  "date": "2025-09-20T21:13:43+02:00",
+  "message": "hero works v2",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "0b00a99",
+  "date": "2025-09-20T19:17:22+02:00",
+  "message": "Hero works",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "024a394",
+  "date": "2025-09-17T11:21:03+02:00",
+  "message": "parse kinda works",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "2eeca93",
+  "date": "2025-09-17T10:39:02+02:00",
+  "message": "auth",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "088099b",
+  "date": "2025-09-16T10:46:01+02:00",
+  "message": "auth works v2",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "ffe188c",
+  "date": "2025-09-10T19:02:47+02:00",
+  "message": "auth works",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "74e1bd0",
+  "date": "2025-09-10T19:02:38+02:00",
+  "message": "auth works",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "a80c879",
+  "date": "2025-09-08T20:09:33+02:00",
+  "message": "commit",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "084adb6",
+  "date": "2025-09-08T13:36:03+02:00",
+  "message": "Initial commit from Create Next App",
+  "repo": "creatify-space"
+ },
+ {
+  "sha": "b514c2f",
+  "date": "2025-03-23T16:34:15+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c21777b",
+  "date": "2025-03-23T15:57:24+01:00",
+  "message": "price change to 5.99",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "43fe660",
+  "date": "2025-03-18T21:05:57+01:00",
+  "message": "changess",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "fff5b97",
+  "date": "2025-03-18T20:59:20+01:00",
+  "message": "DAY",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "505bce2",
+  "date": "2025-03-18T20:51:35+01:00",
+  "message": "changes friend code",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "80a4963",
+  "date": "2025-03-18T20:21:35+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "88795d8",
+  "date": "2025-03-13T22:27:32+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7f4efc7",
+  "date": "2025-03-13T22:25:57+01:00",
+  "message": "changes dailystats",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f22265b",
+  "date": "2025-03-13T22:17:05+01:00",
+  "message": "add friend link",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "54f05e8",
+  "date": "2025-03-13T21:57:23+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "b850d5c",
+  "date": "2025-03-09T03:38:36+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "a603852",
+  "date": "2025-03-09T01:53:43+01:00",
+  "message": "daily",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f818058",
+  "date": "2025-03-09T01:44:49+01:00",
+  "message": "test",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f2bd1fa",
+  "date": "2025-03-09T01:33:36+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1d02ed3",
+  "date": "2025-03-09T01:27:18+01:00",
+  "message": "fixed leaderboard friends",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4f638d2",
+  "date": "2025-03-06T22:31:37+01:00",
+  "message": "socials",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "a22dd6f",
+  "date": "2025-03-06T22:12:34+01:00",
+  "message": "fix?",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f61db24",
+  "date": "2025-03-06T21:44:48+01:00",
+  "message": "fixed leaderboard notification",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "95694a4",
+  "date": "2025-03-06T19:26:35+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "362220e",
+  "date": "2025-03-06T19:05:18+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "0caeb42",
+  "date": "2025-03-06T19:01:30+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "ac7ac27",
+  "date": "2025-03-06T18:53:06+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "9afa70a",
+  "date": "2025-03-06T18:46:09+01:00",
+  "message": "FIXED",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7544cf6",
+  "date": "2025-03-06T17:20:29+01:00",
+  "message": "streak works?",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "bf940bf",
+  "date": "2025-03-05T16:17:26+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1a78d7d",
+  "date": "2025-03-05T16:15:24+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f0e2464",
+  "date": "2025-03-05T15:23:25+01:00",
+  "message": "changes delete acc",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1d75915",
+  "date": "2025-03-05T15:11:11+01:00",
+  "message": "cancelsub",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "09339a4",
+  "date": "2025-03-05T14:42:10+01:00",
+  "message": "challenges completed, count total, settings delete acc",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "2b7d6d4",
+  "date": "2025-03-05T14:16:49+01:00",
+  "message": "fixed last active + totaldhikr",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f904ddf",
+  "date": "2025-03-02T16:13:50+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1d1f9cd",
+  "date": "2025-03-02T15:41:18+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c866717",
+  "date": "2025-03-02T15:15:25+01:00",
+  "message": "challenges",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "51bb00d",
+  "date": "2025-03-02T00:13:57+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "57784ec",
+  "date": "2025-03-01T23:00:04+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "8c97dd9",
+  "date": "2025-03-01T22:54:07+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "eb1e3fc",
+  "date": "2025-03-01T22:13:08+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "ce671cc",
+  "date": "2025-03-01T22:09:55+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6dc4edb",
+  "date": "2025-03-01T22:07:10+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "b4529de",
+  "date": "2025-03-01T22:04:23+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3557019",
+  "date": "2025-03-01T22:01:47+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "e8be5e7",
+  "date": "2025-03-01T21:13:21+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "bbec851",
+  "date": "2025-03-01T21:07:49+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "09e8e60",
+  "date": "2025-03-01T20:45:55+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7bfa572",
+  "date": "2025-03-01T18:18:22+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4dbce23",
+  "date": "2025-03-01T18:17:24+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c5db6d7",
+  "date": "2025-03-01T18:14:13+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "635fa89",
+  "date": "2025-03-01T17:59:12+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c878fc3",
+  "date": "2025-03-01T17:35:41+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "eae310d",
+  "date": "2025-03-01T17:24:19+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6492b48",
+  "date": "2025-03-01T16:57:08+01:00",
+  "message": "chnages",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "fa6af80",
+  "date": "2025-03-01T16:53:20+01:00",
+  "message": "changes style",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c403adb",
+  "date": "2025-03-01T16:34:48+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "42de3bf",
+  "date": "2025-03-01T16:30:58+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "116e631",
+  "date": "2025-03-01T16:25:30+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4d3695e",
+  "date": "2025-03-01T15:07:01+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "aa7ce70",
+  "date": "2025-03-01T15:01:48+01:00",
+  "message": "whentouse",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "51ab56f",
+  "date": "2025-03-01T14:37:17+01:00",
+  "message": "install2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7e4326b",
+  "date": "2025-03-01T14:30:16+01:00",
+  "message": "test install",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "9a4e0a5",
+  "date": "2025-03-01T14:22:50+01:00",
+  "message": "changes2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "e41cb1f",
+  "date": "2025-02-27T21:28:01+01:00",
+  "message": "install",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "df0144c",
+  "date": "2025-02-27T21:11:35+01:00",
+  "message": "fixes?",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3ef29e4",
+  "date": "2025-02-25T22:11:48+01:00",
+  "message": "removed console.log",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3356566",
+  "date": "2025-02-25T22:11:02+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "72d2c0e",
+  "date": "2025-02-25T22:10:54+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "92c468b",
+  "date": "2025-02-25T22:08:29+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "fc6f794",
+  "date": "2025-02-25T21:57:44+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "dff5152",
+  "date": "2025-02-24T22:13:17+01:00",
+  "message": "payment v1.2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "00100f8",
+  "date": "2025-02-24T21:47:49+01:00",
+  "message": "payment v1",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "2878666",
+  "date": "2025-02-22T23:11:29+01:00",
+  "message": "rank2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "a5e7866",
+  "date": "2025-02-22T23:00:42+01:00",
+  "message": "rank",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "9463de8",
+  "date": "2025-02-22T22:39:27+01:00",
+  "message": "v2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "8a60a8a",
+  "date": "2025-02-22T22:15:57+01:00",
+  "message": "show added friend immediatly",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "40abaa3",
+  "date": "2025-02-22T22:13:07+01:00",
+  "message": "friend notifications works",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "42c4cae",
+  "date": "2025-02-22T21:37:30+01:00",
+  "message": "friend fixed",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "550d915",
+  "date": "2025-02-22T21:16:07+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "18bf4b4",
+  "date": "2025-02-22T00:45:36+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "fe1b299",
+  "date": "2025-02-22T00:32:03+01:00",
+  "message": "where",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "5e7539b",
+  "date": "2025-02-22T00:28:36+01:00",
+  "message": "fixed",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "19c3d5d",
+  "date": "2025-02-22T00:25:05+01:00",
+  "message": "changes2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f0a2756",
+  "date": "2025-02-22T00:16:36+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6ab68d1",
+  "date": "2025-02-22T00:05:12+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "a09e16f",
+  "date": "2025-02-21T22:44:49+01:00",
+  "message": "changes i think this works kinda",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "224cf4a",
+  "date": "2025-02-21T21:44:32+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3d54718",
+  "date": "2025-02-21T21:33:48+01:00",
+  "message": "fix",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "ef0a9bc",
+  "date": "2025-02-21T21:33:27+01:00",
+  "message": "friend3",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "8d5d739",
+  "date": "2025-02-21T21:11:15+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "fdc0eda",
+  "date": "2025-02-21T21:10:44+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f370be8",
+  "date": "2025-02-21T21:06:41+01:00",
+  "message": "friends2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1dec1e2",
+  "date": "2025-02-21T20:50:10+01:00",
+  "message": "friend?",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f7d0f19",
+  "date": "2025-02-21T20:37:30+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "f7e2380",
+  "date": "2025-02-21T20:08:50+01:00",
+  "message": "friend removed immediatly",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1201c19",
+  "date": "2025-02-21T19:41:19+01:00",
+  "message": "ui profile",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "a7526e9",
+  "date": "2025-02-21T19:40:15+01:00",
+  "message": "delete friend fix",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "b6267cc",
+  "date": "2025-02-21T19:08:57+01:00",
+  "message": "delete acc, if not logged in then no access",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c786f80",
+  "date": "2025-02-21T18:24:06+01:00",
+  "message": "changes challenges design",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "827a4d0",
+  "date": "2025-02-21T18:20:56+01:00",
+  "message": "friends delete, logout, delete acc",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "78d0461",
+  "date": "2025-02-21T17:12:31+01:00",
+  "message": "changes profilemodal scroll",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "0f9fb9a",
+  "date": "2025-02-21T17:06:36+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "52bfa95",
+  "date": "2025-02-21T17:03:55+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6f2c750",
+  "date": "2025-02-21T15:23:04+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "ecf15ab",
+  "date": "2025-02-21T15:13:56+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "a670856",
+  "date": "2025-02-21T15:08:22+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "81f15e7",
+  "date": "2025-02-21T15:03:34+01:00",
+  "message": "challenges",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c978812",
+  "date": "2025-02-21T14:57:17+01:00",
+  "message": "leaderboard you2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c3ca1b0",
+  "date": "2025-02-21T14:40:08+01:00",
+  "message": "sound off",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1a140bb",
+  "date": "2025-02-21T14:25:25+01:00",
+  "message": "leaderboard YOU",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "2fcb44a",
+  "date": "2025-02-21T14:10:52+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "2f6b588",
+  "date": "2025-02-21T13:35:59+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "b373268",
+  "date": "2025-02-10T21:03:33+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "e59fd4f",
+  "date": "2025-02-10T20:15:38+01:00",
+  "message": "notification",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "b3c6f97",
+  "date": "2025-02-04T22:56:34+01:00",
+  "message": "leaderboard profile click + logout.",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "8d09272",
+  "date": "2025-02-04T22:25:46+01:00",
+  "message": "friends link",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3b0bbff",
+  "date": "2025-02-03T22:13:46+01:00",
+  "message": "leaderboard community",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "39c8d51",
+  "date": "2025-02-01T22:53:03+01:00",
+  "message": "settings",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7929631",
+  "date": "2025-02-01T22:24:17+01:00",
+  "message": "bottomNav.js",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "41930f8",
+  "date": "2025-02-01T22:12:33+01:00",
+  "message": "settings",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "fa31307",
+  "date": "2025-02-01T20:57:59+01:00",
+  "message": "SOUND2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "b18fc76",
+  "date": "2025-02-01T20:16:43+01:00",
+  "message": "SOUND",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7e2cf24",
+  "date": "2025-02-01T19:48:22+01:00",
+  "message": "vibrate",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4aa15dd",
+  "date": "2025-02-01T19:43:11+01:00",
+  "message": "vibrate",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4c57777",
+  "date": "2025-02-01T19:27:40+01:00",
+  "message": "handelclick3",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3b57a6a",
+  "date": "2025-02-01T18:19:09+01:00",
+  "message": "handelclick2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "070b807",
+  "date": "2025-02-01T18:02:18+01:00",
+  "message": "handelclick",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6580f85",
+  "date": "2025-02-01T18:00:15+01:00",
+  "message": "month",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "262ebed",
+  "date": "2025-02-01T17:30:25+01:00",
+  "message": "month",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7d385ae",
+  "date": "2025-02-01T16:31:26+01:00",
+  "message": "analytics works WIDTH",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3121f93",
+  "date": "2025-02-01T07:12:02+01:00",
+  "message": "analytics works WIDTH FIXED",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "ac549b2",
+  "date": "2025-01-31T23:49:24+01:00",
+  "message": "analytics works",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "d1aaedb",
+  "date": "2025-01-31T22:38:37+01:00",
+  "message": "styling analaytics",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "007258d",
+  "date": "2025-01-31T22:32:59+01:00",
+  "message": "MAYBE BARS",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "69795f9",
+  "date": "2025-01-31T22:12:50+01:00",
+  "message": "Next level screen FIXED",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "30a9cc5",
+  "date": "2025-01-31T21:23:15+01:00",
+  "message": "Next level screen",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "9539f8c",
+  "date": "2025-01-31T21:16:54+01:00",
+  "message": "Next level screen",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "83f73dc",
+  "date": "2025-01-31T18:14:27+01:00",
+  "message": "progress bar challenge screen fixed",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "ed97c29",
+  "date": "2025-01-31T17:51:48+01:00",
+  "message": "total points FIXED?",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "00aece8",
+  "date": "2025-01-31T17:41:27+01:00",
+  "message": "total points",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4b3f69b",
+  "date": "2025-01-31T12:14:55+01:00",
+  "message": "total points",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "9ee8504",
+  "date": "2025-01-30T23:09:48+01:00",
+  "message": "profile + best streak + level progress",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7ec414f",
+  "date": "2025-01-29T22:42:48+01:00",
+  "message": "profile dymamic + counter",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3902bc5",
+  "date": "2025-01-29T22:41:20+01:00",
+  "message": "profile dymamic + counter",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "8298602",
+  "date": "2025-01-29T21:36:10+01:00",
+  "message": "confetti",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "532db91",
+  "date": "2025-01-29T20:19:00+01:00",
+  "message": "Fix?",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4872927",
+  "date": "2025-01-29T19:52:16+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "9e94c59",
+  "date": "2025-01-28T22:41:20+01:00",
+  "message": "statistics styling",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "b849155",
+  "date": "2025-01-28T21:25:25+01:00",
+  "message": "last active",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1807271",
+  "date": "2025-01-28T20:51:23+01:00",
+  "message": "fix",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "8f50ace",
+  "date": "2025-01-28T20:38:21+01:00",
+  "message": "GET count",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c34155e",
+  "date": "2025-01-28T20:10:46+01:00",
+  "message": "fix suspense",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c5920c5",
+  "date": "2025-01-27T21:35:45+01:00",
+  "message": "userchallenge saved in the db",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "65a936a",
+  "date": "2025-01-19T22:53:47+01:00",
+  "message": "fixed?",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6796925",
+  "date": "2025-01-19T22:48:03+01:00",
+  "message": "bar",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "c907bb7",
+  "date": "2025-01-19T22:44:42+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "127b74f",
+  "date": "2025-01-19T21:55:51+01:00",
+  "message": "profile dynamic",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "cb52a6d",
+  "date": "2025-01-19T21:04:14+01:00",
+  "message": "fix",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "5e3fe38",
+  "date": "2025-01-19T18:41:21+01:00",
+  "message": "changs",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1d378cb",
+  "date": "2025-01-19T15:01:11+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "7cf350b",
+  "date": "2025-01-19T14:42:32+01:00",
+  "message": "more like an app",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "9229859",
+  "date": "2025-01-19T14:39:24+01:00",
+  "message": "bgwhute",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "455d80c",
+  "date": "2025-01-19T14:35:10+01:00",
+  "message": "ch",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1bdfc57",
+  "date": "2025-01-19T14:34:41+01:00",
+  "message": "man",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "11439a8",
+  "date": "2025-01-19T14:33:43+01:00",
+  "message": "rm sticky",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "aa879d5",
+  "date": "2025-01-19T14:26:47+01:00",
+  "message": "mta white",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "aa8e3df",
+  "date": "2025-01-19T14:24:32+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "01d1521",
+  "date": "2025-01-19T14:19:36+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "fb0b359",
+  "date": "2025-01-19T14:08:57+01:00",
+  "message": "changes2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "83c9415",
+  "date": "2025-01-19T14:01:33+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "47c7330",
+  "date": "2025-01-19T13:58:58+01:00",
+  "message": "bottomnav",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "34d4763",
+  "date": "2025-01-19T13:57:52+01:00",
+  "message": "height + width",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "d0492e9",
+  "date": "2025-01-19T13:52:44+01:00",
+  "message": "height",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "846f065",
+  "date": "2025-01-19T13:40:50+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "46f099f",
+  "date": "2025-01-19T11:48:07+01:00",
+  "message": "dbs conn",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "054ab06",
+  "date": "2025-01-18T22:35:02+01:00",
+  "message": "popp",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6d4cbe8",
+  "date": "2025-01-18T22:21:29+01:00",
+  "message": "chan",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "8f65904",
+  "date": "2025-01-18T21:45:35+01:00",
+  "message": "test",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "a337892",
+  "date": "2025-01-18T21:40:52+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4cd45e3",
+  "date": "2025-01-18T21:21:09+01:00",
+  "message": "changes2",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "1242782",
+  "date": "2025-01-18T21:16:25+01:00",
+  "message": "test",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "6d6642e",
+  "date": "2025-01-18T21:09:54+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "3c3db84",
+  "date": "2025-01-18T16:13:41+01:00",
+  "message": "changes",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "4858df7",
+  "date": "2025-01-18T12:00:43+01:00",
+  "message": "first commit",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "2ccf66d",
+  "date": "2025-01-15T16:07:48+01:00",
+  "message": "Initial commit",
+  "repo": "Tasbeeh-Challenge"
+ },
+ {
+  "sha": "53f2f0a",
+  "date": "2024-09-25T19:49:46+02:00",
+  "message": "Update index.html",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "f559564",
+  "date": "2024-04-20T17:12:40+02:00",
+  "message": "Update index.html",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "7b7b9b1",
+  "date": "2024-04-06T14:33:46+02:00",
+  "message": "img",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "6aa7a54",
+  "date": "2024-04-06T14:20:38+02:00",
+  "message": "new project",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "df6ff88",
+  "date": "2024-02-25T11:45:39+01:00",
+  "message": "Merge branch 'main' of https://github.com/iqrafarah/Portfolio",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "929901c",
+  "date": "2024-02-25T11:45:36+01:00",
+  "message": "Add position: relative",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "1ac657d",
+  "date": "2024-01-25T20:23:38+01:00",
+  "message": "Update style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "9f9f2b1",
+  "date": "2024-01-21T15:26:01+01:00",
+  "message": "Update font size and padding in CSS, and change button text in JS",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "e05483b",
+  "date": "2024-01-21T15:19:55+01:00",
+  "message": "Merge branch 'main' of https://github.com/iqrafarah/Portfolio",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "ee8a4e2",
+  "date": "2024-01-21T15:19:40+01:00",
+  "message": "commit",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "8c235ca",
+  "date": "2024-01-20T19:47:18+01:00",
+  "message": "Update index.html",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "9dcf80c",
+  "date": "2024-01-20T19:43:09+01:00",
+  "message": "Update index.html",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "0712cce",
+  "date": "2024-01-20T19:40:14+01:00",
+  "message": "Update index.html",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "dc75751",
+  "date": "2024-01-20T13:10:15+01:00",
+  "message": "Fix margin and update max-width in CSS",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "2889c94",
+  "date": "2024-01-20T11:10:33+01:00",
+  "message": "kleine aanpassing",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "78905ec",
+  "date": "2024-01-20T10:40:53+01:00",
+  "message": "Update project detail page and index page",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "ab861f5",
+  "date": "2024-01-18T15:35:34+01:00",
+  "message": "Update style.css and index.js",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "3ae91bc",
+  "date": "2024-01-17T18:01:06+01:00",
+  "message": "Add \"What I've Learned\" section to project detail page",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "16261e8",
+  "date": "2024-01-08T23:28:26+01:00",
+  "message": "Update style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "ab68869",
+  "date": "2024-01-08T22:18:51+01:00",
+  "message": "Update style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "cb8dc6e",
+  "date": "2024-01-08T22:18:03+01:00",
+  "message": "Update style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "1733906",
+  "date": "2024-01-08T22:16:49+01:00",
+  "message": "Update style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "f877ba4",
+  "date": "2024-01-08T22:14:21+01:00",
+  "message": "Update style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "24bd24b",
+  "date": "2024-01-08T22:13:25+01:00",
+  "message": "Update style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "0cf40a1",
+  "date": "2024-01-08T22:11:33+01:00",
+  "message": "Update project-detail.html",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "89b99a5",
+  "date": "2024-01-08T22:06:41+01:00",
+  "message": "Update and rename style.css to css/style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "f7ce83f",
+  "date": "2024-01-08T22:03:48+01:00",
+  "message": "Update and rename css/home to style.css",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "258eeda",
+  "date": "2024-01-08T22:02:48+01:00",
+  "message": "Update home",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "02357f6",
+  "date": "2024-01-08T22:01:59+01:00",
+  "message": "styling update",
+  "repo": "Portfolio"
+ },
+ {
+  "sha": "356c72c",
+  "date": "2024-01-08T21:55:43+01:00",
+  "message": "Add files via upload",
+  "repo": "Portfolio"
+ }
+]
