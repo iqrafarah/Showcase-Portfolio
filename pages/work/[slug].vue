@@ -121,20 +121,21 @@ onMounted(() => {
   @apply min-h-[100svh] bg-ink text-beige;
 }
 
-/* The buttons stay at the top while you scroll. They have no background, so the screenshots show behind them. */
+/* The buttons stay at the top while you scroll. They have no background, so the pictures show behind them.
+   On a large screen the header takes no space (-mb-[81px]), so the pictures start at the very top of the page. */
 .case-header {
-  @apply sticky top-0 z-20 flex h-[104px] items-end justify-end gap-4 px-6 pb-3 sm:h-[81px] sm:items-center sm:px-10 sm:pb-0;
+  @apply sticky top-0 z-20 flex h-[104px] items-end justify-end gap-4 px-6 pb-3 sm:h-[81px] sm:items-center sm:px-10 sm:pb-0 lg:-mb-[81px];
 }
 
 /* Two columns on a large screen: text (3 parts) and screenshots (7 parts). On a phone they stack. */
 .case-layout {
-  @apply grid gap-10 px-6 pb-24 pt-4 sm:px-10 lg:grid-cols-[minmax(320px,3fr)_minmax(0,7fr)] lg:gap-12 lg:pb-0 lg:pt-0;
+  @apply grid gap-10 px-6 pb-24 pt-4 sm:px-10 lg:grid-cols-[minmax(320px,3fr)_minmax(0,7fr)] lg:gap-12 lg:pb-0 lg:pr-0 lg:pt-0;
 }
 
 /* The text column sticks to the top while the screenshots scroll,
-   and is exactly as tall as the screen (minus the header at the top and a small gap at the bottom). */
+   and is exactly as tall as the screen (minus a small gap at the top and at the bottom). */
 .case-text {
-  @apply lg:sticky lg:top-[81px] lg:flex lg:h-[calc(100svh-107px)] lg:flex-col lg:self-start;
+  @apply lg:mt-10 lg:sticky lg:top-10 lg:flex lg:h-[calc(100svh-66px)] lg:flex-col lg:self-start;
 }
 .case-category {
   @apply font-mono text-[12px] uppercase text-beige/45;

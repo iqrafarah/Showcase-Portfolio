@@ -58,7 +58,7 @@ function paragraphsOf(text?: string | string[]) {
 <style scoped>
 /* The list. It scrolls inside itself when the screen is too short, without a visible scrollbar. */
 .accordion {
-  @apply mt-8 min-h-0 flex-1 overflow-y-auto border-b border-beige/15;
+  @apply mt-5 min-h-0 flex-1 overflow-y-auto border-b border-beige/15;
   scrollbar-width: none;
 }
 .accordion::-webkit-scrollbar {
