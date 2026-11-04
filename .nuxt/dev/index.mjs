@@ -764,10 +764,22 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
-      "/work/vecozo": {
+      "/work/restaurant-gem": {
         "prerender": true
       },
       "/work/moodtunes": {
+        "prerender": true
+      },
+      "/work/vecozo": {
+        "prerender": true
+      },
+      "/work/creatify": {
+        "prerender": true
+      },
+      "/work/tasbeeh-challenge": {
+        "prerender": true
+      },
+      "/work/pomotomo": {
         "prerender": true
       },
       "/_nuxt/builds/meta/**": {
@@ -780,11 +792,27 @@ const _inlineRuntimeConfig = {
           "cache-control": "public, max-age=1, immutable"
         }
       },
-      "/work/vecozo/_payload.json": {
+      "/work/restaurant-gem/_payload.json": {
         "ssr": true,
         "prerender": true
       },
       "/work/moodtunes/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/work/vecozo/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/work/creatify/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/work/tasbeeh-challenge/_payload.json": {
+        "ssr": true,
+        "prerender": true
+      },
+      "/work/pomotomo/_payload.json": {
         "ssr": true,
         "prerender": true
       }
