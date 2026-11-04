@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import profile from '~/data/profile.json'
 
+// THE MENU AT THE TOP: Work, About, Contact
+//   - "Work" lights up while the Work section is in the middle of the screen
+//   - the menu slides away when you scroll down and comes back when you scroll up
+//   - "About" opens the About drawer, "Contact" opens your mail app
 const about = useAbout()
 const inWork = ref(false) // the work section is in the middle of the screen
 const hidden = ref(false) // the menu slides away while you scroll down

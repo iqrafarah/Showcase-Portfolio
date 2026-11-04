@@ -2,8 +2,9 @@
 import profile from '~/data/profile.json'
 import icons from '~/data/icons.json'
 
-// Every tool is a bridged pair like the Close button, but the other way round: logo first, then the name.
-// Dark buttons, white logos. A tool without a logo shows a short symbol instead.
+// THE TOOLBOX in the About drawer: a row of small dark buttons, each with the tool's logo and name.
+// The tools come from data/profile.json (stack). The logo shapes are in data/icons.json.
+// A tool without a logo shows a short symbol instead (add one in `symbols`).
 const symbols: Record<string, string> = { GoHighLevel: 'GHL' }
 
 const tools = profile.stack.flatMap((group) => group.items).map((name) => ({ name, hasLogo: name in icons }))

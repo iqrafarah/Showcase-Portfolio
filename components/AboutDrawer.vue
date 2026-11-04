@@ -2,25 +2,30 @@
 import gsap from 'gsap'
 import profile from '~/data/profile.json'
 
+// THE ABOUT DRAWER
+// A panel that slides in from the right when you click "About" in the menu.
+// Its text comes from data/profile.json:  about (intro text), experience (jobs), stack (tools).
+//
+// `open` is true while the drawer is open. The menu and the hero button set it to true (see useAbout in composables/useUi.ts).
 const open = useAbout()
-const asset = useAsset()
 const drawer = ref<HTMLElement>()
 const closeButton = ref<HTMLButtonElement>()
-const copied = ref(false)
+const emailCopied = ref(false)
 
-function copy() {
+// "Copy email" button: copies the address and shows "Copied" for a moment
+function copyEmail() {
   navigator.clipboard?.writeText(profile.email).catch(() => {})
-  copied.value = true
-  setTimeout(() => (copied.value = false), 1800)
+  emailCopied.value = true
+  setTimeout(() => (emailCopied.value = false), 1800)
 }
 
+// When the drawer opens or closes
 watch(open, (isOpen) => {
-  document.body.classList.toggle('lock', isOpen)
-  document.documentElement.classList.toggle('drawer-open', isOpen)
-  isOpen ? scroller.lenis?.stop() : scroller.lenis?.start()
+  lockPageScroll(isOpen) // the page behind it must not scroll, see composables/usePanel.ts
   if (!isOpen) return
 
   nextTick(() => closeButton.value?.focus())
+
   // the blocks rise one after another once the drawer has slid in
   gsap.fromTo(
     drawer.value!.querySelectorAll('[data-item]'),
@@ -29,22 +34,19 @@ watch(open, (isOpen) => {
   )
 })
 
-onMounted(() => {
-  addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') open.value = false
-  })
-})
-
+onMounted(() => closeOnEscape(() => open.value, () => (open.value = false)))
 </script>
 
 <template>
   <div>
+    <!-- the dark, blurred area behind the drawer. Click it to close. -->
     <div
       class="fixed inset-0 z-[80] bg-black/50 backdrop-blur-[3px] transition-opacity duration-500"
       :class="open ? 'opacity-100' : 'pointer-events-none opacity-0'"
       @click="open = false"
     />
 
+    <!-- the drawer itself -->
     <aside
       ref="drawer"
       data-lenis-prevent
@@ -69,7 +71,7 @@ onMounted(() => {
         <div data-item class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
           <div class="pair">
             <a :href="`mailto:${profile.email}`" class="btn btn-light"><RollText text="Say hello" /></a>
-            <button type="button" class="btn btn-light" @click="copy"><RollText :text="copied ? 'Copied' : 'Copy email'" /></button>
+            <button type="button" class="btn btn-light" @click="copyEmail"><RollText :text="emailCopied ? 'Copied' : 'Copy email'" /></button>
           </div>
           <p class="font-mono text-[12px] uppercase text-beige/45">Design + code + automation</p>
         </div>

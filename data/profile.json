@@ -1,34 +1,7 @@
 {
-  "name": "Iqra Farah",
-  "role": "Web designer & developer",
-  "location": "Noord-Brabant, Netherlands",
-  "timezone": "Europe/Amsterdam",
   "email": "iqrafarah02@gmail.com",
-  "site": "https://iqrafarah.nl",
   "github": "https://github.com/iqrafarah",
   "githubUser": "iqrafarah",
-  "eyebrow": "Web designer & developer / Noord-Brabant, NL",
-  "headline": [
-    "Hello, I'm Iqra,",
-    "a web designer & developer."
-  ],
-  "intro": "I design everything myself in Figma and build it in Next.js, React and WordPress. A creative who codes.",
-  "ticker": [
-    "Web designer & developer",
-    "Noord-Brabant, NL",
-    "Figma to production",
-    "Built with Nuxt + Tailwind"
-  ],
-  "spiral": "IQRA FARAH · WEB DESIGNER & DEVELOPER · FIGMA TO PRODUCTION · ",
-  "index": {
-    "title": [
-      "Learning by shipping.",
-      "Every single time."
-    ],
-    "text": "I'm creative, so I design. I'm technical, so I build. Everything starts as my own design in Figma and ends as a fast, working site, with automations on top when a business needs them. I'm full stack, strongest on the frontend, and I've shipped real sites for a scheduling tool, a restaurant and a law firm.",
-    "label": "Projects shipped",
-    "chip": "9 stacks"
-  },
   "experience": [
     {
       "company": "Unique Design",
@@ -149,20 +122,5 @@
         ]
       }
     ]
-  },
-  "since": 2022,
-  "now": [
-    {
-      "label": "Looking for",
-      "value": "A web designer / developer role"
-    },
-    {
-      "label": "Based in",
-      "value": "Noord-Brabant, NL"
-    },
-    {
-      "label": "Works in",
-      "value": "Figma, Nuxt, React, WordPress"
-    }
-  ]
+  }
 }

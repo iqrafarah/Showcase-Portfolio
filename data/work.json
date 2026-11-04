@@ -10,8 +10,6 @@
       "Figma"
     ],
     "summary": "Website for Rooster, a Dutch tool for staff scheduling and planning. I designed it and built it in WordPress.",
-    "description": "Website for rooster.nu, designed and built in WordPress.",
-    "learned": "Turning a design into a theme a client can edit themselves.",
     "image": "/images/rooster.jpg",
     "links": [
       {
@@ -69,8 +67,6 @@
       "Awwwards"
     ],
     "summary": "A restaurant website. I designed it in Figma and built it in WordPress.",
-    "description": "A restaurant website, designed and built in WordPress.",
-    "learned": "What it takes to build to a standard that gets noticed: details, motion and real client feedback.",
     "image": "/images/restaurant-gem.jpg",
     "links": [
       {
@@ -126,8 +122,6 @@
       "Bootstrap"
     ],
     "summary": "A study tool that combines the Pomodoro technique with a virtual plant that grows with every focus session, plus a physical buzzer.",
-    "description": "Pomodoro timer with a growing plant.",
-    "learned": "Building a full app with a database and a physical device.",
     "image": "/images/pomodoroplant.jpg",
     "links": [
       {
@@ -182,8 +176,6 @@
       "Elementor"
     ],
     "summary": "A law firm website built with Elementor, using Flexbox for a smooth, user-friendly layout.",
-    "description": "A law firm website with Elementor and Flexbox. Not entirely new to me, but every project brings its own challenges.",
-    "learned": "A better understanding of Flexbox for layouts that adapt well to different screens.",
     "image": "/images/advokat.jpg",
     "links": [
       {
@@ -239,8 +231,6 @@
       "Prisma"
     ],
     "summary": "Turn your LinkedIn data into a live portfolio in minutes. Magic-link login, editable dashboard, one-click publishing.",
-    "description": "A platform that generates a professional portfolio from a LinkedIn PDF, with a dashboard to customise it and a unique URL to share.",
-    "learned": "Auth flows, parsing real-world data and a live-preview dashboard.",
     "image": "/images/creatify.jpg",
     "links": [
       {

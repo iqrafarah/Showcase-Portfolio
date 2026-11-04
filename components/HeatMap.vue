@@ -2,9 +2,9 @@
 import saved from '~/data/heatmap.json'
 import profile from '~/data/profile.json'
 
-// A contribution heatmap for 2024 (a good year). Same look as the GitHub profile graph.
-// A contribution heatmap, old comment: for the last year (same look as the GitHub profile graph).
-// It asks GitHub for live numbers. If that does not work, it shows the saved graph in data/heatmap.json.
+// THE CONTRIBUTION GRAPH in the About drawer (the same look as the graph on a GitHub profile).
+// It shows one year (YEAR below). It asks GitHub for live numbers.
+// If that does not work, it shows the saved graph from data/heatmap.json instead.
 const props = defineProps<{ dark?: boolean; hideTotal?: boolean }>()
 
 const YEAR = 2024

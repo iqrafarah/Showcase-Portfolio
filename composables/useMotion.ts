@@ -5,10 +5,16 @@ import Lenis from 'lenis'
 // the smooth scroller, kept here so other components can pause it
 export const scroller: { lenis: Lenis | null } = { lenis: null }
 
-// Scroll animations.
-//   data-reveal   slides up when it scrolls into view (again, every time it comes back)
-//   data-stagger  its children slide up one after another
-// These elements are hidden in CSS until GSAP shows them (see main.css).
+// SMOOTH SCROLLING AND SCROLL ANIMATIONS
+//
+// Two things happen here:
+//   1. Smooth scrolling (the library "Lenis"): the page glides instead of jumping.
+//   2. Elements that slide up when they scroll into view (the library "GSAP"):
+//        data-reveal   put this on an element and it slides up when it scrolls into view
+//        data-stagger  put this on a box and its children slide up one after another
+//      Example:  <p data-reveal>I slide up</p>
+//
+// Those elements are hidden by a rule in assets/css/main.css until GSAP shows them.
 // The "js" class on <html> is only added when the visitor allows motion.
 export function initMotion() {
   if (!document.documentElement.classList.contains('js')) return

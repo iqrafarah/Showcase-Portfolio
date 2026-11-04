@@ -2,8 +2,13 @@
 import work from '~/data/work.json'
 import profile from '~/data/profile.json'
 
-// Every card has its own width and side, and a different gap above it, so the page feels random but never crowded.
-// Nothing overlaps: there is always clear space between two cards (on small screens: full width).
+// THE WORK SECTION: one <WorkCard /> for every project in data/work.json.
+//
+// Every card has its own width, side and gap above it, so the page feels loose but never crowded.
+// Nothing overlaps. On small screens every card is full width.
+//   place = the width and position of the card (only on large screens, the "lg:" part)
+//   ratio = the shape of the picture (16/10 is wide, 4/5 is tall, square is square)
+// The first card uses the first line, the second card the second line, and so on. It starts over after the last line.
 const places = [
   { place: 'lg:w-[62%]', ratio: 'aspect-[16/10]' },
   { place: 'lg:w-[30%] lg:ml-auto lg:mr-[4%] lg:mt-[7vw]', ratio: 'aspect-[4/5]' },

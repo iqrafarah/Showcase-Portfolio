@@ -1,19 +1,23 @@
 <script setup lang="ts">
-// A band of square cells that turns one colour into another.
-// Scrolling moves the edge, so the cells seem to dissolve.
+// THE PIXEL DISSOLVE BETWEEN TWO SECTIONS
+// A band of square cells that turns one colour into another (used in app.vue: dark Work section -> light Contact section).
+// While you scroll, the "edge" between the two colours moves, so the cells seem to dissolve into each other.
+//
+//   <PixelDissolve from="#121211" into="#efeee9" />     from = the colour above, into = the colour below
 const props = defineProps<{ from: string; into: string }>()
 
 const canvas = ref<HTMLCanvasElement>()
-const cell = 24
+const cell = 24 // size of one square in pixels
 
 onMounted(() => {
   const el = canvas.value!
   const ctx = el.getContext('2d')!
   let cols = 0
   let rows = 0
-  let cells: number[] = []
-  let visible = false
+  let cells: number[] = [] // one random number (0 to 1) per square: decides when it changes colour
+  let visible = false // only redraw while the band is on screen
 
+  // measures the band, makes the random numbers, and draws. Runs at the start and when the size changes.
   function build() {
     const dpr = Math.min(devicePixelRatio || 1, 2)
     el.width = el.clientWidth * dpr
@@ -31,8 +35,10 @@ onMounted(() => {
     draw()
   }
 
+  // paints the band for the current scroll position
   function draw() {
     const box = el.getBoundingClientRect()
+    // how far the band has scrolled through the screen: 0 = just entering at the bottom, 1 = just left at the top
     const scrolled = clamp((innerHeight - box.top) / (innerHeight + box.height))
 
     ctx.fillStyle = props.from

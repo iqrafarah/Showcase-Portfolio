@@ -1,77 +1,76 @@
 <script setup lang="ts">
-import gsap from 'gsap'
+// THE BLACK PIXELS BEHIND THE HERO
+//
+// A grid of solid black squares, drawn on a <canvas> behind the hero text:
+//   - thickest along the bottom edge, where the hero joins the dark Work section
+//   - a lighter sprinkle down the left and right sides
+//   - nothing behind the headline, so the text is always easy to read
+// Every square is placed by chance, so it looks different on every visit.
+// It does not move. It is drawn once, and again when the window changes size.
 
-// Big black squares behind the hero, thickest at the bottom where they join the dark Work section, fading out upwards.
-// Every square has its own strength (a few fixed steps, like the pixel dissolve) and slowly breathes.
 const canvas = ref<HTMLCanvasElement>()
 
-onMounted(() => {
+const COLOR = '#121211' // the same black as the Work section
+const SQUARE_SIZE = 56 // pixels (smaller on a phone, see below)
+const SQUARE_SIZE_PHONE = 36
+
+// The chance (0 to 1) that a square is drawn, for the square at `col`, `row`.
+// `cols` and `rows` are the size of the grid.
+function chanceOfSquare(col: number, row: number, cols: number, rows: number, isPhone: boolean) {
+  const across = (col + 0.5) / cols // 0 = left edge, 1 = right edge
+  const down = (row + 0.5) / rows // 0 = top, 1 = bottom
+  const rowsFromBottom = rows - 1 - row // 0 = the very last row
+
+  // no squares behind the headline (a wide strip in the middle), except in the last rows at the bottom
+  const stripHalfWidth = isPhone ? 0.42 : 0.3
+  const isBehindText = Math.abs(across - 0.5) < stripHalfWidth && rowsFromBottom > 2
+  if (isBehindText) return 0
+
+  // the last three rows are thick across the whole width: 100%, 70% and 35%
+  const bottomRows = [1, 0.7, 0.35]
+  const bottomChance = bottomRows[rowsFromBottom] ?? 0
+
+  // above that: the chance grows towards the bottom, and towards the left and right sides
+  const fromBottomEdge = Math.pow(down, 5)
+  const fromSides = Math.pow(Math.abs(across - 0.5) * 2, 3.5) * 0.5
+  const gradientChance = Math.max(fromBottomEdge, fromSides) * 0.8
+
+  return Math.max(bottomChance, gradientChance)
+}
+
+function draw() {
   const el = canvas.value!
-  const ctx = el.getContext('2d')!
-  let width = 0
-  let height = 0
-  let cells: { x: number; y: number; size: number; alpha: number; phase: number; speed: number; dark: boolean }[] = []
+  const context = el.getContext('2d')!
+  const width = el.clientWidth
+  const height = el.clientHeight
+  const isPhone = width < 700
 
-  const steps = [1]
+  // make the canvas sharp on high-resolution screens
+  const pixelRatio = Math.min(devicePixelRatio || 1, 2)
+  el.width = width * pixelRatio
+  el.height = height * pixelRatio
+  context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0)
 
-  function build() {
-    width = el.clientWidth
-    height = el.clientHeight
-    const dpr = Math.min(devicePixelRatio || 1, 2)
-    el.width = width * dpr
-    el.height = height * dpr
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+  const size = isPhone ? SQUARE_SIZE_PHONE : SQUARE_SIZE
+  const cols = Math.ceil(width / size)
+  const rows = Math.ceil(height / size)
 
-    const size = width < 700 ? 36 : 56
-    const cols = Math.ceil(width / size)
-    const rows = Math.ceil(height / size)
-    cells = []
-    for (let row = 0; row < rows; row++) {
-      for (let col = 0; col < cols; col++) {
-        const nx = (col + 0.5) / cols
-        const ny = (row + 0.5) / rows
-        // black pixels, thickest along the bottom (where the dark Work section starts) and fading upwards,
-        // with a lighter sprinkle down the sides
-        const bottom = Math.pow(ny, 5)
-        const side = Math.pow(Math.abs(nx - 0.5) * 2, 3.5) * 0.5
-        const strength = Math.max(bottom, side)
-                // the last three rows thicken evenly across the whole width, so the hero melts into the dark Work section
-        const fromBottom = rows - 1 - row
-        const bottomChance = [1, 0.7, 0.35][fromBottom] ?? 0
-        // keep the area behind the text clear, so the headline always reads
-        const behindText = Math.abs(nx - 0.5) < (width < 700 ? 0.42 : 0.3) && fromBottom > 2
-        if (behindText) continue
-        if (Math.random() > Math.max(bottomChance, strength * 0.8)) continue
-        const level = 0
-        cells.push({
-          x: col * size,
-          y: height - (rows - row) * size, // grid starts from the bottom so the last row is always whole
-          size,
-          alpha: steps[level],
-          phase: Math.random() * Math.PI * 2,
-          speed: 0.3 + Math.random() * 0.6,
-          dark: true
-        })
-      }
+  context.fillStyle = COLOR
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (Math.random() > chanceOfSquare(col, row, cols, rows, isPhone)) continue
+      const x = col * size
+      const y = height - (rows - row) * size // the grid starts at the bottom, so the last row is always a whole row
+      context.fillRect(x, y, size + 0.5, size + 0.5) // +0.5 hides thin gaps between squares
     }
   }
+}
 
-  function draw(time = 0) {
-    ctx.clearRect(0, 0, width, height)
-    for (const cell of cells) {
-      const breathe = prefersReducedMotion() ? 1 : 0.8 + 0.2 * Math.sin(time * cell.speed + cell.phase)
-      ctx.globalAlpha = cell.alpha * (cell.alpha === 1 ? 1 : breathe)
-      ctx.fillStyle = cell.dark ? '#121211' : '#ed4407'
-      ctx.fillRect(cell.x, cell.y, cell.size + 0.5, cell.size + 0.5)
-    }
-    ctx.globalAlpha = 1
-  }
-
-  build()
+onMounted(() => {
   draw()
-  addEventListener('resize', () => (build(), draw()))
-  if (!prefersReducedMotion()) gsap.ticker.add((time) => draw(time))
+  addEventListener('resize', draw)
 })
+onBeforeUnmount(() => removeEventListener('resize', draw))
 </script>
 
 <template>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import profile from '~/data/profile.json'
+
+// THE CONTACT SECTION at the bottom. The email address comes from data/profile.json.
 </script>
 
 <template>

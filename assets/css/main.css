@@ -1,3 +1,9 @@
+/* GLOBAL STYLES (used on every page)
+   - the base rules: page background, text selection, focus outline
+   - .btn, .btn-light, .btn.small, .pair  the buttons used all over the site
+   - .roll  the text that rolls up on hover (see RollText.vue)
+   - small rules that are switched on by JavaScript (.lock, .drawer-open, .js, .loader)
+   Styles that belong to one component live in that component's <style> block, not here. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,15 +35,6 @@
 @layer components {
   .eyebrow {
     @apply font-mono text-[13px] uppercase tracking-[0.02em];
-  }
-  .label {
-    @apply font-mono text-[13px] uppercase text-mute;
-  }
-
-  /* Dithered "checkerboard" border used on nav, cards and the drawer */
-  .dither {
-    background-image: conic-gradient(#121211 25%, #454543 0 50%, #121211 0 75%, #454543 0);
-    background-size: 3px 3px;
   }
 
   /* Buttons ------------------------------------------------------------ */
@@ -98,19 +95,10 @@
     transform: translateY(-100%);
   }
 
-  /* dotted-leader rows */
-  .leader {
-    @apply flex items-baseline gap-2.5 font-mono text-[14px] uppercase;
-  }
-  .leader > i {
-    @apply flex-1 border-b border-dotted border-current opacity-40;
-    transform: translateY(-4px);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .animate-marquee, .animate-marquee-fast, .animate-spin360 { animation: none; }
 }
 
 /* motion: hidden until GSAP reveals them (class set in head, skipped for reduced motion) */
@@ -121,12 +109,6 @@
 @keyframes cellIn {
   from { opacity: 0; transform: scale(0.3); }
   to { opacity: 1; transform: none; }
-}
-
-/* outlined text for the second marquee row */
-.outline-text {
-  color: transparent;
-  -webkit-text-stroke: 1.5px #121211;
 }
 
 /* Lenis smooth scroll */

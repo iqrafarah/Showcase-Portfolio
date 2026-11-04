@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import gsap from 'gsap'
 
+// THE FIRST SCREEN: headline, short intro and the buttons.
+// The text is written directly in the template below. Change it there.
+// The black pixels in the background come from <HeroPixels />.
 const about = useAbout()
 const buttons = ref<HTMLElement>()
 
-
-// buttons lean a little towards the pointer
+// The buttons lean a little towards the mouse pointer (not on touch screens)
 onMounted(() => {
   if (matchMedia('(hover: none)').matches || prefersReducedMotion()) return
   buttons.value!.querySelectorAll<HTMLElement>('.btn').forEach((button) => {
