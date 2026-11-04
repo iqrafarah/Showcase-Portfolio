@@ -23,6 +23,7 @@ export function useHoverPanel(frame: Ref<HTMLElement | undefined>, panel: Ref<HT
 
   // every frame: move the panel a bit closer to the pointer
   function movePanel() {
+    if (!panel.value) return
     panelX += (pointerX - panelX) * EASING
     panelY += (pointerY - panelY) * EASING
 
@@ -49,7 +50,7 @@ export function useHoverPanel(frame: Ref<HTMLElement | undefined>, panel: Ref<HT
     panelX = pointerX // start right at the pointer
     panelY = pointerY
     isHovering.value = true
-    movePanel()
+    if (panel.value) movePanel() // (a project with nothing to show has no panel)
   }
 
   function onLeave() {

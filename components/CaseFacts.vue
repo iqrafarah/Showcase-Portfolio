@@ -1,16 +1,17 @@
 <script setup lang="ts">
 // THE SMALL FACTS UNDER THE ACCORDION: role, project type (optional) and the tech stack.
 // All of it comes from the project in data/work.json:
-//   role           shown as "Role"                                   (always)
+//   role           shown as "Role"                                   (optional)
 //   contribution   if a project has this, "My contribution" is shown instead of "Role"   (optional)
 //   type           shown as "Project type"                           (optional)
-//   techs          the list of tags                                  (always)
+//   techs          the list of tags                                  (optional)
+// A row is only shown when its information exists.
 defineProps<{ project: any }>()
 </script>
 
 <template>
   <dl class="facts">
-    <div class="row">
+    <div v-if="project.contribution || project.role" class="row">
       <dt>{{ project.contribution ? 'My contribution' : 'Role' }}</dt>
       <dd class="with-square">
         <span class="orange-square" aria-hidden="true"></span>
@@ -23,7 +24,7 @@ defineProps<{ project: any }>()
       <dd>{{ project.type }}</dd>
     </div>
 
-    <div class="row">
+    <div v-if="project.techs?.length" class="row">
       <dt>Stack</dt>
       <dd class="tags">
         <span v-for="tech in project.techs" :key="tech" class="tag">{{ tech }}</span>

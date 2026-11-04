@@ -10,6 +10,8 @@
 // To make "big pixels" we first draw the picture very small (for example 14 x 9 pixels)
 // and then stretch that tiny picture over the card without smoothing.
 //
+// If a project has no picture, `imageUrl` is empty and nothing happens.
+//
 // Use it in a component like this:
 //   const { isSharp } = usePixelReveal(frame, canvas, imageUrl)
 //   isSharp is true when the real screenshot should be visible.
@@ -172,6 +174,8 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
   }
 
   onMounted(() => {
+    if (!imageUrl) return // a project without a picture: nothing to animate
+
     image = new Image()
     image.onload = () => {
       imageIsLoaded = true

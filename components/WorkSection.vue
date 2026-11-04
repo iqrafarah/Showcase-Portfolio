@@ -30,7 +30,7 @@ const places = [
     </div>
     <!-- one card per row, each with its own width and side (on small screens: full width) -->
     <div class="flex flex-col gap-y-24 lg:gap-y-0">
-      <div v-for="(project, i) in work" :key="project.id" :class="places[i % places.length].place" data-reveal>
+      <div v-for="(project, i) in work" :key="project.slug" :class="places[i % places.length].place" data-reveal>
         <WorkCard :project="project" :index="i" :ratio="places[i % places.length].ratio" />
       </div>
     </div>

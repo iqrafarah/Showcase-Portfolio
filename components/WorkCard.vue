@@ -6,6 +6,8 @@
 //   - Click              → the case study opens                                    (components/CaseStudy.vue)
 //
 // The project data comes from data/work.json. `ratio` is the shape of the card (set in WorkSection.vue).
+// Only `slug` and `title` are required. Anything else you leave out (image, links, summary, role, year, techs)
+// is simply not shown, and nothing breaks.
 const props = defineProps<{ project: any; index: number; ratio: string }>()
 
 const asset = useAsset()
@@ -15,7 +17,12 @@ const frame = ref<HTMLElement>() // the picture area
 const canvas = ref<HTMLCanvasElement>() // lies over the picture and draws the pixels
 const panel = ref<HTMLElement>() // the hover info panel
 
-const { isSharp } = usePixelReveal(frame, canvas, asset(props.project.image))
+const hasImage = !!props.project.image
+const { isSharp } = usePixelReveal(frame, canvas, hasImage ? asset(props.project.image) : '')
+
+// Where the card points when you Ctrl/Cmd-click it: the live site if there is one, otherwise this case study.
+const firstLink: string | undefined = props.project.links?.[0]?.url
+const href = firstLink ?? `#case-${props.project.slug}`
 const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 
 // A normal click opens the case study. Ctrl/Cmd/Shift + click still opens the live site in a new tab.
@@ -27,12 +34,13 @@ function onClick(event: MouseEvent) {
 </script>
 
 <template>
-  <a :href="project.links[0].url" target="_blank" rel="noopener" class="work-card" :aria-label="`Open case study: ${project.title}`" @click="onClick">
+  <a :href="href" :target="firstLink ? '_blank' : undefined" rel="noopener" class="work-card" :aria-label="`Open case study: ${project.title}`" @click="onClick">
     <!-- the picture area. On top of each other: the pixel canvas, the real screenshot, the hover panel -->
     <div ref="frame" class="picture" :class="ratio" @pointerenter="onEnter" @pointermove="onMove" @pointerleave="onLeave">
       <canvas ref="canvas" class="layer" aria-hidden="true" />
 
       <img
+        v-if="hasImage"
         class="layer screenshot"
         :class="{ 'is-sharp': isSharp, 'is-zoomed': isHovering }"
         :src="asset(project.image)"
@@ -41,17 +49,17 @@ function onClick(event: MouseEvent) {
         draggable="false"
       />
 
-      <dl ref="panel" class="hover-panel" :class="{ 'is-visible': isHovering }">
+      <!-- only exists when the project has something to show in it -->
+      <dl v-if="project.role || project.year || project.techs?.length" ref="panel" class="hover-panel" :class="{ 'is-visible': isHovering }">
         <div class="panel-card">
-          <div class="panel-top">
-            <dt class="sr-only">Role</dt>
-            <dd class="role"><span class="orange-square" aria-hidden="true"></span><span>{{ project.role }}</span></dd>
+          <div v-if="project.role || project.year" class="panel-top">
+            <template v-if="project.role"><dt class="sr-only">Role</dt><dd class="role"><span class="orange-square" aria-hidden="true"></span><span>{{ project.role }}</span></dd></template>
             <template v-if="project.year"><dt class="sr-only">Year</dt><dd class="year">{{ project.year }}</dd></template>
           </div>
-          <dt class="sr-only">Stack</dt>
+          <template v-if="project.techs?.length"><dt class="sr-only">Stack</dt>
           <dd class="tags">
             <span v-for="tech in project.techs" :key="tech" class="tag">{{ tech }}</span>
-          </dd>
+          </dd></template>
         </div>
       </dl>
     </div>
@@ -61,7 +69,7 @@ function onClick(event: MouseEvent) {
       <h3 class="title">{{ project.title }}</h3>
       <span class="number">{{ String(index + 1).padStart(2, '0') }}</span>
     </div>
-    <p class="summary">{{ project.summary }}</p>
+    <p v-if="project.summary" class="summary">{{ project.summary }}</p>
   </a>
 </template>
 
@@ -114,8 +122,11 @@ function onClick(event: MouseEvent) {
 .year {
   @apply shrink-0 text-[#8c8b86];
 }
+.panel-top + .tags {
+  @apply mt-3;
+}
 .tags {
-  @apply mt-3 flex flex-wrap gap-1.5;
+  @apply flex flex-wrap gap-1.5;
 }
 .tag {
   @apply bg-ink-3 px-2 py-1 text-beige/80;

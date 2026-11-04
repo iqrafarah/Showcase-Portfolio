@@ -14,6 +14,8 @@ import work from '~/data/work.json'
 //   The slug is also written in the address bar as #case-rooster, so a case study can be linked to.
 //
 // All the text comes from data/work.json.
+// Only `slug` and `title` are required. Anything you leave out (story, images, links, role, techs...)
+// is simply not shown, and nothing breaks.
 
 const openSlug = useCase()
 const asset = useAsset()
@@ -24,8 +26,8 @@ const closeButton = ref<HTMLButtonElement>()
 const project = computed<any>(() => work.find((item) => item.slug === openSlug.value) ?? null)
 const isOpen = computed(() => project.value !== null)
 
-// The screenshots. A project lists them in work.json under "images". With only one, "image" is used.
-const pictures = computed<string[]>(() => project.value?.images ?? [project.value?.image])
+// The screenshots. A project lists them in work.json under "images". With only one, "image" is used. With none, none are shown.
+const pictures = computed<string[]>(() => project.value?.images ?? (project.value?.image ? [project.value.image] : []))
 
 function close() {
   openSlug.value = null
@@ -111,13 +113,13 @@ onMounted(() => {
       <div class="case-layout">
         <!-- LEFT: category, title, accordion, facts. (data-item = animated in by playIntro) -->
         <div class="case-text">
-          <p data-item class="case-category">
-            {{ project.group }}<template v-if="project.year"> / {{ project.year }}</template>
+          <p v-if="project.group || project.year" data-item class="case-category">
+            {{ project.group }}<template v-if="project.group && project.year"> / </template>{{ project.year }}
           </p>
           <h2 data-item class="case-title">{{ project.title }}</h2>
 
           <!-- :key makes the accordion start fresh (first item open) for every project -->
-          <CaseAccordion :key="project.slug" data-item :sections="project.story" />
+          <CaseAccordion v-if="project.story?.length" :key="project.slug" data-item :sections="project.story" />
           <CaseFacts data-item :project="project" />
         </div>
 

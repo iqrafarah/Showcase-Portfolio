@@ -4,7 +4,7 @@
 //
 // It gets its content from work.json:   story: [ { title: "The Project", text: ["paragraph", "paragraph"] }, ... ]
 // To rename or add an item, change `story` in data/work.json. Nothing here has to change.
-defineProps<{ sections: { title: string; text: string | string[] }[] }>()
+defineProps<{ sections: { title: string; text?: string | string[] }[] }>()
 
 const openIndex = ref(0) // which item is open (0 = the first one, -1 = none)
 
@@ -13,7 +13,8 @@ function toggle(index: number) {
 }
 
 // A text can be one string or a list of paragraphs. This always gives back a list.
-function paragraphsOf(text: string | string[]) {
+function paragraphsOf(text?: string | string[]) {
+  if (!text) return []
   return Array.isArray(text) ? text : [text]
 }
 </script>
