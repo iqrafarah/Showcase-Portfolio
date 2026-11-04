@@ -18,9 +18,9 @@
 
 const FIRST_BLOCKS_WIDE = 14 // how many blocks wide the first, biggest version is
 const SHARPEN_STEPS = [24, 40, 70] // then it gets finer in these steps
-const SHARPEN_DELAY = 140 // milliseconds between those steps
-const REVEAL_DURATION = 1100 // milliseconds the first reveal takes
-const ORANGE_FLASH = 220 // milliseconds a new block stays orange before it shows the picture
+const SHARPEN_DELAY = 80 // milliseconds between those steps
+const REVEAL_DURATION = 550 // milliseconds the first reveal takes
+const ORANGE_FLASH = 110 // milliseconds a new block stays orange before it shows the picture
 const ORANGE = '#ed4407'
 
 export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<HTMLCanvasElement | undefined>, imageUrl: string) {

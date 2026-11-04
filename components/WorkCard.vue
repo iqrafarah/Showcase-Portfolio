@@ -76,7 +76,7 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 }
 /* the real screenshot: invisible until the pixels are sharp, zooms in a little on hover */
 .screenshot {
-  @apply object-cover opacity-0 transition-[opacity,transform] duration-700 ease-out;
+  @apply object-cover opacity-0 transition-[opacity,transform] duration-500 ease-out;
 }
 .screenshot.is-sharp {
   @apply opacity-100;
