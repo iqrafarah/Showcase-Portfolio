@@ -21,20 +21,22 @@ function copyEmail() {
 onMounted(() => {
   // light up "Work" while the work section is in the middle of the screen
   const work = document.querySelector('#work')
-  if (work) {
-    new IntersectionObserver(([entry]) => (inWork.value = entry.isIntersecting), { rootMargin: '-45% 0px -45% 0px' }).observe(work)
-  }
+  const observer = new IntersectionObserver(([entry]) => (inWork.value = entry.isIntersecting), { rootMargin: '-45% 0px -45% 0px' })
+  if (work) observer.observe(work)
 
   // hide when scrolling down, show again when scrolling up
   let last = scrollY
-  addEventListener(
-    'scroll',
-    () => {
-      hidden.value = scrollY > 240 && scrollY > last
-      last = scrollY
-    },
-    { passive: true }
-  )
+  function onScroll() {
+    hidden.value = scrollY > 240 && scrollY > last
+    last = scrollY
+  }
+  addEventListener('scroll', onScroll, { passive: true })
+
+  // clean up when this page is left (the menu is made again when the home page comes back)
+  onBeforeUnmount(() => {
+    observer.disconnect()
+    removeEventListener('scroll', onScroll)
+  })
 })
 </script>
 

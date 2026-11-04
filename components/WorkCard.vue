@@ -3,15 +3,14 @@
 //
 //   - Scrolls into view  → the screenshot appears as big pixels that get sharper   (composables/usePixelReveal.ts)
 //   - Mouse over it      → a small info panel follows the pointer                  (composables/useHoverPanel.ts)
-//   - Click              → the case study opens                                    (components/CaseStudy.vue)
+//   - Click              → opens the project's own page, /work/<slug>              (pages/work/[slug].vue)
 //
 // The project data comes from data/work.json. `ratio` is the shape of the card (set in WorkSection.vue).
-// Only `slug` and `title` are required. Anything else you leave out (image, links, summary, role, year, techs)
+// Only `slug` and `title` are required. Anything else you leave out (image, summary, role, year, techs)
 // is simply not shown, and nothing breaks.
 const props = defineProps<{ project: any; index: number; ratio: string }>()
 
 const asset = useAsset()
-const openSlug = useCase()
 
 const frame = ref<HTMLElement>() // the picture area
 const canvas = ref<HTMLCanvasElement>() // lies over the picture and draws the pixels
@@ -19,22 +18,11 @@ const panel = ref<HTMLElement>() // the hover info panel
 
 const hasImage = !!props.project.image
 const { isSharp } = usePixelReveal(frame, canvas, hasImage ? asset(props.project.image) : '')
-
-// Where the card points when you Ctrl/Cmd-click it: the live site if there is one, otherwise this case study.
-const firstLink: string | undefined = props.project.links?.[0]?.url
-const href = firstLink ?? `#case-${props.project.slug}`
 const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
-
-// A normal click opens the case study. Ctrl/Cmd/Shift + click still opens the live site in a new tab.
-function onClick(event: MouseEvent) {
-  if (event.metaKey || event.ctrlKey || event.shiftKey) return
-  event.preventDefault()
-  openSlug.value = props.project.slug
-}
 </script>
 
 <template>
-  <a :href="href" :target="firstLink ? '_blank' : undefined" rel="noopener" class="work-card" :aria-label="`Open case study: ${project.title}`" @click="onClick">
+  <NuxtLink :to="`/work/${project.slug}`" class="work-card" :aria-label="`Open case study: ${project.title}`">
     <!-- the picture area. On top of each other: the pixel canvas, the real screenshot, the hover panel -->
     <div ref="frame" class="picture" :class="ratio" @pointerenter="onEnter" @pointermove="onMove" @pointerleave="onLeave">
       <canvas ref="canvas" class="layer" aria-hidden="true" />
@@ -70,7 +58,7 @@ function onClick(event: MouseEvent) {
       <span class="number">{{ String(index + 1).padStart(2, '0') }}</span>
     </div>
     <p v-if="project.summary" class="summary">{{ project.summary }}</p>
-  </a>
+  </NuxtLink>
 </template>
 
 <style scoped>

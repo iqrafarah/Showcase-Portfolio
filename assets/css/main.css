@@ -118,6 +118,16 @@ html.lenis, html.lenis body { height: auto; }
 /* while the About drawer is open, the page's own scrollbar goes away so only the drawer's scrollbar shows */
 html.drawer-open { scrollbar-gutter: auto; overflow: hidden; }
 
+/* page transition: a short fade between the home page and a project page */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
 /* loading screen: only with JavaScript, and never stuck for more than a few seconds */
 .loader { display: none; }
 .js .loader { display: block; background: #121211; }

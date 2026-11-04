@@ -7,6 +7,7 @@ import profile from '~/data/profile.json'
 // Its text comes from data/profile.json:  about (intro text), experience (jobs), stack (tools).
 //
 // `open` is true while the drawer is open. The menu and the hero button set it to true (see useAbout in composables/useUi.ts).
+// When you leave the home page while the drawer is open, the page is unlocked again (see onBeforeUnmount below).
 const open = useAbout()
 const drawer = ref<HTMLElement>()
 const closeButton = ref<HTMLButtonElement>()
@@ -34,7 +35,13 @@ watch(open, (isOpen) => {
   )
 })
 
-onMounted(() => closeOnEscape(() => open.value, () => (open.value = false)))
+onMounted(() => closeOnEscape(() => (open.value = false)))
+
+// leaving the page (for example to a case study) must never leave the page locked
+onBeforeUnmount(() => {
+  open.value = false
+  lockPageScroll(false)
+})
 </script>
 
 <template>

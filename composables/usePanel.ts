@@ -1,4 +1,4 @@
-// SHARED BEHAVIOUR OF THE FULL-SCREEN PANELS (the About drawer and the case study pages)
+// SHARED BEHAVIOUR OF PANELS THAT COVER THE PAGE (the About drawer)
 
 // While a panel is open the page behind it must not scroll.
 // Call this every time a panel opens or closes.
@@ -12,9 +12,11 @@ export function lockPageScroll(panelIsOpen: boolean) {
   else scroller.lenis?.start()
 }
 
-// Run `close` when the visitor presses the Escape key while the panel is open.
-export function closeOnEscape(isOpen: () => boolean, close: () => void) {
-  addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && isOpen()) close()
-  })
+// Run `onEscape` when the visitor presses the Escape key. The listener is removed again when the component goes away.
+export function closeOnEscape(onEscape: () => void) {
+  function onKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') onEscape()
+  }
+  addEventListener('keydown', onKeydown)
+  onBeforeUnmount(() => removeEventListener('keydown', onKeydown))
 }

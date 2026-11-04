@@ -1,10 +1,20 @@
+import work from './data/work.json'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-01',
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
+
+  // `npm run generate` makes a ready-made page for the home page and for every project in data/work.json
+  nitro: {
+    prerender: { routes: work.map((project) => `/work/${project.slug}`) }
+  },
+
   app: {
+    // a short fade when you go from one page to another (the styles are in assets/css/main.css)
+    pageTransition: { name: 'page', mode: 'out-in' },
     // Set NUXT_APP_BASE_URL=/your-repo/ when deploying to a sub-path (e.g. GitHub Pages)
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
