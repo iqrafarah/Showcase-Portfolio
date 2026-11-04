@@ -13,9 +13,10 @@ export function lockPageScroll(panelIsOpen: boolean) {
 }
 
 // Run `onEscape` when the visitor presses the Escape key. The listener is removed again when the component goes away.
-export function closeOnEscape(onEscape: () => void) {
+// The handler gets the key event. A handler that used the key can call event.preventDefault(), so others know to ignore it.
+export function closeOnEscape(onEscape: (event: KeyboardEvent) => void) {
   function onKeydown(event: KeyboardEvent) {
-    if (event.key === 'Escape') onEscape()
+    if (event.key === 'Escape') onEscape(event)
   }
   addEventListener('keydown', onKeydown)
   onBeforeUnmount(() => removeEventListener('keydown', onKeydown))

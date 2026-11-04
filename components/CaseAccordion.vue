@@ -8,8 +8,15 @@ defineProps<{ sections: { title: string; text?: string | string[] }[] }>()
 
 const openIndex = ref(0) // which item is open (0 = the first one, -1 = none)
 
+const list = ref<HTMLElement | null>(null)
+
 function toggle(index: number) {
   openIndex.value = openIndex.value === index ? -1 : index
+  // The list scrolls inside itself when the screen is short. After the opening animation,
+  // scroll so the open title is at the top and its text is easy to read.
+  setTimeout(() => {
+    list.value?.querySelector('.is-open')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+  }, 420)
 }
 
 // A text can be one string or a list of paragraphs. This always gives back a list.
@@ -20,7 +27,7 @@ function paragraphsOf(text?: string | string[]) {
 </script>
 
 <template>
-  <div class="accordion" data-lenis-prevent>
+  <div ref="list" class="accordion" data-lenis-prevent>
     <div v-for="(section, i) in sections" :key="section.title" class="item" :class="{ 'is-open': openIndex === i }">
       <h3>
         <button :id="`acc-${i}`" class="title-button" :aria-expanded="openIndex === i" :aria-controls="`acc-panel-${i}`" @click="toggle(i)">
@@ -64,7 +71,7 @@ function paragraphsOf(text?: string | string[]) {
 
 /* The clickable title: grey while closed, white when hovered or open */
 .title-button {
-  @apply flex w-full items-center justify-between gap-4 py-3.5 text-left text-[clamp(15px,1.1vw,17px)] tracking-[-0.02em] text-beige/70 transition-colors duration-200;
+  @apply flex w-full items-center justify-between gap-4 py-3 text-left text-[clamp(14px,1vw,16px)] tracking-[-0.02em] text-beige/70 transition-colors duration-200;
 }
 .title-button:hover,
 .item.is-open .title-button {
@@ -115,6 +122,6 @@ function paragraphsOf(text?: string | string[]) {
   overflow: hidden; /* hides the text while the row is still small */
 }
 .text {
-  @apply max-w-[30rem] space-y-3 pb-5 text-[clamp(15px,1.05vw,17px)] leading-[1.6] text-beige/65;
+  @apply max-w-[30rem] space-y-2.5 pb-4 text-[clamp(13px,0.9vw,15px)] leading-[1.55] text-beige/65;
 }
 </style>

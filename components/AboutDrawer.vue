@@ -35,7 +35,13 @@ watch(open, (isOpen) => {
   )
 })
 
-onMounted(() => closeOnEscape(() => (open.value = false)))
+onMounted(() =>
+  closeOnEscape((event) => {
+    if (!open.value) return
+    open.value = false
+    event.preventDefault() // tells the page behind it that Escape was used for the drawer
+  })
+)
 
 // leaving the page (for example to a case study) must never leave the page locked
 onBeforeUnmount(() => {

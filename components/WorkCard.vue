@@ -16,8 +16,8 @@ const frame = ref<HTMLElement>() // the picture area
 const canvas = ref<HTMLCanvasElement>() // lies over the picture and draws the pixels
 const panel = ref<HTMLElement>() // the hover info panel
 
-const hasImage = !!props.project.image
-const { isSharp } = usePixelReveal(frame, canvas, hasImage ? asset(props.project.image) : '')
+const hasThumbnail = !!props.project.thumbnail
+const { isSharp } = usePixelReveal(frame, canvas, hasThumbnail ? asset(props.project.thumbnail) : '')
 const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 </script>
 
@@ -28,10 +28,10 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
       <canvas ref="canvas" class="layer" aria-hidden="true" />
 
       <img
-        v-if="hasImage"
+        v-if="hasThumbnail"
         class="layer screenshot"
         :class="{ 'is-sharp': isSharp, 'is-zoomed': isHovering }"
-        :src="asset(project.image)"
+        :src="asset(project.thumbnail)"
         :alt="`Screenshot of ${project.title}`"
         loading="lazy"
         draggable="false"

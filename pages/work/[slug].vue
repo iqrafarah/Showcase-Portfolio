@@ -16,14 +16,17 @@ const route = useRoute()
 const router = useRouter()
 const asset = useAsset()
 const page = ref<HTMLElement>()
-const closeButton = ref<HTMLButtonElement>()
 
 // The project that belongs to the address. Unknown address = "page not found".
 const project: any = work.find((item) => item.slug === route.params.slug)
 if (!project) throw createError({ statusCode: 404, statusMessage: 'Project not found', fatal: true })
 
-// The screenshots. A project lists them in work.json under "images". With only one, "image" is used. With none, none are shown.
-const pictures: string[] = project.images ?? (project.image ? [project.image] : [])
+// The pictures on the right. A project lists them in work.json under "images" (screenshots, or a video ending in .mp4 / .webm).
+// Without "images" the "thumbnail" is used. With neither, none are shown.
+const pictures: string[] = project.images ?? (project.thumbnail ? [project.thumbnail] : [])
+
+// A video file is shown like a GIF: plays by itself, looped, no sound, no controls.
+const isVideo = (file: string) => /\.(mp4|webm)$/i.test(file)
 
 // The title in the browser tab, and the description Google and chat apps show
 useHead({
@@ -31,9 +34,10 @@ useHead({
   meta: [{ name: 'description', content: project.summary ?? `${project.title}, a project by Iqra Farah.` }]
 })
 
-// The ✕ button and the Escape key: go back to where you came from (the work cards).
+// The Escape key: go back to where you came from (the work cards). (The menu at the top has "Work" for the same.)
 // If this page was opened directly (a shared link), go to the work section of the home page instead.
-function close() {
+function close(event: KeyboardEvent) {
+  if (event.defaultPrevented) return // the About drawer used this Escape to close itself
   if (window.history.state?.back) router.back()
   else navigateTo({ path: '/', hash: '#work' })
 }
@@ -52,7 +56,6 @@ function playIntro() {
 }
 
 onMounted(() => {
-  closeButton.value?.focus({ preventScroll: true })
   if (!prefersReducedMotion()) playIntro()
   closeOnEscape(close) // see composables/usePanel.ts
 })
@@ -60,15 +63,16 @@ onMounted(() => {
 
 <template>
   <div ref="page" class="case-page">
-    <!-- top right: a link to the live site (or the code) and the close button -->
+    <!-- the same menu as the home page (Work / About / Contact), in the middle at the top -->
+    <SiteNav />
+    <AboutDrawer />
+
+    <!-- top right: a link to the live site (or the code) -->
     <header class="case-header">
-      <div class="pair">
+      <div v-if="project.links?.length" class="pair">
         <a v-for="link in project.links" :key="link.url" :href="link.url" target="_blank" rel="noopener" class="btn btn-light small">
           <RollText :text="link.label === 'Live' ? 'Visit site' : link.label" />
         </a>
-        <button ref="closeButton" class="btn btn-light small" aria-label="Close" @click="close">
-          <span class="close-cross" aria-hidden="true">✕</span>
-        </button>
       </div>
     </header>
 
@@ -86,15 +90,26 @@ onMounted(() => {
 
       <!-- RIGHT: only screenshots -->
       <div class="case-pictures">
-        <img
-          v-for="(picture, i) in pictures"
-          :key="picture"
-          data-picture
-          :src="asset(picture)"
-          :alt="`${project.title}, screenshot ${i + 1}`"
-          :loading="i === 0 ? 'eager' : 'lazy'"
-          draggable="false"
-        />
+        <template v-for="(picture, i) in pictures" :key="picture">
+          <video
+            v-if="isVideo(picture)"
+            data-picture
+            :src="asset(picture)"
+            autoplay
+            loop
+            muted
+            playsinline
+            disablepictureinpicture
+          />
+          <img
+            v-else
+            data-picture
+            :src="asset(picture)"
+            :alt="`${project.title}, screenshot ${i + 1}`"
+            :loading="i === 0 ? 'eager' : 'lazy'"
+            draggable="false"
+          />
+        </template>
       </div>
     </div>
   </div>
@@ -108,10 +123,7 @@ onMounted(() => {
 
 /* The buttons stay at the top while you scroll. They have no background, so the screenshots show behind them. */
 .case-header {
-  @apply sticky top-0 z-20 flex items-center justify-end gap-4 px-6 py-5 sm:px-10;
-}
-.close-cross {
-  @apply text-[17px] leading-none;
+  @apply sticky top-0 z-20 flex h-[104px] items-end justify-end gap-4 px-6 pb-3 sm:h-[81px] sm:items-center sm:px-10 sm:pb-0;
 }
 
 /* Two columns on a large screen: text (3 parts) and screenshots (7 parts). On a phone they stack. */
@@ -131,11 +143,12 @@ onMounted(() => {
   @apply mt-3 text-[clamp(34px,3.2vw,52px)] font-medium leading-[1.02] tracking-[-0.04em];
 }
 
-/* The screenshots. The bottom gap makes the last screenshot end level with the bottom of the text column. */
+/* The pictures. The bottom gap makes the last screenshot end level with the bottom of the text column. */
 .case-pictures {
   @apply flex min-w-0 flex-col gap-4 lg:pb-[26px];
 }
-.case-pictures img {
+.case-pictures img,
+.case-pictures video {
   @apply block h-auto w-full bg-ink-2;
 }
 </style>

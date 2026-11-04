@@ -10,7 +10,7 @@
       "Figma"
     ],
     "summary": "Website for Rooster, a Dutch tool for staff scheduling and planning. I designed it and built it in WordPress.",
-    "image": "/images/rooster.jpg",
+    "thumbnail": "/images/rooster.jpg",
     "links": [
       {
         "label": "Live",
@@ -67,7 +67,7 @@
       "Awwwards"
     ],
     "summary": "A restaurant website. I designed it in Figma and built it in WordPress.",
-    "image": "/images/restaurant-gem.jpg",
+    "thumbnail": "/images/restaurant-gem.jpg",
     "links": [
       {
         "label": "Live",
@@ -122,7 +122,7 @@
       "Bootstrap"
     ],
     "summary": "A study tool that combines the Pomodoro technique with a virtual plant that grows with every focus session, plus a physical buzzer.",
-    "image": "/images/pomodoroplant.jpg",
+    "thumbnail": "/images/pomodoroplant.jpg",
     "links": [
       {
         "label": "Code",
@@ -176,7 +176,7 @@
       "Elementor"
     ],
     "summary": "A law firm website built with Elementor, using Flexbox for a smooth, user-friendly layout.",
-    "image": "/images/advokat.jpg",
+    "thumbnail": "/images/advokat.jpg",
     "links": [
       {
         "label": "Live",
@@ -231,7 +231,7 @@
       "Prisma"
     ],
     "summary": "Turn your LinkedIn data into a live portfolio in minutes. Magic-link login, editable dashboard, one-click publishing.",
-    "image": "/images/creatify.jpg",
+    "thumbnail": "/images/creatify.jpg",
     "links": [
       {
         "label": "GitHub",
