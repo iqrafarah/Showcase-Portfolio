@@ -110,8 +110,8 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 .year {
   @apply shrink-0 text-[#8c8b86];
 }
-.panel-top + .tags {
-  @apply mt-3;
+.panel-top ~ .tags {
+  @apply mt-4; /* space between the role line and the tags */
 }
 .tags {
   @apply flex flex-wrap gap-1.5;
