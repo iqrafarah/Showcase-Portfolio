@@ -7,11 +7,11 @@
     "role": "UI/UX designer & developer",
     "techs": ["Figma", "C#", "MSSQL"],
     "summary": "A healthcare application that helps doctors organize consultations, manage patients and work together.",
-    "thumbnail": "/images/vecozo-logo.png",
+    "thumbnail": "/images/vecozo-cover.png",
     "links": [],
     "id": 1,
     "images": [
-      "/images/vecozo-logo.png",
+      "/images/vecozo-cover.png",
       "/images/vecozo-mdo-overview.png",
       "/images/vecozo-consultation.png",
       "/images/vecozo-patients.png",
@@ -59,7 +59,7 @@
     "role": "Frontend developer & UI designer",
     "techs": ["HTML", "CSS", "JavaScript", "Spotify API", "Face API"],
     "summary": "A music discovery app that uses facial emotion detection and personal preferences to generate Spotify playlists.",
-    "thumbnail": "/images/moodtunes-three-screens.png",
+    "thumbnail": "/images/moodtunes-cover.png",
     "links": [
       {
         "label": "Code",
@@ -68,9 +68,9 @@
     ],
     "id": 2,
     "images": [
-      "/images/moodtunes-all-screens.png",
+      "/images/moodtunes-cover.png",
       "/images/moodtunes-video.mp4",
-      "/images/moodtunes-scanning.png",
+      "/images/moodtunes-scanning2.png",
       "/images/moodtunes-choices.png",
       "/images/moodtunes-playlist.png"
     ],

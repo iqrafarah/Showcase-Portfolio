@@ -764,19 +764,10 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
-      "/work/rooster": {
+      "/work/vecozo": {
         "prerender": true
       },
-      "/work/restaurant-gem": {
-        "prerender": true
-      },
-      "/work/pomodoroplant": {
-        "prerender": true
-      },
-      "/work/advokat-lawfirm": {
-        "prerender": true
-      },
-      "/work/creatify-space": {
+      "/work/moodtunes": {
         "prerender": true
       },
       "/_nuxt/builds/meta/**": {
@@ -789,23 +780,11 @@ const _inlineRuntimeConfig = {
           "cache-control": "public, max-age=1, immutable"
         }
       },
-      "/work/rooster/_payload.json": {
+      "/work/vecozo/_payload.json": {
         "ssr": true,
         "prerender": true
       },
-      "/work/restaurant-gem/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/work/pomodoroplant/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/work/advokat-lawfirm/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/work/creatify-space/_payload.json": {
+      "/work/moodtunes/_payload.json": {
         "ssr": true,
         "prerender": true
       }
