@@ -13,3 +13,6 @@ export const useAsset = () => {
 export const clamp = (n: number, min = 0, max = 1) => Math.min(max, Math.max(min, n))
 
 export const prefersReducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches
+
+// Which case study is open? (the project's slug, or null). It also lives in the URL as #case-slug.
+export const useCase = () => useState<string | null>('case-open', () => null)

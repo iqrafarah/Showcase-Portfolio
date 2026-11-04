@@ -15,6 +15,7 @@ onMounted(async () => {
     <LoadingScreen />
     <SiteNav />
     <AboutDrawer />
+    <CaseStudy />
 
     <main>
       <HeroSection />

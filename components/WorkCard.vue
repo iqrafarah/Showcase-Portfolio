@@ -5,6 +5,14 @@
 //  - On hover a small info panel follows the pointer.
 const props = defineProps<{ project: any; index: number; ratio: string }>()
 const asset = useAsset()
+const openCase = useCase()
+
+// a click opens the case study; with ctrl/cmd-click the live site still opens in a new tab
+function onClick(event: MouseEvent) {
+  if (event.metaKey || event.ctrlKey || event.shiftKey) return
+  event.preventDefault()
+  openCase.value = props.project.slug
+}
 
 const frame = ref<HTMLElement>()
 const canvas = ref<HTMLCanvasElement>()
@@ -196,7 +204,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <a :href="project.links[0].url" target="_blank" rel="noopener" class="block" :aria-label="`${project.title}: ${project.summary}`">
+  <a :href="project.links[0].url" target="_blank" rel="noopener" class="block" :aria-label="`Open case study: ${project.title}`" @click="onClick">
     <div ref="frame" class="relative overflow-hidden bg-ink-2" :class="ratio" @pointerenter="onEnter" @pointermove="readPointer" @pointerleave="onLeave">
       <canvas ref="canvas" class="absolute inset-0 h-full w-full" aria-hidden="true" />
 

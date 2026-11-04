@@ -64,11 +64,6 @@ onMounted(() => {
           </div>
         </header>
 
-        <!-- who I am -->
-        <div data-item class="mt-10">
-          <h2 class="text-[clamp(30px,3.6vw,40px)] font-medium leading-none tracking-[-0.03em]">Iqra Farah</h2>
-          <p class="mt-2 font-mono text-[12px] uppercase text-beige/45">Web designer & developer / Noord-Brabant</p>
-        </div>
         <p data-item class="mt-10 max-w-[18ch] text-[clamp(32px,4vw,50px)] font-medium leading-[1.06] tracking-[-0.035em]">{{ profile.about.lead }}</p>
         <p data-item class="mt-6 max-w-[34rem] text-[18px] leading-[1.6] text-beige/65">{{ profile.about.text }}</p>
         <div data-item class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
