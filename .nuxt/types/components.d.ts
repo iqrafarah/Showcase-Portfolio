@@ -15,6 +15,8 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 interface _GlobalComponents {
   AboutDrawer: typeof import("../../components/AboutDrawer.vue")['default']
+  CaseAccordion: typeof import("../../components/CaseAccordion.vue")['default']
+  CaseFacts: typeof import("../../components/CaseFacts.vue")['default']
   ContactSection: typeof import("../../components/ContactSection.vue")['default']
   HeatMap: typeof import("../../components/HeatMap.vue")['default']
   HeroPixels: typeof import("../../components/HeroPixels.vue")['default']
@@ -39,7 +41,7 @@ interface _GlobalComponents {
   NuxtRouteAnnouncer: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
   NuxtImg: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
   NuxtPicture: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
-  NuxtPage: typeof import("../../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+  NuxtPage: typeof import("../../node_modules/nuxt/dist/pages/runtime/page")['default']
   NoScript: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['NoScript']
   Link: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Link']
   Base: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Base']
@@ -51,6 +53,8 @@ interface _GlobalComponents {
   Body: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Body']
   NuxtIsland: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
   LazyAboutDrawer: LazyComponent<typeof import("../../components/AboutDrawer.vue")['default']>
+  LazyCaseAccordion: LazyComponent<typeof import("../../components/CaseAccordion.vue")['default']>
+  LazyCaseFacts: LazyComponent<typeof import("../../components/CaseFacts.vue")['default']>
   LazyContactSection: LazyComponent<typeof import("../../components/ContactSection.vue")['default']>
   LazyHeatMap: LazyComponent<typeof import("../../components/HeatMap.vue")['default']>
   LazyHeroPixels: LazyComponent<typeof import("../../components/HeroPixels.vue")['default']>
@@ -75,7 +79,7 @@ interface _GlobalComponents {
   LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
   LazyNuxtImg: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
   LazyNuxtPicture: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
-  LazyNuxtPage: LazyComponent<typeof import("../../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
+  LazyNuxtPage: LazyComponent<typeof import("../../node_modules/nuxt/dist/pages/runtime/page")['default']>
   LazyNoScript: LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
   LazyLink: LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Link']>
   LazyBase: LazyComponent<typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Base']>

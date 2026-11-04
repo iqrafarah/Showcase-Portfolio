@@ -1,275 +1,107 @@
 [
   {
-    "slug": "rooster",
-    "title": "Rooster",
-    "group": "Client",
-    "role": "Web designer & developer",
-    "techs": [
-      "WordPress",
-      "PHP",
-      "Figma"
-    ],
-    "summary": "Website for Rooster, a Dutch tool for staff scheduling and planning. I designed it and built it in WordPress.",
-    "thumbnail": "/images/rooster.jpg",
-    "links": [
-      {
-        "label": "Live",
-        "url": "https://rooster.nu/"
-      }
-    ],
+    "slug": "vecozo",
+    "title": "VECOZO",
+    "group": "Healthcare",
+    "year": "2025",
+    "role": "UI/UX designer & developer",
+    "techs": ["Figma", "C#", "MSSQL"],
+    "summary": "A healthcare application that helps doctors organize consultations, manage patients and work together.",
+    "thumbnail": "/images/vecozo-logo.png",
+    "links": [],
     "id": 1,
     "images": [
-      "/images/rooster.jpg",
-      "/images/rooster-detail-1.jpg",
-      "/images/rooster-detail-2.jpg"
+      "/images/vecozo-logo.png",
+      "/images/vecozo-mdo-overview.png",
+      "/images/vecozo-consultation.png",
+      "/images/vecozo-patients.png",
+      "/images/vecozo-create-mdo.png",
+      "/images/vecozo-all-mdo.png"
     ],
     "story": [
       {
         "title": "The Project",
         "text": [
-          "Rooster is a Dutch tool for staff scheduling and planning, and its website has one job: explain clearly what the product does and make it easy to get started. The site needed to feel as clear and calm as the planning screens it shows.",
-          "I was asked to take it from idea to live site, so the design and the build both ended up with me."
+          "VECOZO is a Dutch healthcare organization that helps healthcare professionals exchange information securely.",
+          "For a school assignment, our team of six worked with VECOZO to develop an application for multidisciplinary consultations (MDOs), where doctors from different specialties discuss patient cases.",
+          "We had 12 weeks to build a working prototype that makes it easier to organize consultations, manage patient information and keep everything in one place."
         ]
       },
       {
         "title": "My Role",
         "text": [
-          "I designed the pages myself in Figma, starting with the structure and the key messages, then the look: type, colours, spacing and the way the product screens are shown. After the design was approved I built it in WordPress with PHP.",
-          "The theme is made so the client can edit the content and the pages themselves, without needing me for every small change."
+          "I was responsible for the entire UI design in Figma, from the overall layout to the reusable components that kept the application consistent.",
+          "I also worked on the development side, building core features and connecting the interface to the application's logic and data. Besides my own work, I helped teammates with other parts of the application."
         ]
       },
       {
         "title": "Behind the Work",
         "text": [
-          "The main challenge was flexibility. The site had to match the design exactly, but also stay easy to change for the people who work with it every day.",
-          "I worked from the Figma design in steps: first the structure and reusable sections, then the details, checking every page on different screen sizes along the way."
+          "We were designing for doctors, so keeping things efficient was important. I focused on reducing unnecessary steps and making patient information and common actions easy to find.",
+          "On the technical side, I worked with C#, MSSQL and a layered architecture with separate presentation, business logic and data access layers. Getting familiar with C# while understanding how everything connected was a challenge.",
+          "We worked in sprints, with two project days each week, and presented our progress to VECOZO every four weeks. Their feedback helped us decide what to improve next."
         ]
       },
       {
         "title": "The Outcome",
         "text": [
-          "The result is a live website for rooster.nu that the client can keep up to date themselves.",
-          "Turning a design into a theme a client can edit themselves. A design on a screen is only half the work: it also has to keep working when someone else changes the text, swaps an image or adds a page. It taught me to think about the editor as a second user of the site."
+          "Together, we built a working prototype that brings patient management, consultation planning and MDO discussions into one application.",
+          "I became more confident with C# and gained a better understanding of layered architecture. I also learned how to take ownership of a design while working with a development team and real client. The project reminded me that good software should make people's work easier, not more complicated."
         ]
       }
     ]
   },
   {
-    "slug": "restaurant-gem",
-    "title": "Restaurant Gem",
-    "group": "Restaurant",
-    "year": "2023",
-    "role": "Web designer & developer",
-    "techs": [
-      "WordPress",
-      "PHP",
-      "Figma",
-      "Awwwards"
-    ],
-    "summary": "A restaurant website. I designed it in Figma and built it in WordPress.",
-    "thumbnail": "/images/restaurant-gem.jpg",
+    "slug": "moodtunes",
+    "title": "MoodTunes",
+    "group": "Web App",
+    "year": "2026",
+    "role": "Frontend developer & UI designer",
+    "techs": ["HTML", "CSS", "JavaScript", "Spotify API", "Face API"],
+    "summary": "A music discovery app that uses facial emotion detection and personal preferences to generate Spotify playlists.",
+    "thumbnail": "/images/moodtunes-three-screens.png",
     "links": [
       {
-        "label": "Live",
-        "url": "https://restaurantgem.com/"
+        "label": "Code",
+        "url": "https://github.com/Shugri7002/MoodTunes"
       }
     ],
     "id": 2,
     "images": [
-      "/images/restaurant-gem.jpg",
-      "/images/restaurant-gem-detail-1.jpg",
-      "/images/restaurant-gem-detail-2.jpg"
+      "/images/moodtunes-all-screens.png",
+      "/images/moodtunes-video.mp4",
+      "/images/moodtunes-scanning.png",
+      "/images/moodtunes-choices.png",
+      "/images/moodtunes-playlist.png"
     ],
     "story": [
       {
         "title": "The Project",
         "text": [
-          "A website for a restaurant, built to feel like the place itself: warm, a little special and easy to use on a phone, which is where most people check opening hours and menus. I set myself a high bar for this one and built it as if it could be sent in to an awards site."
+          "MoodTunes is a music discovery app that uses facial emotion detection and Spotify to create personalized playlists.",
+          "The idea was to go beyond simply matching music to someone's mood. After detecting how they feel, the app lets them choose whether they want music that matches that feeling or helps change it.",
+          "I came up with the concept and pitched it to my classmates. We decided to bring it to life together as a school project."
         ]
       },
       {
         "title": "My Role",
         "text": [
-          "I designed the whole site in Figma first, with a strong visual identity, big imagery and small details. Then I built it in WordPress with PHP, adding motion and interaction so the pages feel alive without getting in the way of the content.",
-          "I shared work in progress with the client and used their feedback to adjust the design before the final version went live."
+          "I worked on the UI design with another classmate and was responsible for the overall frontend styling, bringing the playful colors, typography and interactions into the application.",
+          "I also implemented the Spotify API integration and built the user-choice functionality. Another teammate handled the facial emotion detection."
         ]
       },
       {
         "title": "Behind the Work",
         "text": [
-          "The challenge was reaching a standard that gets noticed without slowing the site down or hiding the content. Every animation had to earn its place.",
-          "I worked in rounds: design in Figma, build, review with the client and refine. Real feedback showed quickly which details mattered and which did not."
+          "Someone's current mood isn't always how they want to feel. If someone feels sad, they might want uplifting music rather than songs that match their sadness. That's why we gave users a choice before generating their playlist.",
+          "My main technical challenge was integrating Spotify and connecting the user's preferences to the playlist generation. I also worked on keeping the experience consistent and easy to follow across the different screens."
         ]
       },
       {
         "title": "The Outcome",
         "text": [
-          "The result is a live restaurant website with a clear identity, smooth motion and a layout that works well on a phone.",
-          "What it takes to build to a standard that gets noticed: details, motion and real client feedback. The difference between a good site and a great one is in small things like spacing, timing and how each element reacts."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "pomodoroplant",
-    "title": "PomodoroPlant",
-    "group": "Web app",
-    "role": "Web developer",
-    "techs": [
-      "ASP.NET",
-      "C#",
-      "SQLite",
-      "Bootstrap"
-    ],
-    "summary": "A study tool that combines the Pomodoro technique with a virtual plant that grows with every focus session, plus a physical buzzer.",
-    "thumbnail": "/images/pomodoroplant.jpg",
-    "links": [
-      {
-        "label": "Code",
-        "url": "https://github.com/BrahimAit98/PomodoroPlant"
-      }
-    ],
-    "id": 3,
-    "images": [
-      "/images/pomodoroplant.jpg",
-      "/images/pomodoroplant-detail-1.jpg",
-      "/images/pomodoroplant-detail-2.jpg"
-    ],
-    "story": [
-      {
-        "title": "The Project",
-        "text": [
-          "PomodoroPlant is a study tool that combines the Pomodoro technique with a virtual plant. Every focus session you finish makes the plant grow, so staying focused has a visible reward instead of just a timer running out.",
-          "It also comes with a physical buzzer, so the app is not only something on a screen."
-        ]
-      },
-      {
-        "title": "My Role",
-        "text": [
-          "I built it as a web app with ASP.NET and C#, with a SQLite database to store sessions and plant progress, and Bootstrap for the interface. I handled the timer logic, the growth of the plant and the connection to the physical device."
-        ]
-      },
-      {
-        "title": "Behind the Work",
-        "text": [
-          "The challenge was making several parts work together: the timer, the database, the growing plant and the physical buzzer.",
-          "I built it step by step, starting with the timer and the data, then the plant that reacts to finished sessions, and last the connection to the device, testing each part before combining them."
-        ]
-      },
-      {
-        "title": "The Outcome",
-        "text": [
-          "The result is a working study tool where every finished focus session makes the plant grow, with the code available on GitHub.",
-          "Building a full app with a database and a physical device. It made me much more comfortable building the whole thing end to end, not just the front end."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "advokat-lawfirm",
-    "title": "Advokat Lawfirm",
-    "group": "WordPress",
-    "year": "2024",
-    "role": "Web designer & developer",
-    "techs": [
-      "WordPress",
-      "Elementor"
-    ],
-    "summary": "A law firm website built with Elementor, using Flexbox for a smooth, user-friendly layout.",
-    "thumbnail": "/images/advokat.jpg",
-    "links": [
-      {
-        "label": "Live",
-        "url": "https://advokat.iqrafarah.nl/"
-      }
-    ],
-    "id": 4,
-    "images": [
-      "/images/advokat.jpg",
-      "/images/advokat-detail-1.jpg",
-      "/images/advokat-detail-2.jpg"
-    ],
-    "story": [
-      {
-        "title": "The Project",
-        "text": [
-          "A website for a law firm. A site like this has to feel trustworthy and professional, and make it easy for visitors to see what the firm does and how to get in touch, on any screen."
-        ]
-      },
-      {
-        "title": "My Role",
-        "text": [
-          "I built the site with WordPress and Elementor and used Flexbox for the layouts, so sections line up cleanly and adapt smoothly from a wide desktop screen to a small phone. I spent time on spacing, hierarchy and readable text, because for a law firm clarity is part of the brand."
-        ]
-      },
-      {
-        "title": "Behind the Work",
-        "text": [
-          "The challenge was a layout that stays clean and easy to read on every screen, because a law firm site has to feel calm and trustworthy before anything else.",
-          "I tested the layouts at different widths while building, and adjusted spacing and alignment until the sections behaved the same way from desktop down to mobile."
-        ]
-      },
-      {
-        "title": "The Outcome",
-        "text": [
-          "The result is a live law firm website that is clear, structured and responsive.",
-          "A better understanding of Flexbox for layouts that adapt well to different screens. Every project brings its own challenges, and this one made me more precise about how layouts behave when the screen size changes."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "creatify-space",
-    "title": "Creatify Space",
-    "group": "Next.js",
-    "year": "2025",
-    "role": "Web designer & developer",
-    "techs": [
-      "Next.js",
-      "React",
-      "Tailwind",
-      "Prisma"
-    ],
-    "summary": "Turn your LinkedIn data into a live portfolio in minutes. Magic-link login, editable dashboard, one-click publishing.",
-    "thumbnail": "/images/creatify.jpg",
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "https://github.com/iqrafarah/creatify-space"
-      }
-    ],
-    "id": 5,
-    "images": [
-      "/images/creatify.jpg",
-      "/images/creatify-detail-1.jpg",
-      "/images/creatify-detail-2.jpg"
-    ],
-    "story": [
-      {
-        "title": "The Project",
-        "text": [
-          "Creatify Space turns your LinkedIn data into a live portfolio in minutes. You upload your LinkedIn PDF, the platform reads it and builds a professional portfolio site, and you get a unique URL to share.",
-          "The idea is to help people who have a career to show but no time to design and build their own site."
-        ]
-      },
-      {
-        "title": "My Role",
-        "text": [
-          "I designed and built the whole platform with Next.js, React, Tailwind and Prisma. It has a magic-link login, a dashboard where you can edit everything that was generated, a live preview next to the editor and one-click publishing. A big part of the work was reading real-world LinkedIn PDFs and turning messy data into clean, structured content."
-        ]
-      },
-      {
-        "title": "Behind the Work",
-        "text": [
-          "The biggest challenge was real-world data. LinkedIn PDFs are never as tidy as test data, so the parser had to handle missing sections, odd formatting and different layouts.",
-          "Alongside it I built the sign-in flow, and the dashboard with a live preview, so people can see the effect of every change straight away."
-        ]
-      },
-      {
-        "title": "The Outcome",
-        "text": [
-          "The result is a platform that turns a LinkedIn PDF into a live portfolio, with a link to share it, and the code is on GitHub.",
-          "Auth flows, parsing real-world data and a live-preview dashboard. I learned to build for the unexpected, and how much a live preview changes the way people feel about editing."
+          "We built a working prototype that combines facial emotion detection, user preferences and Spotify playlist generation.",
+          "I gained more experience working with external APIs and building interactive frontend features. Seeing an idea I came up with turn into a working application was especially rewarding, and it taught me how much a team can achieve by combining different skills."
         ]
       }
     ]
