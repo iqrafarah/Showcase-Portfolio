@@ -49,7 +49,9 @@ function placeOf(project: any, i: number) {
     id="work"
     class="relative bg-ink px-6 pb-24 pt-8 text-beige sm:px-12 lg:px-16"
   >
-    <div class="mb-14 grid gap-6 lg:grid-cols-2 lg:items-end">
+    <div
+      class="mb-14 grid gap-5 lg:grid-cols-[auto_auto] lg:items-end lg:justify-between"
+    >
       <h2
         data-stagger
         class="text-[clamp(38px,4.6vw,76px)] font-medium leading-[1.03] tracking-[-0.03em]"
@@ -58,7 +60,7 @@ function placeOf(project: any, i: number) {
       </h2>
       <p
         data-reveal
-        class="max-w-[30rem] text-[clamp(17px,1.3vw,20px)] leading-relaxed text-beige/60"
+        class="max-w-[24rem] text-balance text-[clamp(16px,1.2vw,19px)] leading-[1.5] text-beige/60 lg:pb-[0.4vw] lg:text-right"
       >
         A mix of internship assignments, school projects and ideas I've built in
         my free time.
