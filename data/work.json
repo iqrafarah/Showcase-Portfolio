@@ -1,5 +1,54 @@
 [
   {
+    "slug": "restaurant-gem",
+    "title": "Restaurant GEM",
+    "group": "Website",
+    "year": "2024",
+    "card": "wide",
+    "role": "Designer & Developer",
+    "techs": ["Figma", "WordPress", "PHP", "ACF"],
+    "summary": "A custom WordPress website designed in Figma to capture the restaurant's atmosphere, built so the client can manage the content themselves.",
+    "thumbnail": "/images/gem-cover.png",
+    "links": [],
+    "images": [
+      "/images/gem-cover.png",
+      "/images/gem-home.png",
+      "/images/gem-about.png",
+      "/images/gem-hero.png",
+      "/images/gem-menu.png"
+    ],
+    "story": [
+      {
+        "title": "The Project",
+        "text": [
+          "Restaurant GEM is a restaurant website I worked on during my internship at Unique Design. It had to capture the restaurant's atmosphere, from the imagery and typography to how visitors move through the site, while making practical information like the menu and reservations easy to find."
+        ]
+      },
+      {
+        "title": "My Role",
+        "text": [
+          "I designed everything in Figma and built most of it as a custom WordPress theme with PHP, Bootstrap and Advanced Custom Fields (ACF), so the client can update their content on their own.",
+          "A coworker helped with the page transitions and animations. I did the rest, from layouts and responsive styling to the WordPress implementation."
+        ]
+      },
+      {
+        "title": "Behind the Work",
+        "text": [
+          "I wanted it to feel like more than a restaurant template, so I put a lot of attention into typography, photography and spacing, while keeping the menu and reservation information easy to reach.",
+          "Because it is a custom theme, I made sure it works across screen sizes and stays flexible when the client changes content through ACF."
+        ]
+      },
+      {
+        "title": "The Outcome",
+        "text": [
+          "A custom WordPress website that turns my Figma designs into a working site the client can manage. It was also nominated for Site of the Day on Awwwards.",
+          "I learned how to take a client project from design through development, build flexible PHP templates and work with a coworker on the finishing details. It let me bring my design and development skills together."
+        ]
+      }
+    ],
+    "id": 1
+  },
+  {
     "slug": "creatify",
     "title": "Creatify Space",
     "group": "Web App",
@@ -49,7 +98,57 @@
         ]
       }
     ],
-    "id": 1
+    "id": 2
+  },
+  {
+    "slug": "vecozo",
+    "title": "VECOZO",
+    "group": "Healthcare",
+    "year": "2025",
+    "card": "medium",
+    "role": "Designer & Developer",
+    "techs": ["Figma", "C#", "MSSQL"],
+    "summary": "A healthcare app that brings consultation planning and patient information together in one place, built for VECOZO.",
+    "thumbnail": "/images/vecozo-cover.png",
+    "links": [],
+    "images": [
+      "/images/vecozo-cover.png",
+      "/images/Vecozo-all-mdo.png",
+      "/images/vecozo-consultation.png",
+      "/images/vecozo-create-mdo.png",
+      "/images/vecozo-patients.png"
+    ],
+    "story": [
+      {
+        "title": "The Project",
+        "text": [
+          "VECOZO is a Dutch organization that helps healthcare professionals share information securely. For a school assignment, our team of six built an application for multidisciplinary consultations (MDOs), where specialists from different fields discuss patient cases.",
+          "We had 12 weeks to deliver a working prototype that makes it easier to plan consultations and manage patient information in one place."
+        ]
+      },
+      {
+        "title": "My Role",
+        "text": [
+          "I worked on both design and development. I designed the whole interface in Figma, including layouts, visual style and reusable components, and built core features in C# connected to the application's logic and data.",
+          "I also helped teammates build and refine other parts of the application."
+        ]
+      },
+      {
+        "title": "Behind the Work",
+        "text": [
+          "Healthcare professionals need to work efficiently, so I focused on clear navigation, patient information that is easy to find and fewer steps for common tasks.",
+          "The app is built with C# and MSSQL in a layered architecture that separates presentation, business logic and data access. We worked in sprints with two project days a week and presented to VECOZO every four weeks. Their feedback decided what we improved next."
+        ]
+      },
+      {
+        "title": "The Outcome",
+        "text": [
+          "A working prototype that brings patient management, consultation planning and MDO discussions into one application.",
+          "I became more confident with C#, learned how to structure an application in layers and got to work with a real client. My biggest takeaway: balance design and development, and keep the people who use the software at the center."
+        ]
+      }
+    ],
+    "id": 3
   },
   {
     "slug": "tasbeeh-challenge",
@@ -103,7 +202,7 @@
         ]
       }
     ],
-    "id": 2
+    "id": 4
   },
   {
     "slug": "moodtunes",
@@ -155,105 +254,6 @@
         "text": [
           "A working prototype that combines facial emotion detection, user preferences and Spotify playlist generation.",
           "I gained experience with external APIs and interactive frontend features. Seeing my own idea turn into a working app was the best part, and it showed me what a team can do when everyone brings different skills."
-        ]
-      }
-    ],
-    "id": 3
-  },
-  {
-    "slug": "vecozo",
-    "title": "VECOZO",
-    "group": "Healthcare",
-    "year": "2025",
-    "card": "medium",
-    "role": "Designer & Developer",
-    "techs": ["Figma", "C#", "MSSQL"],
-    "summary": "A healthcare app that brings consultation planning and patient information together in one place, built for VECOZO.",
-    "thumbnail": "/images/vecozo-cover.png",
-    "links": [],
-    "images": [
-      "/images/vecozo-cover.png",
-      "/images/Vecozo-all-mdo.png",
-      "/images/vecozo-consultation.png",
-      "/images/vecozo-create-mdo.png",
-      "/images/vecozo-patients.png"
-    ],
-    "story": [
-      {
-        "title": "The Project",
-        "text": [
-          "VECOZO is a Dutch organization that helps healthcare professionals share information securely. For a school assignment, our team of six built an application for multidisciplinary consultations (MDOs), where specialists from different fields discuss patient cases.",
-          "We had 12 weeks to deliver a working prototype that makes it easier to plan consultations and manage patient information in one place."
-        ]
-      },
-      {
-        "title": "My Role",
-        "text": [
-          "I worked on both design and development. I designed the whole interface in Figma, including layouts, visual style and reusable components, and built core features in C# connected to the application's logic and data.",
-          "I also helped teammates build and refine other parts of the application."
-        ]
-      },
-      {
-        "title": "Behind the Work",
-        "text": [
-          "Healthcare professionals need to work efficiently, so I focused on clear navigation, patient information that is easy to find and fewer steps for common tasks.",
-          "The app is built with C# and MSSQL in a layered architecture that separates presentation, business logic and data access. We worked in sprints with two project days a week and presented to VECOZO every four weeks. Their feedback decided what we improved next."
-        ]
-      },
-      {
-        "title": "The Outcome",
-        "text": [
-          "A working prototype that brings patient management, consultation planning and MDO discussions into one application.",
-          "I became more confident with C#, learned how to structure an application in layers and got to work with a real client. My biggest takeaway: balance design and development, and keep the people who use the software at the center."
-        ]
-      }
-    ],
-    "id": 4
-  },
-  {
-    "slug": "restaurant-gem",
-    "title": "Restaurant GEM",
-    "group": "Website",
-    "year": "2024",
-    "card": "wide",
-    "role": "Designer & Developer",
-    "techs": ["Figma", "WordPress", "PHP", "ACF"],
-    "summary": "A custom WordPress website designed in Figma to capture the restaurant's atmosphere, built so the client can manage the content themselves.",
-    "thumbnail": "/images/gem-cover.png",
-    "links": [],
-    "images": [
-      "/images/gem-cover.png",
-      "/images/gem-home.png",
-      "/images/gem-about.png",
-      "/images/gem-hero.png",
-      "/images/gem-menu.png"
-    ],
-    "story": [
-      {
-        "title": "The Project",
-        "text": [
-          "Restaurant GEM is a restaurant website I worked on during my internship at Unique Design. It had to capture the restaurant's atmosphere, from the imagery and typography to how visitors move through the site, while making practical information like the menu and reservations easy to find."
-        ]
-      },
-      {
-        "title": "My Role",
-        "text": [
-          "I designed everything in Figma and built most of it as a custom WordPress theme with PHP, Bootstrap and Advanced Custom Fields (ACF), so the client can update their content on their own.",
-          "A coworker helped with the page transitions and animations. I did the rest, from layouts and responsive styling to the WordPress implementation."
-        ]
-      },
-      {
-        "title": "Behind the Work",
-        "text": [
-          "I wanted it to feel like more than a restaurant template, so I put a lot of attention into typography, photography and spacing, while keeping the menu and reservation information easy to reach.",
-          "Because it is a custom theme, I made sure it works across screen sizes and stays flexible when the client changes content through ACF."
-        ]
-      },
-      {
-        "title": "The Outcome",
-        "text": [
-          "A custom WordPress website that turns my Figma designs into a working site the client can manage. It was also nominated for Site of the Day on Awwwards.",
-          "I learned how to take a client project from design through development, build flexible PHP templates and work with a coworker on the finishing details. It let me bring my design and development skills together."
         ]
       }
     ],
