@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Portfolio of Iqra Farah, a web designer and developer from Noord-Brabant, the Netherlands. Creative web design and full-stack development, from Figma to production, plus automations with n8n and GoHighLevel.',
+            'Portfolio of Iqra Farah, an ICT student at Fontys Tilburg and a frontend developer who also knows full-stack, with a focus on UI design. Projects from internships, school and free time.',
         },
         { name: 'theme-color', content: '#efeee9' },
         {

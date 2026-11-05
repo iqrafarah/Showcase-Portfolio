@@ -1,45 +1,63 @@
 <script setup lang="ts">
-import type { NuxtError } from '#app'
+import type { NuxtError } from '#app';
 
 // THE ERROR PAGE: shown for an address that does not exist (404) and for any other error.
 // Nuxt uses this file automatically because it is called error.vue in the main folder.
-const props = defineProps<{ error: NuxtError }>()
+// It looks like the first screen of the home page: light page, black pixels around the edges.
+const props = defineProps<{ error: NuxtError }>();
 
-const isNotFound = computed(() => props.error.statusCode === 404)
+const isNotFound = computed(() => props.error.statusCode === 404);
 
-useHead({ title: isNotFound.value ? 'Page not found — Iqra Farah' : 'Something went wrong — Iqra Farah' })
+useHead({
+  title: isNotFound.value
+    ? 'Page not found — Iqra Farah'
+    : 'Something went wrong — Iqra Farah',
+});
 
 // Go back to the home page and clear the error
 function goHome() {
-  clearError({ redirect: '/' })
+  clearError({ redirect: '/' });
 }
 </script>
 
 <template>
-  <main class="error-page">
-    <p class="error-code">{{ error.statusCode }}</p>
-    <h1 class="error-title">{{ isNotFound ? 'This page does not exist.' : 'Something went wrong.' }}</h1>
-    <p class="error-text">
-      {{ isNotFound ? 'The address may be wrong, or the project was moved.' : 'Please try again in a moment.' }}
-    </p>
-    <div class="pair">
-      <button class="btn btn-light" @click="goHome"><RollText text="Back to home" /></button>
-    </div>
-  </main>
+  <div>
+    <SiteNav />
+    <AboutDrawer />
+
+    <main class="error-page">
+      <HeroPixels />
+      <p class="eyebrow text-mute">Error {{ error.statusCode }}</p>
+      <h1 class="error-code">{{ error.statusCode }}</h1>
+      <p class="error-title">
+        {{ isNotFound ? "This page doesn't exist." : 'Something went wrong.' }}
+      </p>
+      <p class="error-text">
+        {{
+          isNotFound
+            ? "The link may be wrong, or the page has moved. Let's get you back to my work."
+            : 'Please try again in a moment.'
+        }}
+      </p>
+      <button class="btn" @click="goHome">
+        <RollText text="Back to home" /><i class="dot" />
+      </button>
+    </main>
+  </div>
 </template>
 
 <style scoped>
-/* Dark full-screen page with everything in the middle */
+/* Same set-up as the hero: full screen, everything in the middle, the pixels sit behind it */
 .error-page {
-  @apply flex min-h-[100svh] flex-col items-center justify-center bg-ink px-6 text-center text-beige;
+  @apply relative isolate flex min-h-[100svh] flex-col items-center justify-center px-6 pb-44 pt-24 text-center;
 }
 .error-code {
-  @apply font-mono text-[clamp(90px,18vw,220px)] font-medium leading-none tracking-[-0.06em] text-orange;
+  @apply mt-3 font-medium leading-none tracking-[-0.06em] text-[clamp(110px,20vw,260px)];
 }
 .error-title {
-  @apply mt-6 text-[clamp(24px,3vw,40px)] font-medium tracking-[-0.03em];
+  @apply mt-6 text-[clamp(22px,2.4vw,34px)] font-medium tracking-[-0.03em];
 }
 .error-text {
-  @apply mb-9 mt-3 max-w-[28rem] text-[15px] leading-[1.55] text-beige/60;
+  @apply mb-9 mt-3 max-w-[28rem] text-[clamp(15px,1.2vw,18px)] leading-[1.55] text-mute;
 }
 </style>

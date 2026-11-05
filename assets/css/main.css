@@ -53,9 +53,10 @@
   .btn .dot {
     @apply absolute right-2.5 top-2.5 h-1.5 w-1.5 rounded-full bg-orange;
   }
-  /* the navigation pieces: a bit lighter than ink, so they also show on the dark work section */
+  /* the navigation pieces: a bit lighter than ink, so they also show on the dark work section.
+     (No outline: an outline does not continue over the bridge between two pieces and shows up as thin lines.) */
   .btn.nav {
-    @apply px-5 py-3 text-[13px] text-beige ring-1 ring-white/10;
+    @apply bg-ink-2 px-5 py-3 text-[13px] text-beige;
   }
   .btn.nav:hover {
     @apply bg-ink-3;
@@ -70,9 +71,9 @@
   .pair > .btn:not(:last-child)::after {
     content: '';
     position: absolute;
-    right: -6px;
+    right: -7px; /* 1px more on each side, so no thin seam shows between the bridge and the pieces */
     top: 50%;
-    width: 6px;
+    width: 8px;
     height: 44%;
     transform: translateY(-50%);
     background: inherit;

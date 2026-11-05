@@ -1,61 +1,119 @@
 [
   {
-    "slug": "restaurant-gem",
-    "title": "Restaurant GEM",
-    "group": "Website",
-    "year": "2024",
-    "role": "Designer & Developer",
-    "techs": ["Figma", "WordPress", "PHP", "ACF"],
-    "summary": "A custom WordPress website designed to reflect Restaurant GEM's atmosphere, with a focus on visual details and a smooth browsing experience.",
-    "thumbnail": "/images/gem-cover.png",
-    "links": [],
-    "id": 3,
+    "slug": "creatify",
+    "title": "Creatify Space",
+    "group": "Web App",
+    "year": "2025",
+    "card": "medium",
+    "role": "Designer & Full-stack Developer",
+    "techs": ["Figma", "Next.js", "PostgreSQL", "Prisma"],
+    "summary": "A portfolio builder that turns a LinkedIn PDF into a personal website you can edit and share with one link.",
+    "thumbnail": "/images/creatify-thumbnail.png",
+    "links": [
+      {
+        "label": "Code",
+        "url": "https://github.com/iqrafarah/creatify-space"
+      }
+    ],
     "images": [
-      "/images/gem-cover.png",
-      "/images/gem-home.png",
-      "/images/gem-about.png",
-      "/images/gem-hero.png",
-      "/images/gem-menu.png"
+      "/images/creatify-cover.png",
+      "/images/creatify-figma.png",
+      "/images/creatify-home.png"
     ],
     "story": [
       {
         "title": "The Project",
         "text": [
-          "Restaurant GEM is a restaurant website I worked on during my internship at Unique Design. The goal was to create an online experience that reflected the restaurant's atmosphere, from the imagery and typography to the way visitors move through the website.",
-          "Alongside the visual experience, the website needed to make practical information like the menu and reservations easy to find."
+          "Creatify Space helps people without design or coding skills get a portfolio online. You upload your LinkedIn PDF and the app turns it into a personal website with its own shareable link.",
+          "I built it on my own for a school assignment, from idea to working product."
         ]
       },
       {
         "title": "My Role",
         "text": [
-          "I was responsible for the entire design in Figma and most of the development. I built a custom WordPress theme using PHP and Bootstrap, with Advanced Custom Fields (ACF) so the client could manage the content themselves.",
-          "A coworker helped with the page transitions and animations. I handled the rest of the website, from the layouts and responsive styling to the WordPress implementation."
+          "I did everything myself: the design in Figma and the full application in Next.js. That includes the PDF import, the editing dashboard, authentication, the database and the portfolio generation."
         ]
       },
       {
         "title": "Behind the Work",
         "text": [
-          "I wanted the website to feel like more than a typical restaurant template. I paid attention to typography, photography and spacing to give it its own character, while keeping the menu and reservation information easy to reach.",
-          "Building the design as a custom WordPress theme meant making sure it worked across screen sizes and remained flexible when the client updated content through ACF."
+          "The hard part was turning a LinkedIn PDF into something users can actually edit. Pulling the text out was only the first step. I also had to sort it into the right portfolio sections and keep every part editable.",
+          "For login I used passwordless magic links, and Prisma with PostgreSQL stores the user data. I wanted it to feel simple for the user, even with a lot happening behind the scenes."
         ]
       },
       {
         "title": "The Outcome",
         "text": [
-          "The result was a custom WordPress website that brought my Figma designs into a working, content-manageable experience.",
-          "I learned how to take ownership of a client project from design through development, build flexible PHP templates and collaborate with a coworker on the finishing details. It was a project where I could really bring my design and development skills together."
+          "A working portfolio generator where users import their info, personalize their profile and publish a portfolio they can share.",
+          "It gave me experience building a whole application on my own, and I learned the most about authentication, PDF parsing and working with a database."
         ]
       }
-    ]
+    ],
+    "id": 1
+  },
+  {
+    "slug": "tasbeeh-challenge",
+    "title": "Tasbeeh Challenge",
+    "group": "Web App",
+    "year": "2025",
+    "card": "wide",
+    "role": "Designer & Full-stack Developer",
+    "techs": ["Next.js", "Firebase", "PWA"],
+    "summary": "A mobile-first app that makes daily dhikr more engaging with challenges, streaks and friendly competition.",
+    "thumbnail": "/images/tasbeeh-cover.png",
+    "links": [
+      {
+        "label": "Code",
+        "url": "https://github.com/iqrafarah/Tasbeeh-Challenge"
+      }
+    ],
+    "images": [
+      "/images/tasbeeh-cover.png",
+      "/images/tasbeeh-video.mp4",
+      "/images/tasbeeh-counter.png",
+      "/images/tasbeeh-challenge-three.jpeg"
+    ],
+    "story": [
+      {
+        "title": "The Project",
+        "text": [
+          "Tasbeeh Challenge started with my sister. She wanted to compete with her friends over who could do the most dhikr (repeating short prayers), and I thought it would be fun to build an app for that.",
+          "You can count your dhikr, complete challenges, track your progress and compete with friends on a leaderboard. I built it in my free time, just because I liked the idea."
+        ]
+      },
+      {
+        "title": "My Role",
+        "text": [
+          "I designed and built the whole app myself, from the interface and user flows to the functionality behind it.",
+          "That includes the challenge system, the interactive counter, progress tracking, leaderboards and profiles, plus Google sign-in and Firebase for storing user data."
+        ]
+      },
+      {
+        "title": "Behind the Work",
+        "text": [
+          "People would use it on their phones every day, so I made it mobile-first, kept the counter quick and satisfying, and added PWA support so it can be installed like an app. Challenges, streaks and points give users something to work towards.",
+          "The trickiest part was connecting everything through Firebase. Finishing a challenge has to update the user's progress, points and the leaderboard without making the app feel complicated."
+        ]
+      },
+      {
+        "title": "The Outcome",
+        "text": [
+          "A working app with dhikr counters, challenges, progress statistics, profiles and friend and community leaderboards.",
+          "I got more practice building a complete application independently, especially Firebase authentication and storing user progress. What I like most is that it came from a simple conversation. I didn't need an assignment to start building something useful."
+        ]
+      }
+    ],
+    "id": 2
   },
   {
     "slug": "moodtunes",
     "title": "MoodTunes",
     "group": "Web App",
     "year": "2026",
+    "card": "tall",
     "role": "Frontend Developer & UI Designer",
     "techs": ["JavaScript", "Spotify API", "Face API"],
-    "summary": "A music discovery app that uses facial emotion detection and personal preferences to generate Spotify playlists.",
+    "summary": "An app that reads your mood through your camera and builds a Spotify playlist that matches it, or helps you change it.",
     "thumbnail": "/images/moodtunes-cover.png",
     "links": [
       {
@@ -63,7 +121,6 @@
         "url": "https://github.com/Shugri7002/MoodTunes"
       }
     ],
-    "id": 2,
     "images": [
       "/images/moodtunes-cover-smaller.png",
       "/images/moodtunes-video.mp4",
@@ -75,48 +132,48 @@
       {
         "title": "The Project",
         "text": [
-          "MoodTunes is a music discovery app that uses facial emotion detection and Spotify to create personalized playlists.",
-          "The idea was to go beyond simply matching music to someone's mood. After detecting how they feel, the app lets them choose whether they want music that matches that feeling or helps change it.",
-          "I came up with the concept and pitched it to my classmates. We decided to bring it to life together as a school project."
+          "MoodTunes detects how you feel through your camera and creates a Spotify playlist for it. The twist: you choose whether you want music that matches your mood or music that helps you change it.",
+          "The idea was mine. I pitched it to my classmates and we built it together as a school project."
         ]
       },
       {
         "title": "My Role",
         "text": [
-          "I worked on the UI design with another classmate and was responsible for the overall frontend styling, bringing the playful colors, typography and interactions into the application.",
-          "I also implemented Spotify authentication and API integration, along with the user-choice functionality. Another teammate handled the facial emotion detection."
+          "I came up with the concept and designed the UI together with a classmate. I handled the frontend styling (playful colors, typography and interactions) and built the Spotify authentication, the API integration and the choice step.",
+          "A teammate built the facial emotion detection."
         ]
       },
       {
         "title": "Behind the Work",
         "text": [
-          "Someone's current mood isn't always how they want to feel. If someone feels sad, they might want uplifting music rather than songs that match their sadness. That's why we gave users a choice before generating their playlist.",
-          "My main technical challenge was integrating Spotify and connecting the user's preferences to the playlist generation. I also worked on keeping the experience consistent and easy to follow across the different screens."
+          "Your current mood isn't always how you want to feel. Someone who feels sad might want uplifting music, so we added a choice step before the playlist is generated.",
+          "My main challenge was the Spotify integration and connecting the user's choices to the playlist, while keeping the different screens consistent and easy to follow."
         ]
       },
       {
         "title": "The Outcome",
         "text": [
-          "We built a working prototype that combines facial emotion detection, user preferences and Spotify playlist generation.",
-          "I gained more experience working with external APIs and building interactive frontend features. Seeing an idea I came up with turn into a working application was especially rewarding, and it taught me how much a team can achieve by combining different skills."
+          "A working prototype that combines facial emotion detection, user preferences and Spotify playlist generation.",
+          "I gained experience with external APIs and interactive frontend features. Seeing my own idea turn into a working app was the best part, and it showed me what a team can do when everyone brings different skills."
         ]
       }
-    ]
+    ],
+    "id": 3
   },
   {
     "slug": "vecozo",
     "title": "VECOZO",
     "group": "Healthcare",
     "year": "2025",
+    "card": "medium",
     "role": "Designer & Developer",
     "techs": ["Figma", "C#", "MSSQL"],
-    "summary": "A healthcare application that brings patient management and multidisciplinary consultations together in one place.",
+    "summary": "A healthcare app that brings consultation planning and patient information together in one place, built for VECOZO.",
     "thumbnail": "/images/vecozo-cover.png",
     "links": [],
-    "id": 1,
     "images": [
       "/images/vecozo-cover.png",
-      "/images/vecozo-all-mdo.png",
+      "/images/Vecozo-all-mdo.png",
       "/images/vecozo-consultation.png",
       "/images/vecozo-create-mdo.png",
       "/images/vecozo-patients.png"
@@ -125,197 +182,136 @@
       {
         "title": "The Project",
         "text": [
-          "VECOZO is a Dutch healthcare organization that helps healthcare professionals exchange information securely.",
-          "For a school assignment, our team of six worked with VECOZO to develop an application for multidisciplinary consultations (MDOs), where healthcare professionals from different specialties discuss patient cases.",
-          "We had 12 weeks to build a working prototype that makes it easier to organize consultations, manage patient information and keep everything in one place."
+          "VECOZO is a Dutch organization that helps healthcare professionals share information securely. For a school assignment, our team of six built an application for multidisciplinary consultations (MDOs), where specialists from different fields discuss patient cases.",
+          "We had 12 weeks to deliver a working prototype that makes it easier to plan consultations and manage patient information in one place."
         ]
       },
       {
         "title": "My Role",
         "text": [
-          "I worked across both design and development. I designed the entire interface in Figma, creating the layouts, visual style and reusable components to keep the application consistent.",
-          "I also developed core features, worked with the application's logic and data, and helped teammates build and refine other parts of the application. Being involved in both sides meant I could take my designs beyond Figma and turn them into working functionality."
+          "I worked on both design and development. I designed the whole interface in Figma, including layouts, visual style and reusable components, and built core features in C# connected to the application's logic and data.",
+          "I also helped teammates build and refine other parts of the application."
         ]
       },
       {
         "title": "Behind the Work",
         "text": [
-          "We were designing for healthcare professionals, so efficiency mattered. I focused on clear navigation, making patient information easy to find and reducing unnecessary steps in common tasks.",
-          "On the development side, I worked with C#, MSSQL and a layered architecture separating presentation, business logic and data access. Getting more comfortable with C# while learning how these layers connected was an important part of the project.",
-          "We worked in sprints, with two project days a week, and presented our progress to VECOZO every four weeks. Their feedback helped us decide what to improve next."
+          "Healthcare professionals need to work efficiently, so I focused on clear navigation, patient information that is easy to find and fewer steps for common tasks.",
+          "The app is built with C# and MSSQL in a layered architecture that separates presentation, business logic and data access. We worked in sprints with two project days a week and presented to VECOZO every four weeks. Their feedback decided what we improved next."
         ]
       },
       {
         "title": "The Outcome",
         "text": [
-          "Together, we delivered a working prototype that brings patient management, consultation planning and MDO discussions into one application.",
-          "I gained more confidence with C#, learned how to structure applications using a layered architecture and got experience working with a real client. The biggest takeaway was learning to balance design and development while keeping the people using the software at the center of both."
+          "A working prototype that brings patient management, consultation planning and MDO discussions into one application.",
+          "I became more confident with C#, learned how to structure an application in layers and got to work with a real client. My biggest takeaway: balance design and development, and keep the people who use the software at the center."
         ]
       }
-    ]
+    ],
+    "id": 4
   },
   {
-    "slug": "creatify",
-    "title": "Creatify Space",
-    "group": "Web App",
-    "year": "2025",
-    "role": "Designer & Full-stack Developer",
-    "techs": ["Figma", "Next.js", "PostgreSQL"],
-    "summary": "A portfolio builder that turns LinkedIn information into a personal website users can customize and share.",
-    "thumbnail": "/images/creatify-thumbnail.png",
-    "links": [
-      {
-        "label": "Code",
-        "url": "https://github.com/iqrafarah/creatify-space"
-      }
-    ],
-    "id": 4,
+    "slug": "restaurant-gem",
+    "title": "Restaurant GEM",
+    "group": "Website",
+    "year": "2024",
+    "card": "wide",
+    "role": "Designer & Developer",
+    "techs": ["Figma", "WordPress", "PHP", "ACF"],
+    "summary": "A custom WordPress website designed in Figma to capture the restaurant's atmosphere, built so the client can manage the content themselves.",
+    "thumbnail": "/images/gem-cover.png",
+    "links": [],
     "images": [
-      "/images/creatify-cover.png",
-      "/images/creatify-figma.png",
-      "/images/creatify-home.png"
+      "/images/gem-cover.png",
+      "/images/gem-home.png",
+      "/images/gem-about.png",
+      "/images/gem-hero.png",
+      "/images/gem-menu.png"
     ],
     "story": [
       {
         "title": "The Project",
         "text": [
-          "Creatify Space is a portfolio builder that helps people create their own website without needing design or coding skills.",
-          "For a school assignment, I built a platform that turns information from a LinkedIn PDF into a personal portfolio. Users can customize their information through a dashboard and publish a portfolio with its own shareable link."
+          "Restaurant GEM is a restaurant website I worked on during my internship at Unique Design. It had to capture the restaurant's atmosphere, from the imagery and typography to how visitors move through the site, while making practical information like the menu and reservations easy to find."
         ]
       },
       {
         "title": "My Role",
         "text": [
-          "This was a solo project, so I handled everything from design to development. I designed the interface in Figma and built the full application using Next.js.",
-          "I worked on the PDF import, editing dashboard, authentication, database and portfolio generation. It gave me the freedom to make both the design and technical decisions myself."
+          "I designed everything in Figma and built most of it as a custom WordPress theme with PHP, Bootstrap and Advanced Custom Fields (ACF), so the client can update their content on their own.",
+          "A coworker helped with the page transitions and animations. I did the rest, from layouts and responsive styling to the WordPress implementation."
         ]
       },
       {
         "title": "Behind the Work",
         "text": [
-          "The biggest challenge was turning a LinkedIn PDF into something users could actually edit. Extracting the information was one part, but organizing it into the right portfolio sections and keeping everything editable was another.",
-          "I also implemented passwordless login using magic links and used Prisma with PostgreSQL to store user data. The goal was to keep the experience simple, even with several things happening behind the scenes."
+          "I wanted it to feel like more than a restaurant template, so I put a lot of attention into typography, photography and spacing, while keeping the menu and reservation information easy to reach.",
+          "Because it is a custom theme, I made sure it works across screen sizes and stays flexible when the client changes content through ACF."
         ]
       },
       {
         "title": "The Outcome",
         "text": [
-          "I built a working portfolio generator where users can import their information, personalize their profile and publish a shareable portfolio.",
-          "This project taught me a lot about full-stack development, especially authentication, PDF parsing and working with databases. It also gave me experience building an entire application independently, rather than focusing on just one part of it."
+          "A custom WordPress website that turns my Figma designs into a working site the client can manage. It was also nominated for Site of the Day on Awwwards.",
+          "I learned how to take a client project from design through development, build flexible PHP templates and work with a coworker on the finishing details. It let me bring my design and development skills together."
         ]
-      }
-    ]
-  },
-  {
-    "slug": "tasbeeh-challenge",
-    "title": "Tasbeeh Challenge",
-    "group": "Web App",
-    "year": "2025",
-    "role": "Designer & Full-stack Developer",
-    "techs": ["Next.js", "Firebase", "PWA"],
-    "summary": "A mobile-first app that makes daily dhikr more engaging through challenges, progress tracking and friendly competition.",
-    "thumbnail": "/images/tasbeeh-cover.png",
-    "links": [
-      {
-        "label": "Code",
-        "url": "https://github.com/iqrafarah/Tasbeeh-Challenge"
       }
     ],
-    "id": 5,
-    "images": [
-      "/images/tasbeeh-cover.png",
-      "/images/tasbeeh-video.mp4",
-      "/images/tasbeeh-counter.png",
-      "/images/tasbeeh-challenge-three.jpeg"
-    ],
-    "story": [
-      {
-        "title": "The Project",
-        "text": [
-          "Tasbeeh Challenge started with my sister. She wanted a way to compete with her friends over who could do the most dhikr, which is basically remembering Allah by repeating short prayers or phrases. I thought it would be fun to build an app for that.",
-          "I made a mobile-first app where you can count your dhikr, complete challenges, track your progress and compete with friends on a leaderboard.",
-          "It was something I built in my free time, just because I liked the idea."
-        ]
-      },
-
-      {
-        "title": "My Role",
-        "text": [
-          "I designed and developed the entire application myself, from the interface and user flows to the functionality behind it.",
-          "I built the challenge system, interactive counter, progress tracking, leaderboards and user profiles. I also implemented Google sign-in and used Firebase to store and manage user data."
-        ]
-      },
-      {
-        "title": "Behind the Work",
-        "text": [
-          "I wanted the app to feel simple enough to use every day. The counter needed to be quick and satisfying, while challenges, streaks and points gave users something to work towards.",
-          "Since people would mostly use it on their phones, I designed it mobile-first and added PWA support so it could be installed like an app.",
-          "One of the more challenging parts was connecting everything through Firebase. A completed challenge needed to update the user's progress, points and leaderboard without making the experience feel complicated."
-        ]
-      },
-      {
-        "title": "The Outcome",
-        "text": [
-          "I built a working application with dhikr counters, challenges, progress statistics, user profiles and friend and community leaderboards.",
-          "This project gave me more experience building a complete application independently, especially with Firebase authentication, storing user progress and connecting different features together.",
-          "What I like most about it is that it came from such a simple conversation. I didn't need an assignment to start building something useful."
-        ]
-      }
-    ]
+    "id": 5
   },
-
   {
     "slug": "pomotomo",
     "title": "Pomotomo",
     "group": "Web App",
     "year": "2025",
-    "role": "Developer",
-    "techs": ["ASP.NET", "C#", "SQLite"],
-    "summary": "A focus timer that grows a virtual plant as you complete study sessions, with a physical buzzer to let you know when time is up.",
-    "thumbnail": "/images/Pomotomo-cover.png",
+    "card": "square",
+    "role": "Designer & Developer",
+    "techs": ["Figma", "ASP.NET", "C#", "SQLite"],
+    "summary": "A focus timer that grows a virtual plant as you study, with a physical buzzer that goes off when your session ends.",
+    "thumbnail": "/images/pomotomo-cover.png",
     "links": [
       {
         "label": "Code",
         "url": "https://github.com/BrahimAit98/PomodoroPlant"
       }
     ],
-    "id": 6,
     "images": [
-      "/images/Pomotomo-cover.png",
-      "/images/Pomotomo-video.mp4",
-      "/images/Pomotomo-garden.png",
-      "/images/Pomotomo-board.png",
-      "/images/Pomotomo-login.png"
+      "/images/pomotomo-cover.png",
+      "/images/pomotomo-video.mp4",
+      "/images/pomotomo-garden.png",
+      "/images/pomotomo-board.png",
+      "/images/pomotomo-login.png"
     ],
     "story": [
       {
         "title": "The Project",
         "text": [
-          "Pomotomo is a focus app we built as a team for a school project. It uses the Pomodoro technique, where you study for a set amount of time and take short breaks in between.",
-          "We wanted to make focusing a little more rewarding, so we added a virtual plant that grows as you finish sessions. There's also a physical buzzer that goes off when the timer ends, so you don't have to keep checking the screen."
+          "Pomotomo is a focus app we built as a team for a school project. It uses the Pomodoro technique: you study for a set time and then take a short break.",
+          "To make focusing more rewarding, a virtual plant grows with every finished session. A physical buzzer tells you when time is up, so you don't have to keep checking the screen."
         ]
       },
       {
         "title": "My Role",
         "text": [
-          "I worked on the application alongside my teammates. We used ASP.NET and C# to build the website, with SQLite to store user accounts and completed focus sessions.",
-          "The application includes a focus timer, a virtual garden and a statistics page where users can see how much time they've spent studying."
+          "I designed the interface in Figma together with a teammate, then worked on the app with the team. We built the website with ASP.NET and C#, and SQLite stores the user accounts and completed focus sessions.",
+          "It includes the focus timer, a virtual garden and a statistics page that shows how much time you have spent studying."
         ]
       },
       {
         "title": "Behind the Work",
         "text": [
-          "The interesting part was connecting the website to an actual piece of hardware. The timer needed to communicate with the buzzer so it could signal when a session was finished.",
-          "We also had to connect completed sessions to the plant's growth and the user's statistics, so the different parts of the app worked together."
+          "The interesting part was connecting the website to a real piece of hardware. The timer has to tell the buzzer when a session is over.",
+          "We also linked completed sessions to the plant's growth and the user's statistics, so every part of the app works together."
         ]
       },
       {
         "title": "The Outcome",
         "text": [
-          "We built a working Pomodoro app with focus and break timers, a growing virtual plant, a physical buzzer and progress tracking.",
-          "What made this project different was having something physical connected to the website. It wasn't just about what happened on the screen anymore."
+          "A working Pomodoro app with focus and break timers, a growing virtual plant, a physical buzzer and progress tracking.",
+          "This project was different from my others because something physical was connected to the website. It wasn't only about what happened on the screen."
         ]
       }
-    ]
+    ],
+    "id": 6
   }
 ]

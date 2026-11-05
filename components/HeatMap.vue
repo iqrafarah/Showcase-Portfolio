@@ -3,14 +3,18 @@ import saved from '~/data/heatmap.json';
 import profile from '~/data/profile.json';
 
 // THE CONTRIBUTION GRAPH in the About drawer (the same look as the graph on a GitHub profile).
-// It shows one year (YEAR below). It asks GitHub for live numbers.
+// It shows the last 12 months and asks GitHub for live numbers, so it updates by itself when you commit.
 // If that does not work, it shows the saved graph from data/heatmap.json instead.
 const props = defineProps<{ dark?: boolean; hideTotal?: boolean }>();
 
-const YEAR = 2024;
+// how many weeks are shown (53 = the whole year)
+const WEEKS = 53;
 const levels = ref(new Map<string, number>()); // date -> 0 to 4
 const total = ref(saved.total);
 const status = ref<'saved' | 'live'>('saved');
+const savedYear = new Date(
+  new Date(saved.start + 'T00:00:00').getTime() + 7 * 86400000,
+).getFullYear(); // the year the saved graph is about
 
 function dayKey(date: Date) {
   const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -30,39 +34,39 @@ saved.weeks.forEach((week) => {
 onMounted(async () => {
   try {
     const response = await fetch(
-      `https://github-contributions-api.jogruber.de/v4/${profile.githubUser}?y=${YEAR}`,
+      `https://github-contributions-api.jogruber.de/v4/${profile.githubUser}?y=last`,
     );
     const data = await response.json();
     const live = new Map<string, number>();
     data.contributions.forEach((day: any) => live.set(day.date, day.level));
     levels.value = live;
-    total.value = Number(data.total?.[YEAR] ?? 0);
+    total.value = Number(data.total?.lastYear ?? 0);
     status.value = 'live';
   } catch {
     // keep the saved graph
   }
 });
 
-// 53 columns (weeks) of 7 days, the last column is this week
+// WEEKS columns of 7 days, the last column is this week
 const weeks = computed(() => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   let day: Date;
   let end = today; // days after this one stay empty
   if (status.value === 'live') {
-    // the whole year: from the Sunday before 1 January until 31 December
-    day = new Date(YEAR, 0, 1);
-    day.setDate(day.getDate() - day.getDay());
-    end = new Date(YEAR, 11, 31);
-  } else {
+    // the last WEEKS weeks, the last column is this week
     const lastDay = new Date(today);
     lastDay.setDate(lastDay.getDate() + (6 - lastDay.getDay()));
     day = new Date(lastDay);
-    day.setDate(day.getDate() - 53 * 7 + 1);
+    day.setDate(day.getDate() - WEEKS * 7 + 1);
+  } else {
+    // the saved graph (data/heatmap.json): from its start date, one year
+    day = new Date(saved.start + 'T00:00:00');
+    end = new Date(savedYear, 11, 31);
   }
 
   const result = [];
-  for (let w = 0; w < 53; w++) {
+  for (let w = 0; w < WEEKS; w++) {
     const week = [];
     for (let d = 0; d < 7; d++) {
       const key = dayKey(day);
@@ -112,25 +116,22 @@ const shades = computed(() => [
         v-for="month in months"
         :key="month.column"
         class="absolute"
-        :style="{ left: (month.column / 53) * 100 + '%' }"
+        :style="{ left: (month.column / WEEKS) * 100 + '%' }"
         >{{ month.name }}</span
       >
     </div>
 
     <div
-      class="grid grid-cols-[repeat(53,minmax(0,1fr))] gap-[2px] sm:gap-[3px]"
+      class="grid gap-[3px] sm:gap-1"
+      :style="{ gridTemplateColumns: `repeat(${WEEKS}, minmax(0, 1fr))` }"
       role="img"
       :aria-label="`${total} contributions`"
     >
-      <div
-        v-for="(week, w) in weeks"
-        :key="w"
-        class="grid gap-[2px] sm:gap-[3px]"
-      >
+      <div v-for="(week, w) in weeks" :key="w" class="grid gap-[3px] sm:gap-1">
         <span
           v-for="(day, d) in week"
           :key="day.key"
-          class="aspect-square rounded-[2px] sm:rounded-[3px]"
+          class="aspect-square rounded-[3px] sm:rounded-[4px]"
           :class="day.future ? 'bg-transparent' : shades[day.level]"
           :style="
             day.future
@@ -148,14 +149,11 @@ const shades = computed(() => [
       class="mt-4 flex flex-wrap items-center justify-between gap-3 font-mono text-[12px] uppercase opacity-70"
     >
       <span v-if="!hideTotal">
-        {{ status === 'live' ? YEAR : 'The last year' }}:
+        {{ status === 'live' ? 'The last year' : savedYear }}:
         {{ total }} contributions
         <span v-if="status === 'live'">· live from GitHub</span>
       </span>
-      <span v-else
-        >{{ status === 'live' ? '' : 'The last year' }}Every square is a day I
-        built something</span
-      >
+      <span v-else>Every square is a day I built something</span>
       <span class="flex items-center gap-1.5">
         Less
         <i

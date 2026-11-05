@@ -2,12 +2,13 @@
   "email": "iqrafarah02@gmail.com",
   "github": "https://github.com/iqrafarah",
   "githubUser": "iqrafarah",
+  "photo": "/images/profile.jpg",
   "experience": [
     {
       "company": "Unique Design",
       "role": "Web Designer & Developer Intern",
       "period": "2024 – 2025",
-      "text": "At Unique Design, I worked on both the design and development of websites. I created designs in Figma and turned them into custom WordPress themes using PHP and ACF. One of my main projects was Restaurant GEM, where I was responsible for the entire design and most of the development.",
+      "text": "At Unique Design I designed websites in Figma and built them as custom WordPress themes with PHP and ACF. I took projects from the first design to launch, made sure they worked on every screen, and set them up so clients could update their own content.",
       "bullets": [],
       "logo": "/images/logos/unique-design.svg",
       "color": "#172D4B",
@@ -17,7 +18,7 @@
       "company": "Bewise Solutions",
       "role": "Web Developer Intern",
       "period": "2022 – 2023",
-      "text": "My work at Bewise was a mix of building new websites and maintaining existing ones. I worked mainly with WordPress and Elementor, tested websites, fixed issues and made updates. I also designed some websites, joined client meetings and spoke directly with clients about their requests.",
+      "text": "At Bewise I built and maintained WordPress websites with Elementor, tested sites and fixed issues, and worked on designs. I also joined client meetings and talked to clients directly about the changes they needed.",
       "bullets": [],
       "logo": "/images/logos/bewise.png",
       "color": "#2a2145",
@@ -27,7 +28,7 @@
       "company": "SOVOT",
       "role": "IT Support Intern",
       "period": "2020 – 2021",
-      "text": "During my internship at Bewise Solutions, I helped with IT support for SOVOT. I answered support questions, helped users with technical issues and worked with colleagues to find solutions.",
+      "text": "I did IT support for SOVOT during my internship at Bewise Solutions: I answered support questions, helped users with technical issues and worked with colleagues to find solutions.",
       "bullets": [],
       "logo": "/images/logos/sovot.png",
       "color": "#f8ec4a",
@@ -41,54 +42,26 @@
     },
     {
       "group": "Frontend",
-      "items": ["HTML & CSS", "JavaScript", "React", "Next.js"]
+      "items": ["JavaScript", "Next.js", "HTML & CSS"]
     },
     {
       "group": "CMS",
-      "items": ["WordPress", "Elementor", "Webflow", "Kirby CMS"]
+      "items": ["WordPress", "Elementor"]
     },
     {
       "group": "Backend",
-      "items": ["PHP", "Node.js", "Express", "MongoDB"]
+      "items": ["PHP", "C#", "Node.js", "Express"]
     },
     {
       "group": "Automation",
-      "items": ["GoHighLevel", "n8n"]
+      "items": ["GoHighLevel", "n8n", "Zapier"]
+    },
+    {
+      "group": "Libraries",
+      "items": ["React"]
     }
   ],
   "about": {
-    "lead": "Hello, I'm Iqra.",
-    "text": "I'm a frontend developer based in Noord-Brabant, and I enjoy UI design just as much as coding. I like working out how something should look and feel, then bringing it to life in the browser. I've also worked with backend development, databases and APIs, so I enjoy figuring out what happens behind the scenes too. Outside of school and internships, I like building my own ideas and trying out new things.",
-    "facts": [
-      {
-        "label": "Based in",
-        "value": "Noord-Brabant, Netherlands"
-      },
-      {
-        "label": "Focus",
-        "value": "Frontend development & UI design"
-      },
-      {
-        "label": "Email",
-        "value": "iqrafarah02@gmail.com"
-      }
-    ],
-    "what": [
-      {
-        "title": "Design",
-        "text": "I like figuring out the layout, typography and little details that make an interface feel right.",
-        "tags": ["Figma", "UI Design"]
-      },
-      {
-        "title": "Build",
-        "text": "Frontend is my favorite part, but I've also built features that work with APIs, databases and backend logic.",
-        "tags": ["React", "Next.js", "WordPress", "PHP"]
-      },
-      {
-        "title": "Automate",
-        "text": "I've also worked with tools like n8n and GoHighLevel to connect systems and automate repetitive tasks.",
-        "tags": ["n8n", "GoHighLevel"]
-      }
-    ]
+    "text": "I've always liked both designing and coding. There's something really satisfying about seeing a design I made in Figma turn into something I can actually click around in.\n\nDuring my internships, I worked on website design, WordPress development, testing and maintenance. I also got to work directly with clients, which taught me a lot about building something for someone other than myself.\n\nFrontend is what I enjoy most right now, but I want to get better at the backend too. My goal is to become a full-stack developer who understands both the design and the code behind an application.\n\nIn my free time, I'm usually working on a random project, trying something new or exploring open-source code. And when I'm not in a reading slump, I love fiction books with a good plot twist. I always try to guess the ending. Sometimes I'm even right."
   }
 }
