@@ -5,9 +5,9 @@
   "experience": [
     {
       "company": "Unique Design",
-      "role": "",
+      "role": "Web Designer & Developer Intern",
       "period": "2024 – 2025",
-      "text": "",
+      "text": "At Unique Design, I worked on both the design and development of websites. I created designs in Figma and turned them into custom WordPress themes using PHP and ACF. One of my main projects was Restaurant GEM, where I was responsible for the entire design and most of the development.",
       "bullets": [],
       "logo": "/images/logos/unique-design.svg",
       "color": "#172D4B",
@@ -15,9 +15,9 @@
     },
     {
       "company": "Bewise Solutions",
-      "role": "Web developer",
+      "role": "Web Developer Intern",
       "period": "2022 – 2023",
-      "text": "Managed and updated text, images and video on client websites, built WordPress websites, supported customers and built the Restaurant Gem website.",
+      "text": "My work at Bewise was a mix of building new websites and maintaining existing ones. I worked mainly with WordPress and Elementor, tested websites, fixed issues and made updates. I also designed some websites, joined client meetings and spoke directly with clients about their requests.",
       "bullets": [],
       "logo": "/images/logos/bewise.png",
       "color": "#2a2145",
@@ -25,9 +25,9 @@
     },
     {
       "company": "SOVOT",
-      "role": "Front desk employee",
+      "role": "IT Support Intern",
       "period": "2020 – 2021",
-      "text": "Solved IT-related issues, supported end users, brainstormed solutions and offered advice.",
+      "text": "During my internship at Bewise Solutions, I helped with IT support for SOVOT. I answered support questions, helped users with technical issues and worked with colleagues to find solutions.",
       "bullets": [],
       "logo": "/images/logos/sovot.png",
       "color": "#f8ec4a",
@@ -37,48 +37,28 @@
   "stack": [
     {
       "group": "Design",
-      "items": [
-        "Figma"
-      ]
+      "items": ["Figma"]
     },
     {
-      "group": "Build",
-      "items": [
-        "HTML & CSS",
-        "JavaScript",
-        "React",
-        "Next.js",
-        "PHP"
-      ]
+      "group": "Frontend",
+      "items": ["HTML & CSS", "JavaScript", "React", "Next.js"]
     },
     {
       "group": "CMS",
-      "items": [
-        "WordPress",
-        "Elementor",
-        "Webflow",
-        "Kirby CMS"
-      ]
+      "items": ["WordPress", "Elementor", "Webflow", "Kirby CMS"]
     },
     {
       "group": "Backend",
-      "items": [
-        "Node.js",
-        "Express",
-        "MongoDB"
-      ]
+      "items": ["PHP", "Node.js", "Express", "MongoDB"]
     },
     {
       "group": "Automation",
-      "items": [
-        "GoHighLevel",
-        "n8n"
-      ]
+      "items": ["GoHighLevel", "n8n"]
     }
   ],
   "about": {
-    "lead": "Creative eye. Full-stack hands.",
-    "text": "I'm Iqra Farah, a web designer and developer based in Noord-Brabant. I design everything myself in Figma, then build it in code, from the first sketch to the live site. I'm full stack with frontend as my strongest side, and I set up automations with n8n and GoHighLevel.",
+    "lead": "Hello, I'm Iqra.",
+    "text": "I'm a frontend developer based in Noord-Brabant, and I enjoy UI design just as much as coding. I like working out how something should look and feel, then bringing it to life in the browser. I've also worked with backend development, databases and APIs, so I enjoy figuring out what happens behind the scenes too. Outside of school and internships, I like building my own ideas and trying out new things.",
     "facts": [
       {
         "label": "Based in",
@@ -86,7 +66,7 @@
       },
       {
         "label": "Focus",
-        "value": "Web design & development, Figma to production"
+        "value": "Frontend development & UI design"
       },
       {
         "label": "Email",
@@ -96,30 +76,18 @@
     "what": [
       {
         "title": "Design",
-        "text": "I draw every screen in Figma first, so it feels right before any code.",
-        "tags": [
-          "Figma",
-          "Website design"
-        ]
+        "text": "I like figuring out the layout, typography and little details that make an interface feel right.",
+        "tags": ["Figma", "UI Design"]
       },
       {
         "title": "Build",
-        "text": "WordPress, or React and Next.js when a site needs more.",
-        "tags": [
-          "WordPress",
-          "React",
-          "Next.js",
-          "Node.js"
-        ]
+        "text": "Frontend is my favorite part, but I've also built features that work with APIs, databases and backend logic.",
+        "tags": ["React", "Next.js", "WordPress", "PHP"]
       },
       {
-        "title": "Look after",
-        "text": "I test everything and keep sites running well after launch.",
-        "tags": [
-          "Testing",
-          "Scrum",
-          "Maintenance"
-        ]
+        "title": "Automate",
+        "text": "I've also worked with tools like n8n and GoHighLevel to connect systems and automate repetitive tasks.",
+        "tags": ["n8n", "GoHighLevel"]
       }
     ]
   }

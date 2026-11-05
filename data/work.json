@@ -283,7 +283,6 @@
     "images": [
       "/images/Pomotomo-cover.png",
       "/images/Pomotomo-video.mp4",
-      "/images/Pomotomo-counter.png",
       "/images/Pomotomo-garden.png",
       "/images/Pomotomo-board.png",
       "/images/Pomotomo-login.png"
@@ -292,7 +291,7 @@
       {
         "title": "The Project",
         "text": [
-          "PomodoroPlant is a focus app we built as a team for a school project. It uses the Pomodoro technique, where you study for a set amount of time and take short breaks in between.",
+          "Pomotomo is a focus app we built as a team for a school project. It uses the Pomodoro technique, where you study for a set amount of time and take short breaks in between.",
           "We wanted to make focusing a little more rewarding, so we added a virtual plant that grows as you finish sessions. There's also a physical buzzer that goes off when the timer ends, so you don't have to keep checking the screen."
         ]
       },
