@@ -166,16 +166,6 @@ onBeforeUnmount(() => {
           </h3>
           <div data-item class="section-body"><Toolbox /></div>
         </section>
-
-        <!-- heatmap -->
-        <section class="about-section">
-          <h3 data-item class="section-title">
-            <span class="orange-square" aria-hidden="true"></span>Commits
-          </h3>
-          <div data-item class="section-body">
-            <ClientOnly><HeatMap v-if="open" dark hide-total /></ClientOnly>
-          </div>
-        </section>
       </div>
     </aside>
   </div>
@@ -184,12 +174,12 @@ onBeforeUnmount(() => {
 <style scoped>
 /* The panel: dark, full height, slides in from the right (the slide itself is set in the template above) */
 .about-drawer {
-  @apply fixed bottom-0 right-0 top-0 z-[90] w-[min(900px,100%)] overflow-y-auto bg-ink text-beige transition-transform duration-[750ms] ease-[cubic-bezier(.7,0,.15,1)];
+  @apply fixed bottom-0 right-0 top-0 z-[90] w-[min(720px,100%)] overflow-y-auto bg-ink text-beige transition-transform duration-[750ms] ease-[cubic-bezier(.7,0,.15,1)];
 }
 
 /* Same height as the header on the case study page. It has a soft dark background, so the text that scrolls under it stays readable. */
 .about-header {
-  @apply sticky top-0 z-10 flex h-[81px] items-center justify-end bg-ink/90 px-6 backdrop-blur sm:px-10;
+  @apply sticky top-0 z-10 flex h-[81px] items-center justify-end px-6 backdrop-blur sm:px-10;
 }
 .close-cross {
   @apply text-[17px] leading-none;

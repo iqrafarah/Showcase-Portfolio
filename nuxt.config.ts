@@ -40,7 +40,7 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
       ],
       link: [
-        { rel: 'icon', href: '/favicon.svg' },
+        { rel: 'icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         {
           rel: 'preconnect',

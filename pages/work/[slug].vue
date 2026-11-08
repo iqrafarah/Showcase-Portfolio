@@ -192,6 +192,6 @@ onMounted(() => {
 }
 .case-pictures img,
 .case-pictures video {
-  @apply block h-[720px] object-cover object-top w-full bg-ink-2;
+  @apply block aspect-[4/3] max-h-[720px] w-full bg-ink-2 object-cover object-top;
 }
 </style>
