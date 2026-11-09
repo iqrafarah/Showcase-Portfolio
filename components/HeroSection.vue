@@ -7,7 +7,6 @@ import gsap from 'gsap';
 const about = useAbout();
 const buttons = ref<HTMLElement>();
 
-// The buttons lean a little towards the mouse pointer (not on touch screens)
 onMounted(() => {
   if (matchMedia('(hover: none)').matches || prefersReducedMotion()) return;
   buttons.value!.querySelectorAll<HTMLElement>('.btn').forEach((button) => {
@@ -36,7 +35,7 @@ onMounted(() => {
   >
     <HeroPixels />
     <p data-hero class="eyebrow text-mute">
-      Frontend developer who likes design
+      Hi, I'm Iqra 👋
     </p>
     <h1
       data-hero
@@ -49,7 +48,7 @@ onMounted(() => {
       data-hero
       class="mt-6 max-w-[34rem] text-[clamp(16px,1.2vw,19px)] leading-[1.55] text-mute"
     >
-      Hi, I'm Iqra, a second-year ICT student at Fontys in Tilburg. I enjoy
+      I'm a second-year ICT student at Fontys in Tilburg. I enjoy
       turning designs into working websites and applications. Frontend is my
       favorite part, but I'm getting more into backend development too.
     </p>

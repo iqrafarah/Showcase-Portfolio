@@ -16,21 +16,18 @@ const drawer = ref<HTMLElement>();
 const closeButton = ref<HTMLButtonElement>();
 const emailCopied = ref(false);
 
-// "Copy email" button: copies the address and shows "Copied" for a moment
 function copyEmail() {
   navigator.clipboard?.writeText(profile.email).catch(() => {});
   emailCopied.value = true;
   setTimeout(() => (emailCopied.value = false), 1800);
 }
 
-// When the drawer opens or closes
 watch(open, (isOpen) => {
   lockPageScroll(isOpen); // the page behind it must not scroll, see composables/usePanel.ts
   if (!isOpen) return;
 
   nextTick(() => closeButton.value?.focus());
 
-  // the blocks rise one after another once the drawer has slid in
   gsap.fromTo(
     drawer.value!.querySelectorAll('[data-item]'),
     { opacity: 0, y: 40 },
@@ -53,7 +50,6 @@ onMounted(() =>
   }),
 );
 
-// leaving the page (for example to a case study) must never leave the page locked
 onBeforeUnmount(() => {
   open.value = false;
   lockPageScroll(false);
@@ -62,14 +58,12 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <!-- the dark, blurred area behind the drawer. Click it to close. -->
     <div
       class="fixed inset-0 z-[80] bg-black/50 backdrop-blur-[3px] transition-opacity duration-500"
       :class="open ? 'opacity-100' : 'pointer-events-none opacity-0'"
       @click="open = false"
     />
 
-    <!-- the drawer itself. Built like the case study page: small grey label, big title, rows with thin lines. -->
     <aside
       ref="drawer"
       data-lenis-prevent
@@ -84,7 +78,6 @@ onBeforeUnmount(() => {
           : 'translate-x-full'
       "
     >
-      <!-- the close button stays at the top right while you scroll -->
       <header class="about-header">
         <button
           ref="closeButton"
@@ -98,7 +91,6 @@ onBeforeUnmount(() => {
 
       <div class="about-content">
         <p data-item class="about-category">About</p>
-        <!-- "Hello (round photo) I'm Iqra" as the big title -->
         <h2 data-item class="about-title">
           <template v-if="profile.photo"
             >Hello
@@ -136,7 +128,6 @@ onBeforeUnmount(() => {
           </div>
         </div>
 
-        <!-- where I worked -->
         <section class="about-section">
           <h3 data-item class="section-title">
             <span class="orange-square" aria-hidden="true"></span>Where I've
@@ -159,7 +150,6 @@ onBeforeUnmount(() => {
           </div>
         </section>
 
-        <!-- toolbox -->
         <section class="about-section">
           <h3 data-item class="section-title">
             <span class="orange-square" aria-hidden="true"></span>Tech stack
@@ -172,12 +162,10 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-/* The panel: dark, full height, slides in from the right (the slide itself is set in the template above) */
 .about-drawer {
   @apply fixed bottom-0 right-0 top-0 z-[90] w-[min(720px,100%)] overflow-y-auto bg-ink text-beige transition-transform duration-[750ms] ease-[cubic-bezier(.7,0,.15,1)];
 }
 
-/* Same height as the header on the case study page. It has a soft dark background, so the text that scrolls under it stays readable. */
 .about-header {
   @apply sticky top-0 z-10 flex h-[81px] items-center justify-end px-6 backdrop-blur sm:px-10;
 }
@@ -189,11 +177,9 @@ onBeforeUnmount(() => {
   @apply px-6 pb-28 pt-4 sm:px-10;
 }
 
-/* The top part, like the top of a case study: grey label, big title, text */
 .about-category {
   @apply font-mono text-[12px] uppercase text-beige/45;
 }
-/* The greeting: big title with the round photo in the middle of the sentence */
 .about-photo {
   @apply mx-1 inline-block h-[1.05em] w-[1.05em] rounded-full object-cover align-[-0.14em];
 }
@@ -207,7 +193,6 @@ onBeforeUnmount(() => {
   @apply mt-7;
 }
 
-/* Every part (jobs, toolbox, commits) starts with a thin line and a title with the little orange square */
 .about-section {
   @apply mt-12 border-t border-beige/15;
 }
@@ -221,7 +206,6 @@ onBeforeUnmount(() => {
   @apply pb-2 pt-3;
 }
 
-/* A job: company on the left and the years on the right, the role in orange under it */
 .jobs {
   @apply space-y-7 pb-2 pt-3;
 }

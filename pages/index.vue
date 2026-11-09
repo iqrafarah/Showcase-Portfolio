@@ -14,8 +14,8 @@ onBeforeUnmount(() => stopRevealAnimations?.())
 
 <template>
   <div>
-    <SiteNav />         <!-- the menu at the top: Work, About, Contact -->
-    <AboutDrawer />     <!-- the About panel that slides in from the right -->
+    <SiteNav />
+    <AboutDrawer />
 
     <main>
       <HeroSection />

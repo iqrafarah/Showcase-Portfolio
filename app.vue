@@ -5,7 +5,6 @@
 //   pages/work/[slug].vue   one page per project (case study)          address:  /work/rooster
 // <NuxtPage /> below shows the page that belongs to the current address.
 
-// Start the smooth scrolling (composables/useMotion.ts) once the site is on screen
 onMounted(async () => {
   await nextTick()
   try {
@@ -19,7 +18,7 @@ onMounted(async () => {
 
 <template>
   <div>
-    <LoadingScreen />   <!-- the black pixel wall when the site opens -->
+    <LoadingScreen />
     <NuxtPage />
   </div>
 </template>

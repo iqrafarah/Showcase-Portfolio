@@ -6,8 +6,6 @@
 // The menu and the hero button set it to true, the drawer itself reads it.
 export const useAbout = () => useState<boolean>('about-open', () => false)
 
-// ---- Small tools -----------------------------------------------------------------------
-
 // Turns "/images/rooster.jpg" into the right address for an image in the public/ folder.
 // (On a normal site that is just "/images/rooster.jpg". When the site is hosted in a sub-folder,
 // like GitHub Pages, the name of that folder is put in front.)

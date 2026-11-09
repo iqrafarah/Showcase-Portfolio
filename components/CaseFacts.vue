@@ -37,7 +37,6 @@ defineProps<{ project: any }>()
 .facts {
   @apply font-mono text-[12px] uppercase;
 }
-/* every row has a thin line under it, except the last one */
 .row {
   @apply flex items-baseline justify-between gap-6 border-b border-beige/15 py-3;
 }

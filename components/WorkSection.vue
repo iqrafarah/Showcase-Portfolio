@@ -30,7 +30,7 @@ const gapsAbove = [
   'lg:mt-[4vw]',
   'lg:mt-[10vw]',
   'lg:mt-[4vw]',
-]; // starts over after the last one
+];
 
 function shapeOf(project: any) {
   return shapes[project.card] ?? shapes.wide;
@@ -66,7 +66,6 @@ function placeOf(project: any, i: number) {
         my free time.
       </p>
     </div>
-    <!-- one card per row, each with its own width and side (on small screens: full width) -->
     <div class="flex flex-col gap-y-24 lg:gap-y-0">
       <div
         v-for="(project, i) in work"
