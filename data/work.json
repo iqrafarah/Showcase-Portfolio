@@ -9,7 +9,12 @@
     "techs": ["Figma", "WordPress", "PHP", "ACF"],
     "summary": "A custom WordPress website designed in Figma to capture the restaurant's atmosphere, built so the client can manage the content themselves.",
     "thumbnail": "/images/gem-cover.png",
-    "links": [],
+    "links": [
+      {
+        "label": "Code",
+        "url": "https://restaurantgem.com/"
+      }
+    ],
     "images": [
       "/images/gem-cover.png",
       "/images/gem-home.png",
