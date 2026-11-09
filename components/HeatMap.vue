@@ -7,14 +7,13 @@ import profile from '~/data/profile.json';
 // If that does not work, it shows the saved graph from data/heatmap.json instead.
 const props = defineProps<{ dark?: boolean; hideTotal?: boolean }>();
 
-// how many weeks are shown (53 = the whole year)
 const WEEKS = 53;
-const levels = ref(new Map<string, number>()); // date -> 0 to 4
+const levels = ref(new Map<string, number>());
 const total = ref(saved.total);
 const status = ref<'saved' | 'live'>('saved');
 const savedYear = new Date(
   new Date(saved.start + 'T00:00:00').getTime() + 7 * 86400000,
-).getFullYear(); // the year the saved graph is about
+).getFullYear();
 
 function dayKey(date: Date) {
   const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -22,7 +21,6 @@ function dayKey(date: Date) {
   return `${date.getFullYear()}-${month}-${day}`;
 }
 
-// the saved graph: one text line per week, one number per day
 const savedDay = new Date(saved.start + 'T00:00:00');
 saved.weeks.forEach((week) => {
   for (const level of week) {
@@ -43,24 +41,20 @@ onMounted(async () => {
     total.value = Number(data.total?.lastYear ?? 0);
     status.value = 'live';
   } catch {
-    // keep the saved graph
   }
 });
 
-// WEEKS columns of 7 days, the last column is this week
 const weeks = computed(() => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   let day: Date;
-  let end = today; // days after this one stay empty
+  let end = today;
   if (status.value === 'live') {
-    // the last WEEKS weeks, the last column is this week
     const lastDay = new Date(today);
     lastDay.setDate(lastDay.getDate() + (6 - lastDay.getDay()));
     day = new Date(lastDay);
     day.setDate(day.getDate() - WEEKS * 7 + 1);
   } else {
-    // the saved graph (data/heatmap.json): from its start date, one year
     day = new Date(saved.start + 'T00:00:00');
     end = new Date(savedYear, 11, 31);
   }
@@ -90,13 +84,11 @@ const months = computed(() => {
       });
     lastMonth = date.getMonth();
   });
-  // skip a label that would sit on top of the next one
   return list.filter(
     (month, i) => !list[i + 1] || list[i + 1].column - month.column > 2,
   );
 });
 
-// level 0 is a faint square, levels 1 to 4 get more and more blue
 const shades = computed(() => [
   props.dark ? 'bg-beige/10' : 'bg-ink/10',
   'bg-orange/30',

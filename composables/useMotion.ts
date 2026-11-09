@@ -22,10 +22,8 @@ import Lenis from 'lenis'
 // the smooth scroller, kept here so other components can pause it
 export const scroller: { lenis: Lenis | null } = { lenis: null }
 
-// ---- 1. smooth scrolling ----------------------------------------------------------------------
-
 export function initSmoothScroll() {
-  if (scroller.lenis) return // already running
+  if (scroller.lenis) return
   gsap.registerPlugin(ScrollTrigger)
 
   const lenis = new Lenis()
@@ -34,11 +32,10 @@ export function initSmoothScroll() {
   gsap.ticker.add((time) => lenis.raf(time * 1000))
   gsap.ticker.lagSmoothing(0)
 
-  // links like #work scroll smoothly too
   document.addEventListener('click', (event) => {
     const link = (event.target as HTMLElement).closest('a[href^="#"]')
     const href = link?.getAttribute('href') ?? ''
-    if (!/^#[\w-]+$/.test(href)) return // only simple links like #work
+    if (!/^#[\w-]+$/.test(href)) return
     const target = document.querySelector(href)
     if (!target) return
     event.preventDefault()
@@ -46,15 +43,12 @@ export function initSmoothScroll() {
   })
 }
 
-// ---- 2. slide-up animations -------------------------------------------------------------------
-
 export function initRevealAnimations() {
   if (!document.documentElement.classList.contains('js')) return () => {}
   gsap.registerPlugin(ScrollTrigger)
 
-  const triggers: ScrollTrigger[] = [] // everything we create, so we can remove it again
+  const triggers: ScrollTrigger[] = []
 
-  // slides the items up, one after another
   function slideUp(items: HTMLElement[]) {
     gsap.fromTo(
       items,
@@ -72,7 +66,6 @@ export function initRevealAnimations() {
     items.forEach((item) => item.classList.remove('is-in'))
   }
 
-  // every element with data-reveal
   triggers.push(
     ...ScrollTrigger.batch('[data-reveal]', {
       start: 'top 92%',
@@ -84,7 +77,6 @@ export function initRevealAnimations() {
     })
   )
 
-  // every box with data-stagger: its children slide up one by one
   gsap.utils.toArray<HTMLElement>('[data-stagger]').forEach((box) => {
     const children = () => Array.from(box.children) as HTMLElement[]
     triggers.push(
@@ -104,6 +96,5 @@ export function initRevealAnimations() {
   document.fonts?.ready.then(() => ScrollTrigger.refresh())
   addEventListener('load', () => ScrollTrigger.refresh())
 
-  // the "switch off" function
   return () => triggers.forEach((trigger) => trigger.kill())
 }

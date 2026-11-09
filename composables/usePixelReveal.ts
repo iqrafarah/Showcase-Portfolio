@@ -16,35 +16,29 @@
 //   const { isSharp } = usePixelReveal(frame, canvas, imageUrl)
 //   isSharp is true when the real screenshot should be visible.
 
-const FIRST_BLOCKS_WIDE = 14 // how many blocks wide the first, biggest version is
-const SHARPEN_STEPS = [24, 40, 70] // then it gets finer in these steps
-const SHARPEN_DELAY = 80 // milliseconds between those steps
-const REVEAL_DURATION = 550 // milliseconds the first reveal takes
-const ORANGE_FLASH = 110 // milliseconds a new block stays orange before it shows the picture
+const FIRST_BLOCKS_WIDE = 14
+const SHARPEN_STEPS = [24, 40, 70]
+const SHARPEN_DELAY = 80
+const REVEAL_DURATION = 550
+const ORANGE_FLASH = 110
 const ORANGE = '#ed4407'
 
 export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<HTMLCanvasElement | undefined>, imageUrl: string) {
   const isSharp = ref(false)
 
-  // what the animation is doing right now
-  let image: HTMLImageElement // created in onMounted: the server has no Image
+  let image: HTMLImageElement
   let imageIsLoaded = false
   let cardIsOnScreen = false
   let hasStarted = false
   let timeouts: number[] = []
   let animationFrame = 0
 
-  // ---- helpers for drawing -------------------------------------------------------------
-
-  // The card shows the screenshot cropped to fill it (like object-fit: cover).
-  // This draws that crop onto a tiny canvas that is `cols` x `rows` pixels big.
   function makeTinyCopy(cols: number, rows: number) {
     const tiny = document.createElement('canvas')
     tiny.width = cols
     tiny.height = rows
     const tinyContext = tiny.getContext('2d', { willReadFrequently: true })!
 
-    // work out which part of the screenshot is visible in the card
     const cardRatio = frame.value!.clientWidth / frame.value!.clientHeight
     let cropWidth = image.naturalWidth
     let cropHeight = image.naturalHeight
@@ -57,7 +51,6 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
     return tiny
   }
 
-  // Gets the big canvas ready (sharp on high-resolution screens) and returns its drawing tool.
   function prepareCanvas() {
     const el = canvas.value!
     const pixelRatio = Math.min(devicePixelRatio || 1, 2)
@@ -65,16 +58,13 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
     el.height = frame.value!.clientHeight * pixelRatio
     const context = el.getContext('2d')!
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0)
-    context.imageSmoothingEnabled = false // keep the pixels hard-edged
+    context.imageSmoothingEnabled = false
     return context
   }
 
-  // how many rows of blocks fit when the card is `cols` blocks wide
   function rowsFor(cols: number) {
     return Math.max(2, Math.round((cols * frame.value!.clientHeight) / frame.value!.clientWidth))
   }
-
-  // ---- step 1: the blocks pop up one by one -----------------------------------------------
 
   function revealBlocks(done: () => void) {
     const width = frame.value!.clientWidth
@@ -86,15 +76,13 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
     const blockWidth = width / cols
     const blockHeight = height / rows
 
-    // all block numbers in a random order: the order in which they pop up
     const order = Array.from({ length: cols * rows }, (_, i) => i).sort(() => Math.random() - 0.5)
 
     const startTime = performance.now()
-    let blocksShown = 0 // how many blocks have popped up (orange or picture)
-    let blocksSettled = 0 // how many of those have already turned from orange into the picture
-    const shownAt: number[] = [] // when each block popped up
+    let blocksShown = 0
+    let blocksSettled = 0
+    const shownAt: number[] = []
 
-    // draws one block, either orange or as the real pixel of the screenshot
     function drawBlock(position: number, asPicture: boolean) {
       const col = order[position] % cols
       const row = Math.floor(order[position] / cols)
@@ -108,15 +96,12 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
       }
     }
 
-    // runs on every screen refresh until all blocks are done
     function step(now: number) {
-      // how many blocks should be visible by now?
       const shouldBeShown = Math.min(order.length, Math.floor(((now - startTime) / REVEAL_DURATION) * order.length))
       for (; blocksShown < shouldBeShown; blocksShown++) {
         shownAt[blocksShown] = now
-        drawBlock(blocksShown, false) // new block: orange
+        drawBlock(blocksShown, false)
       }
-      // blocks that have been orange long enough turn into the picture
       while (blocksSettled < blocksShown && now - shownAt[blocksSettled] > ORANGE_FLASH) {
         drawBlock(blocksSettled, true)
         blocksSettled++
@@ -128,9 +113,6 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
     animationFrame = requestAnimationFrame(step)
   }
 
-  // ---- step 2: smaller blocks, then the sharp picture ---------------------------------------
-
-  // draws the whole screenshot as blocks, `cols` blocks wide
   function drawPixels(cols: number) {
     const context = prepareCanvas()
     context.drawImage(makeTinyCopy(cols, rowsFor(cols)), 0, 0, frame.value!.clientWidth, frame.value!.clientHeight)
@@ -140,25 +122,20 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
     SHARPEN_STEPS.forEach((cols, i) => {
       timeouts.push(window.setTimeout(() => drawPixels(cols), i * SHARPEN_DELAY))
     })
-    // after the last step the real <img> fades in (the card's CSS does the fading)
     timeouts.push(window.setTimeout(() => (isSharp.value = true), SHARPEN_STEPS.length * SHARPEN_DELAY))
   }
 
-  // ---- start and reset -----------------------------------------------------------------------
-
-  // plays the animation, once the picture is loaded AND the card is on screen
   function start() {
     if (hasStarted || !imageIsLoaded || !cardIsOnScreen) return
     hasStarted = true
 
     if (prefersReducedMotion()) {
-      isSharp.value = true // no animation: show the real screenshot straight away
+      isSharp.value = true
       return
     }
     revealBlocks(sharpen)
   }
 
-  // back to the beginning, so the animation can play again when the card comes back
   function reset() {
     hasStarted = false
     isSharp.value = false
@@ -174,7 +151,7 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
   }
 
   onMounted(() => {
-    if (!imageUrl) return // a project without a picture: nothing to animate
+    if (!imageUrl) return
 
     image = new Image()
     image.onload = () => {
@@ -183,8 +160,6 @@ export function usePixelReveal(frame: Ref<HTMLElement | undefined>, canvas: Ref<
     }
     image.src = imageUrl
 
-    // Watch the card. It counts as "on screen" once its top is in the lower 80% of the screen,
-    // so the visitor sees the animation happen. It resets once the card has left the screen completely.
     const observer = new IntersectionObserver(
       ([entry]) => {
         cardIsOnScreen = entry.isIntersecting

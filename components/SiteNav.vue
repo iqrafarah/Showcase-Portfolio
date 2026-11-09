@@ -6,11 +6,10 @@ import profile from '~/data/profile.json'
 //   - the menu slides away when you scroll down and comes back when you scroll up
 //   - "About" opens the About drawer, "Contact" opens your mail app
 const about = useAbout()
-const onHome = useRoute().path === '/' // on a project page, "Work" goes back to the home page
-const inWork = ref(false) // the work section is in the middle of the screen
-const hidden = ref(false) // the menu slides away while you scroll down
+const onHome = useRoute().path === '/'
+const inWork = ref(false)
+const hidden = ref(false)
 
-// the mail app opens through the link; the address is also copied, in case no mail app opens
 function copyEmail() {
   try {
     navigator.clipboard.writeText(profile.email)
@@ -20,12 +19,10 @@ function copyEmail() {
 }
 
 onMounted(() => {
-  // light up "Work" while the work section is in the middle of the screen
   const work = document.querySelector('#work')
   const observer = new IntersectionObserver(([entry]) => (inWork.value = entry.isIntersecting), { rootMargin: '-45% 0px -45% 0px' })
   if (work) observer.observe(work)
 
-  // hide when scrolling down, show again when scrolling up
   let last = scrollY
   function onScroll() {
     hidden.value = scrollY > 240 && scrollY > last
@@ -33,7 +30,6 @@ onMounted(() => {
   }
   addEventListener('scroll', onScroll, { passive: true })
 
-  // clean up when this page is left (the menu is made again when the home page comes back)
   onBeforeUnmount(() => {
     observer.disconnect()
     removeEventListener('scroll', onScroll)

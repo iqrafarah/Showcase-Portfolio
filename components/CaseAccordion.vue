@@ -6,7 +6,7 @@
 // To rename or add an item, change `story` in data/work.json. Nothing here has to change.
 defineProps<{ sections: { title: string; text?: string | string[] }[] }>()
 
-const openIndex = ref(0) // which item is open (0 = the first one, -1 = none)
+const openIndex = ref(0)
 
 const list = ref<HTMLElement | null>(null)
 
@@ -19,7 +19,6 @@ function toggle(index: number) {
   }, 420)
 }
 
-// A text can be one string or a list of paragraphs. This always gives back a list.
 function paragraphsOf(text?: string | string[]) {
   if (!text) return []
   return Array.isArray(text) ? text : [text]
@@ -35,7 +34,6 @@ function paragraphsOf(text?: string | string[]) {
             <span class="orange-square" aria-hidden="true"></span>
             {{ section.title }}
           </span>
-          <!-- the + / − sign: the vertical bar shrinks away when the item opens -->
           <span class="sign" aria-hidden="true">
             <span class="bar horizontal"></span>
             <span class="bar vertical"></span>
@@ -43,7 +41,6 @@ function paragraphsOf(text?: string | string[]) {
         </button>
       </h3>
 
-      <!-- the text: its height slides from 0 to its full size (see .body in the style below) -->
       <div :id="`acc-panel-${i}`" role="region" :aria-labelledby="`acc-${i}`" class="body">
         <div class="body-inner">
           <div class="text">
@@ -56,7 +53,6 @@ function paragraphsOf(text?: string | string[]) {
 </template>
 
 <style scoped>
-/* The list. It scrolls inside itself when the screen is too short, without a visible scrollbar. */
 .accordion {
   @apply mt-5 min-h-0 flex-1 overflow-y-auto border-b border-beige/15;
   scrollbar-width: none;
@@ -69,7 +65,6 @@ function paragraphsOf(text?: string | string[]) {
   @apply border-t border-beige/15;
 }
 
-/* The clickable title: grey while closed, white when hovered or open */
 .title-button {
   @apply flex w-full items-center justify-between gap-4 py-3 text-left text-[clamp(14px,1vw,16px)] tracking-[-0.02em] text-beige/70 transition-colors duration-200;
 }
@@ -82,7 +77,6 @@ function paragraphsOf(text?: string | string[]) {
   @apply flex min-w-0 items-center;
 }
 
-/* The little orange square before the title: only visible on the open item */
 .orange-square {
   @apply h-[7px] w-0 shrink-0 bg-orange opacity-0 transition-all duration-300;
 }
@@ -90,7 +84,6 @@ function paragraphsOf(text?: string | string[]) {
   @apply mr-3 w-[7px] opacity-100;
 }
 
-/* The + / − sign on the right: a horizontal bar and a vertical bar */
 .sign {
   @apply relative h-[10px] w-[10px] shrink-0;
 }
@@ -109,7 +102,6 @@ function paragraphsOf(text?: string | string[]) {
   transform: translateX(-50%) scaleY(0); /* the vertical bar disappears, so + becomes − */
 }
 
-/* Opening and closing: a grid row that grows from 0 to its natural height */
 .body {
   display: grid;
   grid-template-rows: 0fr;

@@ -12,9 +12,9 @@ const props = defineProps<{ project: any; index: number; ratio: string }>()
 
 const asset = useAsset()
 
-const frame = ref<HTMLElement>() // the picture area
-const canvas = ref<HTMLCanvasElement>() // lies over the picture and draws the pixels
-const panel = ref<HTMLElement>() // the hover info panel
+const frame = ref<HTMLElement>()
+const canvas = ref<HTMLCanvasElement>()
+const panel = ref<HTMLElement>()
 
 const hasThumbnail = !!props.project.thumbnail
 const { isSharp } = usePixelReveal(frame, canvas, hasThumbnail ? asset(props.project.thumbnail) : '')
@@ -23,7 +23,6 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 
 <template>
   <NuxtLink :to="`/work/${project.slug}`" class="work-card" :aria-label="`Open case study: ${project.title}`">
-    <!-- the picture area. On top of each other: the pixel canvas, the real screenshot, the hover panel -->
     <div ref="frame" class="picture" :class="ratio" @pointerenter="onEnter" @pointermove="onMove" @pointerleave="onLeave">
       <canvas ref="canvas" class="layer" aria-hidden="true" />
 
@@ -37,7 +36,6 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
         draggable="false"
       />
 
-      <!-- only exists when the project has something to show in it -->
       <dl v-if="project.role || project.year || project.techs?.length" ref="panel" class="hover-panel" :class="{ 'is-visible': isHovering }">
         <div class="panel-card">
           <div v-if="project.role || project.year" class="panel-top">
@@ -52,7 +50,6 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
       </dl>
     </div>
 
-    <!-- under the picture: title, number and the short summary -->
     <div class="title-row">
       <h3 class="title">{{ project.title }}</h3>
       <span class="number">{{ String(index + 1).padStart(2, '0') }}</span>
@@ -66,15 +63,12 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
   @apply block;
 }
 
-/* ---- the picture area ---- */
 .picture {
   @apply relative overflow-hidden bg-ink-2;
 }
-/* the canvas and the screenshot both fill the whole picture area */
 .layer {
   @apply absolute inset-0 h-full w-full;
 }
-/* the real screenshot: invisible until the pixels are sharp, zooms in a little on hover */
 .screenshot {
   @apply object-cover opacity-0 transition-[opacity,transform] duration-500 ease-out;
 }
@@ -85,7 +79,6 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
   @apply scale-[1.04];
 }
 
-/* ---- the hover panel (black card with role, year and tech tags) ---- */
 .hover-panel {
   @apply pointer-events-none absolute left-0 top-0 w-[min(86%,320px)] opacity-0 transition-opacity duration-200;
 }
@@ -120,7 +113,6 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
   @apply bg-ink-3 px-2 py-1 text-beige/80;
 }
 
-/* ---- under the picture ---- */
 .title-row {
   @apply mt-4 flex items-baseline justify-between gap-4;
 }

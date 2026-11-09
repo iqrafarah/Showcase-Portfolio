@@ -19,7 +19,6 @@ const brand: Record<string, string> = { Figma: '#F24E1E', React: '#61DAFB' }
 
 <style scoped>
 .logo {
-  /* wiped in with hard steps, like the pixel dissolves on the rest of the site */
   clip-path: inset(100% 0 0 0);
   transform: translate(-50%, 6px);
   transition: clip-path 0.3s steps(4), transform 0.3s steps(3);
