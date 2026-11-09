@@ -190,8 +190,9 @@ onMounted(() => {
 .case-pictures {
   @apply flex min-w-0 flex-col gap-4 lg:pb-[26px];
 }
+
 .case-pictures img,
 .case-pictures video {
-  @apply block max-h-[720px] w-full bg-ink-2 object-cover object-top;
+  @apply block max-h-[720px] w-full bg-ink-2 object-cover object-top min-[1700px]:max-h-full;
 }
 </style>
