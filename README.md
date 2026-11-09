@@ -1,12 +1,11 @@
 # Iqra Farah – portfolio
 
-My portfolio: a one-page site with a page for every project. I'm a second-year ICT student at Fontys in Tilburg. I like designing and I like building what I designed.
-
-Designed in Figma. Built with Nuxt 3, Tailwind CSS and GSAP. The code was written with help from Claude (AI).
+Hi, I'm Iqra 👋 I'm a second-year ICT student at Fontys in Tilburg, and this is my portfolio.
+It shows the websites and apps I've made during internships, at school and in my free time. Every project has its own page that explains what it was and what I did.
 
 ![Preview of the portfolio](docs/preview.png)
 
-## 🧱 Tech stack
+## Tech stack
 
 | What | Used for |
 | --- | --- |
@@ -16,7 +15,7 @@ Designed in Figma. Built with Nuxt 3, Tailwind CSS and GSAP. The code was writte
 | [Lenis](https://lenis.darkroom.engineering) | Smooth scrolling |
 | JSON files in `data/` | All text and projects, so I can change content without touching the code |
 
-## 🛠 Set-up
+## Set-up
 
 1. Install the dependencies
 
@@ -30,7 +29,7 @@ Designed in Figma. Built with Nuxt 3, Tailwind CSS and GSAP. The code was writte
    npm run dev
    ```
 
-## 🚀 Build for production
+## Build for production
 
 1. Make a static site in `.output/public`
 
@@ -46,7 +45,7 @@ Designed in Figma. Built with Nuxt 3, Tailwind CSS and GSAP. The code was writte
 
 To host the site in a sub-folder (for example GitHub Pages), set `NUXT_APP_BASE_URL=/your-repo/` before you run `npm run generate`.
 
-## 🎨 Colour codes
+## Colour codes
 
 | Colour | Name | Hex | Used for |
 | --- | --- | --- | --- |
@@ -61,14 +60,14 @@ To host the site in a sub-folder (for example GitHub Pages), set `NUXT_APP_BASE_
 
 The colours are set in `tailwind.config.ts` and used as classes, for example `bg-ink`, `text-beige` and `text-orange`.
 
-## 🔤 Fonts
+## Fonts
 
 - **Geist** for text and headings
 - **Geist Mono** for small labels and buttons (uppercase)
 
 Both are loaded from Google Fonts in `nuxt.config.ts`.
 
-## ✏️ Changing the content
+## Changing the content
 
 - `data/work.json`: the projects and the text of every case study. Only `slug` and `title` are required. Anything you leave out is simply not shown. The `card` field sets the shape of the card (`wide`, `medium`, `tall` or `square`).
 - `data/profile.json`: email, links, About text, jobs and the tech stack.
@@ -77,7 +76,7 @@ Both are loaded from Google Fonts in `nuxt.config.ts`.
 
 To change the order of the projects, change the order in `data/work.json`.
 
-## 📁 Project structure
+## Project structure
 
 ```
 assets/css/       global styles
@@ -89,7 +88,7 @@ public/           images and favicon
 tailwind.config.ts  colours and fonts
 ```
 
-## ✨ Details
+## Details
 
 - A pixel wall opens when the site loads, and the hero has black pixels behind it.
 - Project screenshots appear as big pixels that get sharper when they scroll into view.
