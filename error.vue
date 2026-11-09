@@ -14,7 +14,6 @@ useHead({
     : 'Something went wrong — Iqra Farah',
 });
 
-// Go back to the home page and clear the error
 function goHome() {
   clearError({ redirect: '/' });
 }
@@ -47,7 +46,6 @@ function goHome() {
 </template>
 
 <style scoped>
-/* Same set-up as the hero: full screen, everything in the middle, the pixels sit behind it */
 .error-page {
   @apply relative isolate flex min-h-[100svh] flex-col items-center justify-center px-6 pb-44 pt-24 text-center;
 }
