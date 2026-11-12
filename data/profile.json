@@ -28,7 +28,8 @@
       "company": "SOVOT",
       "role": "IT Support Intern",
       "period": "2020 – 2021",
-      "text": "I did IT support for SOVOT during my internship at Bewise Solutions: I answered support questions, helped users with technical issues and worked with colleagues to find solutions.",
+      "text": "During my internship at SOVOT, I provided IT support by responding to user queries, troubleshooting technical issues, and collaborating with colleagues to deliver effective solutions.",
+
       "bullets": [],
       "logo": "/images/logos/sovot.png",
       "color": "#f8ec4a",
@@ -45,6 +46,10 @@
       "items": ["JavaScript", "Next.js", "HTML & CSS"]
     },
     {
+      "group": "Libraries",
+      "items": ["React"]
+    },
+    {
       "group": "CMS",
       "items": ["WordPress", "Elementor"]
     },
@@ -55,10 +60,6 @@
     {
       "group": "Automation",
       "items": ["GoHighLevel", "n8n", "Zapier"]
-    },
-    {
-      "group": "Libraries",
-      "items": ["React"]
     }
   ],
   "about": {
