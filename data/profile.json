@@ -8,7 +8,7 @@
       "company": "Unique Design",
       "role": "Frontend Developer Intern",
       "period": "2024 – 2025",
-      "text": "At Unique Design I designed websites in Figma and built them as custom WordPress themes with PHP and ACF. I took projects from the first design to launch, made sure they worked on every screen, and set them up so clients could update their own content.",
+      "text": "I designed websites in Figma and built them as custom WordPress themes with PHP and ACF. I worked on projects from the first design to launch, made sure they worked on every screen size, and set them up so clients could edit their own content.",
       "bullets": [],
       "logo": "/images/logos/unique-design.svg",
       "color": "#172D4B",
@@ -18,7 +18,7 @@
       "company": "Bewise Solutions",
       "role": "Web Developer Intern",
       "period": "2022 – 2023",
-      "text": "At Bewise I built and maintained WordPress websites with Elementor, tested sites and fixed issues, and worked on designs. I also joined client meetings and talked to clients directly about the changes they needed.",
+      "text": "I built and maintained WordPress websites with Elementor, tested sites, fixed bugs and helped with designs. I also joined client meetings and talked to clients about the changes they wanted.",
       "bullets": [],
       "logo": "/images/logos/bewise.png",
       "color": "#2a2145",
@@ -28,8 +28,7 @@
       "company": "SOVOT",
       "role": "IT Support Intern",
       "period": "2020 – 2021",
-      "text": "During my internship at SOVOT, I provided IT support by responding to user queries, troubleshooting technical issues, and collaborating with colleagues to deliver effective solutions.",
-
+      "text": "I did IT support. I answered questions from users, fixed technical problems and worked with my colleagues to solve them.",
       "bullets": [],
       "logo": "/images/logos/sovot.png",
       "color": "#f8ec4a",
@@ -39,30 +38,50 @@
   "stack": [
     {
       "group": "Design",
-      "items": ["Figma"]
+      "items": [
+        "Figma"
+      ]
     },
     {
       "group": "Frontend",
-      "items": ["JavaScript", "Next.js", "HTML & CSS"]
+      "items": [
+        "JavaScript",
+        "Next.js",
+        "HTML & CSS"
+      ]
     },
     {
       "group": "Libraries",
-      "items": ["React"]
+      "items": [
+        "React"
+      ]
     },
     {
       "group": "CMS",
-      "items": ["WordPress", "Elementor"]
+      "items": [
+        "WordPress",
+        "Elementor"
+      ]
     },
     {
       "group": "Backend",
-      "items": ["PHP", "C#", "Node.js", "Express"]
+      "items": [
+        "PHP",
+        "C#",
+        "Node.js",
+        "Express"
+      ]
     },
     {
       "group": "Automation",
-      "items": ["GoHighLevel", "n8n", "Zapier"]
+      "items": [
+        "GoHighLevel",
+        "n8n",
+        "Zapier"
+      ]
     }
   ],
   "about": {
-    "text": "I've always liked both designing and coding. There's something really satisfying about seeing a design I made in Figma turn into something I can actually click around in.\n\nDuring my internships, I worked on website design, WordPress development, testing and maintenance. I also got to work directly with clients, which taught me a lot about building something for someone other than myself.\n\nFrontend is what I enjoy most right now, but I want to get better at the backend too. My goal is to become a full-stack developer who understands both the design and the code behind an application.\n\nIn my free time, I'm usually working on a random project, trying something new or exploring open-source code. And when I'm not in a reading slump, I love fiction books with a good plot twist. I always try to guess the ending. Sometimes I'm even right."
+    "text": "I like both designing and coding. It's fun to design something in Figma and then be able to click through it in the browser.\n\nDuring my internships I worked on website design, WordPress development, testing and maintenance. I also worked with clients directly, which taught me how to build something for someone else instead of for myself.\n\nRight now I like frontend the most, but I want to get better at backend too. My goal is to become a full-stack developer who understands both the design and the code.\n\nIn my free time I work on small projects, try new things and read open-source code. I also like fiction with a good plot twist. I always try to guess the ending, and sometimes I'm right."
   }
 }

@@ -62,8 +62,8 @@ function placeOf(project: any, i: number) {
         data-reveal
         class="max-w-[24rem] text-balance text-[clamp(16px,1.2vw,19px)] leading-[1.5] text-beige/60 lg:pb-[0.4vw] lg:text-right"
       >
-        A mix of internship assignments, school projects and ideas I've built in
-        my free time.
+        Internship work, school projects and a few things I built in my free
+        time.
       </p>
     </div>
     <div class="flex flex-col gap-y-24 lg:gap-y-0">

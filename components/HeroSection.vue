@@ -34,9 +34,7 @@ onMounted(() => {
     class="relative isolate flex min-h-[100svh] flex-col items-center justify-center px-6 pb-44 pt-24 text-center"
   >
     <HeroPixels />
-    <p data-hero class="eyebrow text-mute">
-      Hi, I'm Iqra 👋
-    </p>
+    <p data-hero class="eyebrow text-mute">Hi, I'm Iqra 👋</p>
     <h1
       data-hero
       class="mt-5 sm:max-w-none max-w-[18ch] text-[clamp(40px,5.2vw,74px)] font-medium leading-[0.98] tracking-[-0.045em]"
@@ -48,9 +46,9 @@ onMounted(() => {
       data-hero
       class="mt-6 max-w-[34rem] text-[clamp(16px,1.2vw,19px)] leading-[1.55] text-mute"
     >
-      I'm a second-year ICT student at Fontys in Tilburg. I enjoy
-      turning designs into working websites and applications. Frontend is my
-      favorite part, but I'm getting more into backend development too.
+      I'm a second-year ICT student at Fontys in Tilburg. I like turning designs
+      into working websites. Frontend is my favorite part, but I'm getting into
+      backend too.
     </p>
     <div
       ref="buttons"

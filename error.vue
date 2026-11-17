@@ -34,7 +34,7 @@ function goHome() {
       <p class="error-text">
         {{
           isNotFound
-            ? "The link may be wrong, or the page has moved. Let's get you back to my work."
+            ? "The link might be wrong, or the page was moved. Go back to the home page to see my work."
             : 'Please try again in a moment.'
         }}
       </p>

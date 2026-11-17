@@ -28,9 +28,8 @@ function copyEmail() {
       data-reveal
       class="mt-8 max-w-[32rem] text-[clamp(17px,1.3vw,20px)] leading-relaxed text-mute"
     >
-      I'm open to internships and developer opportunities, especially in
-      frontend development. If you think I'd be a good fit for your team, I'd
-      love to hear from you.
+      I'm open to internships and developer jobs, mostly in frontend. If you
+      think I'd fit your team, send me an email.
     </p>
 
     <div
