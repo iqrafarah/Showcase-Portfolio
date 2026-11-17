@@ -75,7 +75,7 @@ onBeforeUnmount(() => {
       :class="
         open
           ? 'translate-x-0 shadow-[-30px_0_80px_rgba(0,0,0,.4)]'
-          : 'translate-x-full'
+          : 'invisible translate-x-full'
       "
     >
       <header class="about-header">
@@ -163,7 +163,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .about-drawer {
-  @apply fixed bottom-0 right-0 top-0 z-[90] w-[min(720px,100%)] overflow-y-auto bg-ink text-beige transition-transform duration-[750ms] ease-[cubic-bezier(.7,0,.15,1)];
+  @apply fixed bottom-0 right-0 top-0 z-[90] w-[min(720px,100%)] overflow-y-auto bg-ink text-beige transition-[transform,visibility] duration-[750ms] ease-[cubic-bezier(.7,0,.15,1)];
 }
 
 .about-header {
