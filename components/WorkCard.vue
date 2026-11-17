@@ -37,15 +37,12 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
       />
 
       <dl v-if="project.role || project.year || project.techs?.length" ref="panel" class="hover-panel" :class="{ 'is-visible': isHovering }">
-        <div class="panel-card">
-          <div v-if="project.role || project.year" class="panel-top">
-            <template v-if="project.role"><dt class="sr-only">Role</dt><dd class="role"><span class="orange-square" aria-hidden="true"></span><span>{{ project.role }}</span></dd></template>
-            <template v-if="project.year"><dt class="sr-only">Year</dt><dd class="year">{{ project.year }}</dd></template>
-          </div>
-          <template v-if="project.techs?.length"><dt class="sr-only">Stack</dt>
+        <div v-if="project.role" class="panel-item role-item"><dt class="sr-only">Role</dt><dd class="role"><span class="orange-square" aria-hidden="true"></span><span>{{ project.role }}</span></dd></div>
+        <div v-if="project.year" class="panel-item year-item"><dt class="sr-only">Year</dt><dd class="year">{{ project.year }}</dd></div>
+        <div v-if="project.techs?.length" class="panel-item tags-item"><dt class="sr-only">Stack</dt>
           <dd class="tags">
             <span v-for="tech in project.techs" :key="tech" class="tag">{{ tech }}</span>
-          </dd></template>
+          </dd>
         </div>
       </dl>
     </div>
@@ -85,11 +82,17 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 .hover-panel.is-visible {
   @apply opacity-100;
 }
-.panel-card {
-  @apply rounded-xl bg-ink-2 p-4 font-mono text-[10.5px] uppercase text-beige;
+.hover-panel {
+  @apply flex flex-wrap items-center justify-between gap-x-3 gap-y-4 rounded-xl bg-ink-2 p-4 font-mono text-[10.5px] uppercase text-beige;
 }
-.panel-top {
-  @apply flex items-center justify-between gap-3;
+.role-item {
+  @apply min-w-0 flex-1;
+}
+.year-item {
+  @apply ml-auto;
+}
+.tags-item {
+  @apply basis-full;
 }
 .role {
   @apply flex min-w-0 items-center gap-2;
@@ -102,9 +105,6 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 }
 .year {
   @apply shrink-0 text-[#8c8b86];
-}
-.panel-top ~ .tags {
-  @apply mt-4; /* space between the role line and the tags */
 }
 .tags {
   @apply flex flex-wrap gap-1.5;
