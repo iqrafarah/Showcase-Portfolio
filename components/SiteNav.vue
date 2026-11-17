@@ -39,7 +39,7 @@ onMounted(() => {
 
 <template>
   <nav class="fixed left-1/2 top-4 z-40 -translate-x-1/2" aria-label="Main">
-    <div class="transition-transform duration-500 ease-[cubic-bezier(.7,0,.2,1)]" :class="hidden && !about ? '-translate-y-[160%]' : 'translate-y-0'">
+    <div @focusin="hidden = false" :inert="hidden && !about" class="transition-transform duration-500 ease-[cubic-bezier(.7,0,.2,1)]" :class="hidden && !about ? '-translate-y-[160%]' : 'translate-y-0'">
       <!-- drop-shadow (not box-shadow), so the shadow follows the shape of the pieces and the bridges -->
       <div data-hero class="pair [filter:drop-shadow(0_8px_14px_rgba(0,0,0,.22))]">
         <a v-if="onHome" href="#work" class="btn nav" :class="{ on: inWork }"><RollText text="Work" /></a>

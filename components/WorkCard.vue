@@ -72,14 +72,16 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
 .screenshot.is-sharp {
   @apply opacity-100;
 }
-.screenshot.is-zoomed {
+.screenshot.is-zoomed,
+.work-card:focus-visible .screenshot {
   @apply scale-[1.04];
 }
 
 .hover-panel {
   @apply pointer-events-none absolute left-0 top-0 w-[min(86%,320px)] opacity-0 transition-opacity duration-200;
 }
-.hover-panel.is-visible {
+.hover-panel.is-visible,
+.work-card:focus-visible .hover-panel {
   @apply opacity-100;
 }
 .hover-panel {
@@ -120,9 +122,9 @@ const { isHovering, onEnter, onMove, onLeave } = useHoverPanel(frame, panel)
   @apply font-mono text-[20px] uppercase text-beige;
 }
 .number {
-  @apply font-mono text-[13px] uppercase text-beige/50;
+  @apply font-mono text-[13px] uppercase text-beige/70;
 }
 .summary {
-  @apply mt-1 max-w-[34rem] text-[16px] leading-snug text-beige/65;
+  @apply mt-1 max-w-[34rem] text-[16px] leading-snug text-beige/80;
 }
 </style>
