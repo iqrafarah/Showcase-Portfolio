@@ -51,8 +51,14 @@
       {
         "title": "The Outcome",
         "text": [
-          "A custom WordPress website, built from my Figma designs, that the client can manage themselves. It was also nominated for Site of the Day on Awwwards.",
-          "I learned how to take a client project from design to launch, how to build flexible PHP templates, and how to work with a coworker on the final details. It let me use my design and development skills together."
+          "A custom WordPress website, built from my Figma designs, that the client can manage themselves. It was also nominated for Site of the Day on Awwwards."
+        ]
+      },
+      {
+        "title": "Reflection",
+        "text": [
+          "This was my first project that went from Figma design all the way to a live client site. I learned how to build flexible PHP templates and how to work with a coworker on the final details.",
+          "If I did it again, I would test the ACF fields with the client earlier, so I know sooner if the content is easy for them to edit."
         ]
       }
     ],
@@ -108,8 +114,14 @@
       {
         "title": "The Outcome",
         "text": [
-          "A working portfolio generator. Users import their info, edit their profile and publish a portfolio they can share.",
-          "It gave me experience building a whole app on my own. I learned the most about login, reading PDFs and working with a database."
+          "A working portfolio generator. Users import their info, edit their profile and publish a portfolio they can share."
+        ]
+      },
+      {
+        "title": "Reflection",
+        "text": [
+          "The hardest part was the LinkedIn PDF. Getting the text out was easy, but putting it in the right sections and keeping it editable took the most time. I learned the most about login, reading PDFs and working with a database.",
+          "Building everything alone also showed me how much there is to decide in a full app, not just the code."
         ]
       }
     ],
@@ -162,8 +174,14 @@
       {
         "title": "The Outcome",
         "text": [
-          "A working prototype that combines patient management, consultation planning and MDO discussions in one app.",
-          "I got more confident with C#, learned how to build an app in layers, and worked with a real client. My main takeaway: balance design and development, and always think about the people who will use the software."
+          "A working prototype that combines patient management, consultation planning and MDO discussions in one app."
+        ]
+      },
+      {
+        "title": "Reflection",
+        "text": [
+          "I got more confident with C# and learned how to build an app in layers. Working with a real client taught me that their feedback matters more than my own ideas about what to build next.",
+          "My main takeaway: balance design and development, and always think about the people who will use the software."
         ]
       }
     ],
@@ -220,8 +238,14 @@
       {
         "title": "The Outcome",
         "text": [
-          "A working app with dhikr counters, challenges, progress stats, profiles, and leaderboards for friends and the community.",
-          "I got more practice building a complete app on my own, especially Firebase login and saving user progress. What I like most is that it started with a simple conversation. I didn't need an assignment to build something useful."
+          "A working app with dhikr counters, challenges, progress stats, profiles, and leaderboards for friends and the community."
+        ]
+      },
+      {
+        "title": "Reflection",
+        "text": [
+          "I got more practice building a complete app on my own, especially Firebase login and saving user progress. The hardest part was keeping progress, points and the leaderboard in sync.",
+          "What I like most is that it started with a simple conversation. I didn't need an assignment to build something useful."
         ]
       }
     ],
@@ -279,8 +303,14 @@
       {
         "title": "The Outcome",
         "text": [
-          "A working prototype that combines facial emotion detection, the user's choice and Spotify playlists.",
-          "I got experience with external APIs and interactive frontend features. The best part was seeing my own idea become a working app, and seeing what a team can do when everyone brings different skills."
+          "A working prototype that combines facial emotion detection, the user's choice and Spotify playlists."
+        ]
+      },
+      {
+        "title": "Reflection",
+        "text": [
+          "I got experience with external APIs, especially Spotify login and playlists. The hardest part was connecting the user's choice to the playlist while keeping the screens easy to follow.",
+          "Seeing my own idea become a working app was the best part. It also showed me what a team can do when everyone brings different skills."
         ]
       }
     ],
@@ -339,8 +369,14 @@
       {
         "title": "The Outcome",
         "text": [
-          "A working Pomodoro app with focus and break timers, a growing plant, a physical buzzer and progress tracking.",
-          "This project was different from my others because something physical was connected to the website. It wasn't only about what happens on the screen."
+          "A working Pomodoro app with focus and break timers, a growing plant, a physical buzzer and progress tracking."
+        ]
+      },
+      {
+        "title": "Reflection",
+        "text": [
+          "This project was different from my others because something physical was connected to the website. I learned that you have to think about more than the screen when hardware is involved.",
+          "It was also a good lesson in making many parts, like the timer, the plant, the buzzer and the stats, work together."
         ]
       }
     ],
